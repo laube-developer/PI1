@@ -130,6 +130,13 @@
     \label{fig:backlog_nao_funcional}
 \end{figure}
 
+\subsection{Descrição da arquitetura da solução de software}
+
+    \textcolor{black}{A arquitetura da solução de software utilizada é a MVP (Model - View - Presenter). Existirá uma camada View de front-end, para exibir o estado do carrinho e enviar comandos para a camada Presenter. Uma camada Presenter, encarregada de tratar as instruções advindas da View  e enviar para a camada Model, bem como receber mudanças de estado na Model e enviar as atualizações para a camada View.}
+
+
+\textcolor{red}{Itens fundamentais:}
+
 \clearpage
 
 \subsection{Roteiro de testes funcionais}
@@ -144,7 +151,7 @@
 \textbf{CT-01 – Inserir comando via interface} \\ \hline
 \textbf{Tipo:} Sistema \\ \hline
 \textbf{Objetivo:} Verificar se o usuário consegue adicionar um comando de movimento pelo sistema gráfico. \\ \hline
-\textbf{Pré-condições:} ASP32 conectado; interface web aberta. \\ \hline
+\textbf{Pré-condições:} ESP32 conectado; interface web aberta. \\ \hline
 \textbf{Procedimentos:} Abrir o sistema. Inserir um comando, como “andar 10 cm”. Clicar em “adicionar comando”. \\ \hline
 \textbf{Resultado esperado:} O comando é salvo no banco e exibido na lista de comandos. \\ \hline
 \textbf{Especificação do reparo:} Corrigir integração entre front-end e back-end. \\ \hline
@@ -186,7 +193,7 @@
 \textbf{CT-03 – Leitura dos sensores} \\ \hline
 \textbf{Tipo:} Unitário \\ \hline
 \textbf{Objetivo:} Verificar se o código em Python lê corretamente os dados dos sensores. \\ \hline
-\textbf{Pré-condições:} Sensores conectados ao ASP32. \\ \hline
+\textbf{Pré-condições:} Sensores conectados ao ESP32. \\ \hline
 \textbf{Procedimentos:} Rodar o script de leitura. Observar a saída no terminal. \\ \hline
 \textbf{Resultado esperado:} Os dados dos sensores são exibidos em tempo real. \\ \hline
 \textbf{Especificação do reparo:} Revisar pinos GPIO e lógica de leitura. \\ \hline
@@ -312,7 +319,7 @@
 \textbf{CT-09 – Funcionamento das rodas motrizes} \\ \hline
 \textbf{Tipo:} Unitário \\ \hline
 \textbf{Objetivo:} Verificar se ambas as rodas respondem corretamente aos comandos de movimento. \\ \hline
-\textbf{Pré-condições:} ASP32 ligado e motores conectados. \\ \hline
+\textbf{Pré-condições:} ESP32 ligado e motores conectados. \\ \hline
 \textbf{Procedimentos:} Enviar comando “andar 10 cm”. Observar movimento das rodas. \\ \hline
 \textbf{Resultado esperado:} Ambas as rodas giram de forma sincronizada e consistente. \\ \hline
 \textbf{Especificação do reparo:} Revisar conexões dos motores ou código de controle PWM. \\ \hline
@@ -435,7 +442,7 @@
 \centering
 \begin{tabular}{|p{0.95\textwidth}|}
 \hline
-\textbf{CT-15 – Comunicação entre sensores e ASP32} \\ \hline
+\textbf{CT-15 – Comunicação entre sensores e ESP32} \\ \hline
 \textbf{Tipo:} Integrado \\ \hline
 \textbf{Objetivo:} Garantir que todos os sensores se comuniquem corretamente com o microcontrolador. \\ \hline
 \textbf{Pré-condições:} Todos os sensores conectados e ativos. \\ \hline
@@ -444,7 +451,7 @@
 \textbf{Especificação do reparo:} Revisar alimentação elétrica e barramentos I2C/GPIO. \\ \hline
 \textbf{Resultado após reparo:} Comunicação estável. \\ \hline
 \end{tabular}
-\caption{CT-15 – Comunicação entre sensores e ASP32}
+\caption{CT-15 – Comunicação entre sensores e ESP32}
 \end{table}
 
 % ------------------------------------------
@@ -564,7 +571,7 @@
 \textbf{CT-21 – Conexão com o Robô} \\ \hline
 \textbf{Tipo:} Integrado \\ \hline
 \textbf{Objetivo:} Verificar se o sistema estabelece comunicação com o robô e exibe o status. \\ \hline
-\textbf{Pré-condições:} ASP32 ligado; Robô ligado e no alcance (Wi-Fi/Bluetooth). \\ \hline
+\textbf{Pré-condições:} ESP32 ligado; Robô ligado e no alcance (Wi-Fi/Bluetooth). \\ \hline
 \textbf{Procedimentos:} Acessar a interface logada. Clicar no botão "Conectar ao Robô". \\ \hline
 \textbf{Resultado esperado:} A interface exibe o status "Conectado"; A comunicação sem fio é estabelecida com sucesso. \\ \hline
 \textbf{Especificação do reparo:} Revisar o módulo de conexão inicial (API/Protocolo) e a atualização do status no front-end. \\ \hline
@@ -609,7 +616,7 @@
 \textbf{Pré-condições:} Robô em movimento (executando um trajeto longo). \\ \hline
 \textbf{Procedimentos:} Na interface web, clicar no botão "Parada de Emergência". Verificar o comportamento do robô. \\ \hline
 \textbf{Resultado esperado:} O robô para imediatamente (os motores devem ser desligados); A execução da sequência de comandos é abortada. \\ \hline
-\textbf{Especificação do reparo:} Implementar ou corrigir o endpoint de emergência no back-end e o código de interrupção dos motores no ASP32. \\ \hline
+\textbf{Especificação do reparo:} Implementar ou corrigir o endpoint de emergência no back-end e o código de interrupção dos motores no ESP32. \\ \hline
 \textbf{Resultado após reparo:} O robô para instantaneamente ao comando. \\ \hline
 \end{tabular}
 \caption{CT-23 – Parada de Emergência}
