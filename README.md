@@ -1,7 +1,15 @@
-# Projeto Integrador de Engenharia 1
+# ⚙️ Projeto Integrador de Engenharia 1
 Repositório para o projeto da disciplina Projeto Integrador de Engenharia 1
 
 ![Carrinho do ovo](/banner.png "Carrinho do ovo")
+
+## 🔭 Andamento
+| Setor | Documentação | Desenvolvimento | Testes |
+|-----|----|----|----|
+| Mecânica | ![](https://geps.dev/progress/0) | ![](https://geps.dev/progress/0) | ![](https://geps.dev/progress/0) |
+| Eletrônica | ![](https://geps.dev/progress/0) | ![](https://geps.dev/progress/0) | ![](https://geps.dev/progress/0) |
+| Controle | ![](https://geps.dev/progress/0) | ![](https://geps.dev/progress/0) | ![](https://geps.dev/progress/0) |
+| Lógica de missão | ![](https://geps.dev/progress/0) | ![](https://geps.dev/progress/0) | ![](https://geps.dev/progress/0) |
 
 ## Como baixar o repositório
 Abra uma pasta no seu computador no terminal e execute os seguintes comandos:
@@ -27,5 +35,7 @@ O projeto terá duas branchs principais, a *main* e a *develop*. Antes de fazer 
 
 ## Links importantes
 - [Documentação](/documentacao)
-
-
+- [Mecânica](/mecanica)
+- [Eletrônica](/eletronica)
+- [Controle](/controle)
+- [Lógica de missão](/logica_de_missao)
