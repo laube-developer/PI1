@@ -24,6 +24,6 @@ O projeto terá duas branchs principais, a *main* e a *develop*. Antes de fazer 
     git push origin develop
 
 ## Links importantes
-- Documentação: <<!nav>>/documentacao<<!/nav>>
+- [Documentação](/documentacao)
 
 
