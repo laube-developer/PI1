@@ -1,6 +1,8 @@
 # Projeto Integrador de Engenharia 1
 Repositório para o projeto da disciplina Projeto Integrador de Engenharia 1
 
+![Carrinho do ovo](/banner.png "Carrinho do ovo")
+
 ## Como baixar o repositório
 Abra uma pasta no seu computador no terminal e execute os seguintes comandos:
 
