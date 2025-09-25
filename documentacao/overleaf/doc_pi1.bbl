@@ -1,0 +1,25 @@
+\providecommand{\abntreprintinfo}[1]{%
+ \citeonline{#1}}
+\setlength{\labelsep}{0pt}\begin{thebibliography}{}
+\providecommand{\abntrefinfo}[3]{}
+\providecommand{\abntbstabout}[1]{}
+\abntbstabout{v-1.9.7 }
+
+\bibitem[{F\'abio Souza} 2016]{esquematico}
+\abntrefinfo{{F\'abio Souza}}{{F\'abio Souza}}{2016}
+{{F\'abio Souza}. \emph{Aprenda a interpretar um diagrama esquemático}. 2016.
+  \url{https://www.embarcados.com.br/interpretar-um-diagrama-esquematico/}.
+\textit{Online}, acessado em 27 de janeiro de 2021.}
+
+\bibitem[Gibilisco 2014]{block_n_schematic}
+\abntrefinfo{Gibilisco}{GIBILISCO}{2014}
+{GIBILISCO, S. Beginner´s guide to reading schematics.
+McGraw-Hill Education, 2014.}
+
+\bibitem[{Wikipedia contributors} 2020]{blockdiagram}
+\abntrefinfo{{Wikipedia contributors}}{{Wikipedia contributors}}{2020}
+{{Wikipedia contributors}. \emph{Block diagram --- {Wikipedia}{,} The Free
+  Encyclopedia}. 2020. \url{https://en.wikipedia.org/wiki/Block_diagram}.
+\textit{Online}, acessado em 27 de janeiro de 2021.}
+
+\end{thebibliography}

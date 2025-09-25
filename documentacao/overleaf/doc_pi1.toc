@@ -1,0 +1,77 @@
+\changetocdepth {4}
+\babel@toc {brazil}{}\relax 
+\setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
+\setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
+\setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
+\setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
+\setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\contentsline {chapter}{\chapternumberline {1}\MakeTextUppercase []{Introdução}}{10}{chapter.1}%
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\contentsline {chapter}{\chapternumberline {2}\MakeTextUppercase []{Termo de Abertura do Projeto}}{11}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Dados do projeto}{11}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Objetivos}{11}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Mercado-alvo}{12}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Requisitos}{12}{section.2.4}%
+\contentsline {section}{\numberline {2.5}Justificativa}{12}{section.2.5}%
+\contentsline {section}{\numberline {2.6}Indicadores}{12}{section.2.6}%
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\contentsline {chapter}{\chapternumberline {3}\MakeTextUppercase []{Equipe de Trabalho}}{13}{chapter.3}%
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\contentsline {chapter}{\chapternumberline {4}\MakeTextUppercase []{Projeto Conceitual do Produto}}{15}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Características gerais}{15}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Estrutura}{15}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Descrição de \textit {hardware}}{15}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Análise de consumo energético}{16}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Descrição de \textit {software}}{17}{section.4.5}%
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\contentsline {chapter}{\chapternumberline {5}\MakeTextUppercase []{Orçamento}}{19}{chapter.5}%
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\contentsline {chapter}{\chapternumberline {6}\MakeTextUppercase []{Cronograma}}{21}{chapter.6}%
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\contentsline {chapter}{\chapternumberline {7}\MakeTextUppercase []{Resultados Experimentais}}{22}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Características Gerais}{22}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Experimentos da estrutura}{22}{section.7.2}%
+\contentsline {section}{\numberline {7.3}Experimentos de \textit {hardware}}{22}{section.7.3}%
+\contentsline {section}{\numberline {7.4}Experimentos de consumo energético}{22}{section.7.4}%
+\contentsline {section}{\numberline {7.5}Experimentos de \textit {software}}{22}{section.7.5}%
+\contentsline {section}{\numberline {7.6}Experimentos de integração}{23}{section.7.6}%
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\contentsline {chapter}{\chapternumberline {8}\MakeTextUppercase []{Lições Aprendidas}}{24}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Análise SWOT}{24}{section.8.1}%
+\contentsline {section}{\numberline {8.2}Planejado x realizado}{24}{section.8.2}%
+\contentsline {subsection}{\numberline {8.2.1}Objetivos}{24}{subsection.8.2.1}%
+\contentsline {subsection}{\numberline {8.2.2}Prazos}{25}{subsection.8.2.2}%
+\contentsline {subsection}{\numberline {8.2.3}Orçamento}{25}{subsection.8.2.3}%
+\contentsline {subsection}{\numberline {8.2.4}Escopo}{25}{subsection.8.2.4}%
+\contentsline {section}{\numberline {8.3}Projeto}{25}{section.8.3}%
+\contentsline {subsection}{\numberline {8.3.1}Pontos fortes}{25}{subsection.8.3.1}%
+\contentsline {subsection}{\numberline {8.3.2}Pontos fracos}{25}{subsection.8.3.2}%
+\contentsline {section}{\numberline {8.4}Recomendações para projetos futuros}{25}{section.8.4}%
+\contentsline {section}{\numberline {8.5}Questões em aberto}{26}{section.8.5}%
+\contentsline {section}{\numberline {8.6}Desempenho dos fornecedores}{26}{section.8.6}%
+\contentsline {subsection}{\numberline {8.6.1}Fornecedores com desempenho acima do esperado}{26}{subsection.8.6.1}%
+\contentsline {subsection}{\numberline {8.6.2}Fornecedores com desempenho conforme esperado}{26}{subsection.8.6.2}%
+\contentsline {subsection}{\numberline {8.6.3}Fornecedores com desempenho abaixo do esperado}{26}{subsection.8.6.3}%
+\vspace {\cftbeforechapterskip }
+\setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
+\contentsline {chapter}{\MakeTextUppercase []{Refer\^encias}}{27}{section*.12}%
+\renewcommand *{\cftappendixname }{AP\^ENDICE \space }
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
+\cftinsert {A}
+\contentsline {appendix}{\chapternumberline {A}\MakeTextUppercase []{Primeiro Apêndice}}{28}{appendix.A}%
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
+\cftinsert {A}
+\contentsline {appendix}{\chapternumberline {B}\MakeTextUppercase []{Segundo Apêndice}}{29}{appendix.B}%
+\cftinsert {AAA}
+\renewcommand *{\cftappendixname }{ANEXO \space }
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
+\cftinsert {A}
+\contentsline {appendix}{\chapternumberline {A}\MakeTextUppercase []{Primeiro Anexo}}{30}{appendix.anexochapback.1}%
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
+\cftinsert {A}
+\contentsline {appendix}{\chapternumberline {B}\MakeTextUppercase []{Segundo Anexo}}{31}{appendix.anexochapback.2}%
