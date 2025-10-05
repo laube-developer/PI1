@@ -55,15 +55,15 @@
 
 \begin{itemize}
     \item \textcolor{green}{ \textbf{Diagrama BPMN para entender o \textit{software} proposto:} deve deixar claro os principais atores do sistema, suas atividades (de negócios), insumos e resultados.}
-    \item \textcolor{red}{\textbf{\textit{Backlog} funcional do \textit{software}:}}
+    \item \textcolor{green}{\textbf{\textit{Backlog} funcional do \textit{software}:}}
     \begin{itemize}
-        \item \textcolor{red}{ Escrito no formato de histórias de usuário ou casos de uso (decisão da equipe);}
-        \item \textcolor{red}{ Ao declarar o \textit{backlog} de requisitos funcionais, usar a  classificação de MoSCoW (\textit{Must have}, \textit{Should have} e \textit{Could have}),  para um melhor entendimento do próprio \textit{backlog}.}
+        \item \textcolor{green}{ Escrito no formato de histórias de usuário ou casos de uso (decisão da equipe);}
+        \item \textcolor{green}{ Ao declarar o \textit{backlog} de requisitos funcionais, usar a  classificação de MoSCoW (\textit{Must have}, \textit{Should have} e \textit{Could have}),  para um melhor entendimento do próprio \textit{backlog}.}
     \end{itemize}
-    \item \textcolor{red}{\textbf{ \textit{Backlog} não-funcional do \textit{software}:}}
+    \item \textcolor{green}{\textbf{ \textit{Backlog} não-funcional do \textit{software}:}}
     \begin{itemize}
-        \item \textcolor{red}{ Descrever os requisitos não-funcionais de forma objetiva;}
-        \item \textcolor{red}{ Mais facilmente, mais rapidamente, são descrições subjetivas não-válidas. Um exemplo de requisito não-funcional de desempenho: ``a página deve carregar em até 5s quando em conexão 4G''. }
+        \item \textcolor{green}{ Descrever os requisitos não-funcionais de forma objetiva;}
+        \item \textcolor{green}{ Mais facilmente, mais rapidamente, são descrições subjetivas não-válidas. Um exemplo de requisito não-funcional de desempenho: ``a página deve carregar em até 5s quando em conexão 4G''. }
     \end{itemize}
     \item \textcolor{red}{ \textbf{Diagrama de casos de uso,} contendo os atores do sistema, os requisitos com os quais eles interagem e os tipos de relacionamentos entre requisitos realizados por um mesmo ator (ex.: \textit{include}, \textit{extend}). Obs.: este é um diagrama sobre requisitos funcionais.}
     \item \textcolor{red}{ \textbf{Descrição da arquitetura da solução de \textit{software} proposta:}}
@@ -82,17 +82,17 @@
     \item \textcolor{red}{ \textbf{Análise de dados:} as variáveis definidas nos requisitos do projeto em abordagem numérica e gráfica.}
     \item \textcolor{red}{ \textbf{Diagrama de estados} esclarecendo os estados assumidos pelo \textit{software} e os eventos que causam as mudanças de estado do \textit{software}.}
     \item \textcolor{red}{ \textbf{Protótipo funcional do \textit{software}, navegável.}}
-    \item \textcolor{red}{\textbf{ Roteiro de testes funcionais:} }
+    \item \textcolor{green}{\textbf{ Roteiro de testes funcionais:} }
     \begin{itemize}
-        \item \textcolor{red}{Código do caso de teste;}
-        \item \textcolor{red}{Nome do caso de teste;}
-        \item \textcolor{red}{Tipo do caso de teste (unitário, integrado ou sistema);}
-        \item \textcolor{red}{ Objetivo do caso de teste;}
-        \item \textcolor{red}{ Pré-condições do sistema para o teste ser realizado;}
-        \item \textcolor{red}{ Descrição dos procedimentos a serem executados para o teste;}
-        \item \textcolor{red}{ Resultado esperado para o teste ser aprovado (pós-condição após realizado o teste);}
-        \item \textcolor{red}{ Especificação do reparo a ser executado (caso o teste não seja aprovado);}
-        \item \textcolor{red}{ Resultado após reparo (o caso do teste ser necessário de ser repetido após reparo).}
+        \item \textcolor{green}{Código do caso de teste;}
+        \item \textcolor{green}{Nome do caso de teste;}
+        \item \textcolor{green}{Tipo do caso de teste (unitário, integrado ou sistema);}
+        \item \textcolor{green}{ Objetivo do caso de teste;}
+        \item \textcolor{green}{ Pré-condições do sistema para o teste ser realizado;}
+        \item \textcolor{green}{ Descrição dos procedimentos a serem executados para o teste;}
+        \item \textcolor{green}{ Resultado esperado para o teste ser aprovado (pós-condição após realizado o teste);}
+        \item \textcolor{green}{ Especificação do reparo a ser executado (caso o teste não seja aprovado);}
+        \item \textcolor{green}{ Resultado após reparo (o caso do teste ser necessário de ser repetido após reparo).}
     \end{itemize}
 \end{itemize}
 
@@ -129,6 +129,493 @@
     \caption{Backlog não funcional com os requisitos não funcionais}
     \label{fig:backlog_nao_funcional}
 \end{figure}
+
+\clearpage
+
+\subsection{Roteiro de testes funcionais}
+
+% ==========================================
+% CT-01
+% ==========================================
+\begin{table}[H]
+\centering
+\begin{tabular}{|p{0.95\textwidth}|}
+\hline
+\textbf{CT-01 – Inserir comando via interface} \\ \hline
+\textbf{Tipo:} Sistema \\ \hline
+\textbf{Objetivo:} Verificar se o usuário consegue adicionar um comando de movimento pelo sistema gráfico. \\ \hline
+\textbf{Pré-condições:} ASP32 conectado; interface web aberta. \\ \hline
+\textbf{Procedimentos:} Abrir o sistema. Inserir um comando, como “andar 10 cm”. Clicar em “adicionar comando”. \\ \hline
+\textbf{Resultado esperado:} O comando é salvo no banco e exibido na lista de comandos. \\ \hline
+\textbf{Especificação do reparo:} Corrigir integração entre front-end e back-end. \\ \hline
+\textbf{Resultado após reparo:} O comando é exibido corretamente após a correção. \\ \hline
+\end{tabular}
+\caption{CT-01 – Inserir comando via interface}
+\end{table}
+
+% ------------------------------------------
+
+% ==========================================
+% CT-02
+% ==========================================
+\begin{table}[H]
+\centering
+\begin{tabular}{|p{0.95\textwidth}|}
+\hline
+\textbf{CT-02 – Envio de comandos ao robô} \\ \hline
+\textbf{Tipo:} Integrado \\ \hline
+\textbf{Objetivo:} Validar o envio dos comandos armazenados ao robô via comunicação sem fio. \\ \hline
+\textbf{Pré-condições:} Banco de dados contém comandos; robô ligado. \\ \hline
+\textbf{Procedimentos:} Executar a sequência de comandos cadastrados. Verificar se o robô os recebe corretamente. \\ \hline
+\textbf{Resultado esperado:} O robô inicia o movimento conforme as instruções enviadas. \\ \hline
+\textbf{Especificação do reparo:} Verificar módulo de comunicação (Wi-Fi/Bluetooth). \\ \hline
+\textbf{Resultado após reparo:} O robô executa os comandos após a correção. \\ \hline
+\end{tabular}
+\caption{CT-02 – Envio de comandos ao robô}
+\end{table}
+
+% ------------------------------------------
+
+% ==========================================
+% CT-03
+% ==========================================
+\begin{table}[H]
+\centering
+\begin{tabular}{|p{0.95\textwidth}|}
+\hline
+\textbf{CT-03 – Leitura dos sensores} \\ \hline
+\textbf{Tipo:} Unitário \\ \hline
+\textbf{Objetivo:} Verificar se o código em Python lê corretamente os dados dos sensores. \\ \hline
+\textbf{Pré-condições:} Sensores conectados ao ASP32. \\ \hline
+\textbf{Procedimentos:} Rodar o script de leitura. Observar a saída no terminal. \\ \hline
+\textbf{Resultado esperado:} Os dados dos sensores são exibidos em tempo real. \\ \hline
+\textbf{Especificação do reparo:} Revisar pinos GPIO e lógica de leitura. \\ \hline
+\textbf{Resultado após reparo:} Os sensores funcionam conforme esperado. \\ \hline
+\end{tabular}
+\caption{CT-03 – Leitura dos sensores}
+\end{table}
+
+% ------------------------------------------
+
+% ==========================================
+% CT-04
+% ==========================================
+\begin{table}[H]
+\centering
+\begin{tabular}{|p{0.95\textwidth}|}
+\hline
+\textbf{CT-04 – Controle PID} \\ \hline
+\textbf{Tipo:} Integrado \\ \hline
+\textbf{Objetivo:} Testar a estabilidade do controle PID na movimentação do robô. \\ \hline
+\textbf{Pré-condições:} Sensores calibrados; código do PID ativo. \\ \hline
+\textbf{Procedimentos:} Rodar a rotina PID. Registrar posições e observar estabilidade. \\ \hline
+\textbf{Resultado esperado:} Movimentos suaves e estáveis, sem oscilações bruscas. \\ \hline
+\textbf{Especificação do reparo:} Ajustar parâmetros Kp, Ki e Kd. \\ \hline
+\textbf{Resultado após reparo:} Movimentos estabilizados. \\ \hline
+\end{tabular}
+\caption{CT-04 – Controle PID}
+\end{table}
+
+% ------------------------------------------
+
+% ==========================================
+% CT-05
+% ==========================================
+\begin{table}[H]
+\centering
+\begin{tabular}{|p{0.95\textwidth}|}
+\hline
+\textbf{CT-05 – Registro de posições no banco} \\ \hline
+\textbf{Tipo:} Sistema \\ \hline
+\textbf{Objetivo:} Garantir que as posições e tempos sejam persistidos no banco de dados. \\ \hline
+\textbf{Pré-condições:} Banco criado; API em execução. \\ \hline
+\textbf{Procedimentos:} Executar um trajeto completo. Consultar os registros no banco. \\ \hline
+\textbf{Resultado esperado:} Posições e tempos gravados com timestamps coerentes. \\ \hline
+\textbf{Especificação do reparo:} Corrigir a API de persistência. \\ \hline
+\textbf{Resultado após reparo:} Dados registrados corretamente. \\ \hline
+\end{tabular}
+\caption{CT-05 – Registro de posições no banco}
+\end{table}
+
+% ------------------------------------------
+
+% ==========================================
+% CT-06
+% ==========================================
+\begin{table}[H]
+\centering
+\begin{tabular}{|p{0.95\textwidth}|}
+\hline
+\textbf{CT-06 – Exibição do gráfico posição x tempo} \\ \hline
+\textbf{Tipo:} Sistema \\ \hline
+\textbf{Objetivo:} Validar a exibição visual da trajetória percorrida pelo robô. \\ \hline
+\textbf{Pré-condições:} Dados de posição disponíveis no banco. \\ \hline
+\textbf{Procedimentos:} Abrir o dashboard. Clicar em “visualizar gráfico”. \\ \hline
+\textbf{Resultado esperado:} Gráfico renderizado com eixos coerentes. \\ \hline
+\textbf{Especificação do reparo:} Revisar consulta SQL ou biblioteca de gráficos. \\ \hline
+\textbf{Resultado após reparo:} Gráfico exibido corretamente. \\ \hline
+\end{tabular}
+\caption{CT-06 – Exibição do gráfico posição x tempo}
+\end{table}
+
+% ------------------------------------------
+
+% ==========================================
+% CT-07
+% ==========================================
+\begin{table}[H]
+\centering
+\begin{tabular}{|p{0.95\textwidth}|}
+\hline
+\textbf{CT-07 – Detecção de fim de rota} \\ \hline
+\textbf{Tipo:} Integrado \\ \hline
+\textbf{Objetivo:} Verificar se o robô identifica quando chegou ao destino final. \\ \hline
+\textbf{Pré-condições:} Rota programada. \\ \hline
+\textbf{Procedimentos:} Executar o trajeto completo. \\ \hline
+\textbf{Resultado esperado:} Robô para e sinaliza término da rota. \\ \hline
+\textbf{Especificação do reparo:} Revisar condição de parada. \\ \hline
+\textbf{Resultado após reparo:} Robô finaliza corretamente o trajeto. \\ \hline
+\end{tabular}
+\caption{CT-07 – Detecção de fim de rota}
+\end{table}
+
+% ------------------------------------------
+
+% ==========================================
+% CT-08
+% ==========================================
+\begin{table}[H]
+\centering
+\begin{tabular}{|p{0.95\textwidth}|}
+\hline
+\textbf{CT-08 – Entrega automática do ovo} \\ \hline
+\textbf{Tipo:} Sistema \\ \hline
+\textbf{Objetivo:} Garantir que o carrinho deposite o ovo na caixa final sem danos. \\ \hline
+\textbf{Pré-condições:} Objeto posicionado; rota completa. \\ \hline
+\textbf{Procedimentos:} Executar a rota com o ovo no suporte. \\ \hline
+\textbf{Resultado esperado:} Ovo entregue sem danos à caixa final. \\ \hline
+\textbf{Especificação do reparo:} Ajustar o servo de liberação. \\ \hline
+\textbf{Resultado após reparo:} Entrega concluída com sucesso. \\ \hline
+\end{tabular}
+\caption{CT-08 – Entrega automática do ovo}
+\end{table}
+
+% ------------------------------------------
+
+% ==========================================
+% CT-09
+% ==========================================
+\begin{table}[H]
+\centering
+\begin{tabular}{|p{0.95\textwidth}|}
+\hline
+\textbf{CT-09 – Funcionamento das rodas motrizes} \\ \hline
+\textbf{Tipo:} Unitário \\ \hline
+\textbf{Objetivo:} Verificar se ambas as rodas respondem corretamente aos comandos de movimento. \\ \hline
+\textbf{Pré-condições:} ASP32 ligado e motores conectados. \\ \hline
+\textbf{Procedimentos:} Enviar comando “andar 10 cm”. Observar movimento das rodas. \\ \hline
+\textbf{Resultado esperado:} Ambas as rodas giram de forma sincronizada e consistente. \\ \hline
+\textbf{Especificação do reparo:} Revisar conexões dos motores ou código de controle PWM. \\ \hline
+\textbf{Resultado após reparo:} Rodas giram corretamente. \\ \hline
+\end{tabular}
+\caption{CT-09 – Funcionamento das rodas motrizes}
+\end{table}
+
+% ------------------------------------------
+
+% ==========================================
+% CT-10
+% ==========================================
+\begin{table}[H]
+\centering
+\begin{tabular}{|p{0.95\textwidth}|}
+\hline
+\textbf{CT-10 – Direção correta do movimento} \\ \hline
+\textbf{Tipo:} Integrado \\ \hline
+\textbf{Objetivo:} Validar se o robô se desloca na direção esperada conforme os comandos. \\ \hline
+\textbf{Pré-condições:} Área livre e calibrada. \\ \hline
+\textbf{Procedimentos:} Enviar comandos de “frente”, “trás”, “esquerda” e “direita”. Observar deslocamento físico. \\ \hline
+\textbf{Resultado esperado:} Movimentos ocorrem nas direções corretas. \\ \hline
+\textbf{Especificação do reparo:} Corrigir inversão de polaridade nos motores. \\ \hline
+\textbf{Resultado após reparo:} Direções corretas após ajuste. \\ \hline
+\end{tabular}
+\caption{CT-10 – Direção correta do movimento}
+\end{table}
+
+% ------------------------------------------
+
+% ==========================================
+% CT-11
+% ==========================================
+\begin{table}[H]
+\centering
+\begin{tabular}{|p{0.95\textwidth}|}
+\hline
+\textbf{CT-11 – Leitura dos encoders} \\ \hline
+\textbf{Tipo:} Unitário \\ \hline
+\textbf{Objetivo:} Confirmar se os encoders registram corretamente a rotação das rodas. \\ \hline
+\textbf{Pré-condições:} Encoders conectados aos eixos. \\ \hline
+\textbf{Procedimentos:} Girar a roda manualmente. Ler valores no terminal Python. \\ \hline
+\textbf{Resultado esperado:} Valores variam proporcionalmente à rotação. \\ \hline
+\textbf{Especificação do reparo:} Revisar conexões dos pinos GPIO. \\ \hline
+\textbf{Resultado após reparo:} Leituras coerentes com o movimento. \\ \hline
+\end{tabular}
+\caption{CT-11 – Leitura dos encoders}
+\end{table}
+
+% ------------------------------------------
+
+% ==========================================
+% CT-12
+% ==========================================
+\begin{table}[H]
+\centering
+\begin{tabular}{|p{0.95\textwidth}|}
+\hline
+\textbf{CT-12 – Precisão dos encoders} \\ \hline
+\textbf{Tipo:} Integrado \\ \hline
+\textbf{Objetivo:} Validar se a distância percorrida calculada pelos encoders corresponde à distância real. \\ \hline
+\textbf{Pré-condições:} Encoders calibrados. \\ \hline
+\textbf{Procedimentos:} Enviar comando “andar 20 cm”. Medir a distância física percorrida. \\ \hline
+\textbf{Resultado esperado:} Diferença máxima menor ou igual a 5\%. \\ \hline
+\textbf{Especificação do reparo:} Ajustar fator de conversão de pulsos para centímetros. \\ \hline
+\textbf{Resultado após reparo:} Distância calculada com precisão. \\ \hline
+\end{tabular}
+\caption{CT-12 – Precisão dos encoders}
+\end{table}
+
+% ------------------------------------------
+
+% ==========================================
+% CT-13
+% ==========================================
+\begin{table}[H]
+\centering
+\begin{tabular}{|p{0.95\textwidth}|}
+\hline
+\textbf{CT-13 – Leitura do giroscópio} \\ \hline
+\textbf{Tipo:} Unitário \\ \hline
+\textbf{Objetivo:} Verificar se o giroscópio retorna valores coerentes de ângulo e inclinação. \\ \hline
+\textbf{Pré-condições:} Giroscópio conectado e calibrado. \\ \hline
+\textbf{Procedimentos:} Iniciar script de leitura. Girar o robô lentamente. \\ \hline
+\textbf{Resultado esperado:} Valores mudam suavemente conforme o giro. \\ \hline
+\textbf{Especificação do reparo:} Revisar endereçamento I2C. \\ \hline
+\textbf{Resultado após reparo:} Leituras coerentes e contínuas. \\ \hline
+\end{tabular}
+\caption{CT-13 – Leitura do giroscópio}
+\end{table}
+
+% ------------------------------------------
+
+% ==========================================
+% CT-14
+% ==========================================
+\begin{table}[H]
+\centering
+\begin{tabular}{|p{0.95\textwidth}|}
+\hline
+\textbf{CT-14 – Estabilização de trajetória com giroscópio} \\ \hline
+\textbf{Tipo:} Integrado \\ \hline
+\textbf{Objetivo:} Validar se o controle do robô utiliza o giroscópio para corrigir desvios. \\ \hline
+\textbf{Pré-condições:} Giroscópio calibrado. \\ \hline
+\textbf{Procedimentos:} Executar trajeto reto de 1 metro. Observar se há desvio lateral. \\ \hline
+\textbf{Resultado esperado:} Robô mantém trajetória praticamente reta. \\ \hline
+\textbf{Especificação do reparo:} Ajustar algoritmo de correção angular. \\ \hline
+\textbf{Resultado após reparo:} Desvio reduzido significativamente. \\ \hline
+\end{tabular}
+\caption{CT-14 – Estabilização de trajetória com giroscópio}
+\end{table}
+
+% ------------------------------------------
+
+% ==========================================
+% CT-15
+% ==========================================
+\begin{table}[H]
+\centering
+\begin{tabular}{|p{0.95\textwidth}|}
+\hline
+\textbf{CT-15 – Comunicação entre sensores e ASP32} \\ \hline
+\textbf{Tipo:} Integrado \\ \hline
+\textbf{Objetivo:} Garantir que todos os sensores se comuniquem corretamente com o microcontrolador. \\ \hline
+\textbf{Pré-condições:} Todos os sensores conectados e ativos. \\ \hline
+\textbf{Procedimentos:} Rodar script principal. Observar log de leituras no terminal. \\ \hline
+\textbf{Resultado esperado:} Nenhum sensor retorna erro; dados fluem normalmente. \\ \hline
+\textbf{Especificação do reparo:} Revisar alimentação elétrica e barramentos I2C/GPIO. \\ \hline
+\textbf{Resultado após reparo:} Comunicação estável. \\ \hline
+\end{tabular}
+\caption{CT-15 – Comunicação entre sensores e ASP32}
+\end{table}
+
+% ------------------------------------------
+
+% ==========================================
+% CT-16
+% ==========================================
+\begin{table}[H]
+\centering
+\begin{tabular}{|p{0.95\textwidth}|}
+\hline
+\textbf{CT-16 – Login na Interface} \\ \hline
+\textbf{Tipo:} Sistema \\ \hline
+\textbf{Objetivo:} Validar o acesso do usuário ao sistema após autenticação. \\ \hline
+\textbf{Pré-condições:} Servidor web ativo; Usuário/senha válidos cadastrados. \\ \hline
+\textbf{Procedimentos:} Acessar a URL do sistema. Inserir o nome de usuário e senha válidos. Clicar em "Entrar". \\ \hline
+\textbf{Resultado esperado:} O usuário é redirecionado para a tela principal (dashboard) do sistema, exibindo o status de autenticado. \\ \hline
+\textbf{Especificação do reparo:} Corrigir a validação de credenciais no back-end e a lógica de redirecionamento. \\ \hline
+\textbf{Resultado após reparo:} O login é efetuado com sucesso. \\ \hline
+\end{tabular}
+\caption{CT-16 – Login na Interface}
+\end{table}
+
+% ------------------------------------------
+
+% ==========================================
+% CT-17
+% ==========================================
+\begin{table}[H]
+\centering
+\begin{tabular}{|p{0.95\textwidth}|}
+\hline
+\textbf{CT-17 – Logout e Encerramento da Sessão} \\ \hline
+\textbf{Tipo:} Sistema \\ \hline
+\textbf{Objetivo:} Validar o encerramento seguro da sessão do usuário. \\ \hline
+\textbf{Pré-condições:} Usuário logado (sessão ativa). \\ \hline
+\textbf{Procedimentos:} Na tela principal, clicar no botão "Sair" ou "Logout". Tentar acessar a tela principal novamente sem efetuar o login. \\ \hline
+\textbf{Resultado esperado:} O usuário é redirecionado para a tela de login; O acesso a páginas restritas é negado. \\ \hline
+\textbf{Especificação do reparo:} Ajustar o encerramento da sessão e a verificação de token de acesso. \\ \hline
+\textbf{Resultado após reparo:} O logout é concluído com sucesso. \\ \hline
+\end{tabular}
+\caption{CT-17 – Logout e Encerramento da Sessão}
+\end{table}
+
+% ------------------------------------------
+
+% ==========================================
+% CT-18
+% ==========================================
+\begin{table}[H]
+\centering
+\begin{tabular}{|p{0.95\textwidth}|}
+\hline
+\textbf{CT-18 – Inserção de Comandos de Virar e Depositar} \\ \hline
+\textbf{Tipo:} Sistema \\ \hline
+\textbf{Objetivo:} Garantir que todos os tipos de comandos (andar, virar, depositar) possam ser inseridos e persistidos. \\ \hline
+\textbf{Pré-condições:} Interface web aberta; Usuário logado. \\ \hline
+\textbf{Procedimentos:} Inserir o comando "virar esquerda 90º". Clicar em "Adicionar comando". Inserir o comando "depositar objeto". Clicar em "Adicionar comando". \\ \hline
+\textbf{Resultado esperado:} Ambos os comandos (virar e depositar) são salvos no banco e exibidos corretamente na lista de comandos. \\ \hline
+\textbf{Especificação do reparo:} Corrigir o tratamento de diferentes tipos de comandos no front-end e na API de inserção. \\ \hline
+\textbf{Resultado após reparo:} Todos os tipos de comandos são adicionados à fila. \\ \hline
+\end{tabular}
+\caption{CT-18 – Inserção de Comandos de Virar e Depositar}
+\end{table}
+
+% ------------------------------------------
+
+% ==========================================
+% CT-19
+% ==========================================
+\begin{table}[H]
+\centering
+\begin{tabular}{|p{0.95\textwidth}|}
+\hline
+\textbf{CT-19 – Remoção de Comando da Fila} \\ \hline
+\textbf{Tipo:} Sistema \\ \hline
+\textbf{Objetivo:} Verificar se o usuário consegue remover um comando da fila. \\ \hline
+\textbf{Pré-condições:} Pelo menos 3 comandos inseridos na fila. \\ \hline
+\textbf{Procedimentos:} Selecionar um comando específico (ex: o segundo da lista). Clicar no botão "Remover comando" ou ícone de exclusão. Consultar a lista no front-end e no banco de dados. \\ \hline
+\textbf{Resultado esperado:} O comando selecionado é removido da lista exibida e deletado do banco de dados. \\ \hline
+\textbf{Especificação do reparo:} Corrigir a lógica de exclusão no front-end e na API de remoção. \\ \hline
+\textbf{Resultado após reparo:} O comando é removido corretamente. \\ \hline
+\end{tabular}
+\caption{CT-19 – Remoção de Comando da Fila}
+\end{table}
+
+% ------------------------------------------
+
+% ==========================================
+% CT-20
+% ==========================================
+\begin{table}[H]
+\centering
+\begin{tabular}{|p{0.95\textwidth}|}
+\hline
+\textbf{CT-20 – Reordenação de Comandos (Drag and Drop)} \\ \hline
+\textbf{Tipo:} Sistema \\ \hline
+\textbf{Objetivo:} Verificar se é possível alterar a ordem de execução dos comandos. \\ \hline
+\textbf{Pré-condições:} Pelo menos 3 comandos inseridos na fila. \\ \hline
+\textbf{Procedimentos:} Clicar e arrastar um comando (ex: o último da fila) para a primeira posição. Soltar o comando. Verificar a lista na interface e confirmar a ordem no banco. \\ \hline
+\textbf{Resultado esperado:} A ordem da lista é atualizada na interface; A nova ordem é persistida no banco de dados para execução. \\ \hline
+\textbf{Especificação do reparo:} Implementar ou corrigir a lógica de drag and drop e a API de atualização de ordem. \\ \hline
+\textbf{Resultado após reparo:} A ordem dos comandos é alterada e salva. \\ \hline
+\end{tabular}
+\caption{CT-20 – Reordenação de Comandos (Drag and Drop)}
+\end{table}
+
+% ------------------------------------------
+
+% ==========================================
+% CT-21
+% ==========================================
+\begin{table}[H]
+\centering
+\begin{tabular}{|p{0.95\textwidth}|}
+\hline
+\textbf{CT-21 – Conexão com o Robô} \\ \hline
+\textbf{Tipo:} Integrado \\ \hline
+\textbf{Objetivo:} Verificar se o sistema estabelece comunicação com o robô e exibe o status. \\ \hline
+\textbf{Pré-condições:} ASP32 ligado; Robô ligado e no alcance (Wi-Fi/Bluetooth). \\ \hline
+\textbf{Procedimentos:} Acessar a interface logada. Clicar no botão "Conectar ao Robô". \\ \hline
+\textbf{Resultado esperado:} A interface exibe o status "Conectado"; A comunicação sem fio é estabelecida com sucesso. \\ \hline
+\textbf{Especificação do reparo:} Revisar o módulo de conexão inicial (API/Protocolo) e a atualização do status no front-end. \\ \hline
+\textbf{Resultado após reparo:} A conexão é estabelecida e o status é exibido corretamente. \\ \hline
+\end{tabular}
+\caption{CT-21 – Conexão com o Robô}
+\end{table}
+
+% ------------------------------------------
+
+% ==========================================
+% CT-22
+% ==========================================
+\begin{table}[H]
+\centering
+\begin{tabular}{|p{0.95\textwidth}|}
+\hline
+\textbf{CT-22 – Desconexão do Robô} \\ \hline
+\textbf{Tipo:} Integrado \\ \hline
+\textbf{Objetivo:} Garantir que a comunicação com o robô possa ser encerrada pelo usuário. \\ \hline
+\textbf{Pré-condições:} Conexão com o robô estabelecida (CT-21 aprovado). \\ \hline
+\textbf{Procedimentos:} Na interface, clicar no botão "Desconectar do Robô". \\ \hline
+\textbf{Resultado esperado:} O status da interface muda para "Desconectado"; A comunicação com o robô é encerrada. \\ \hline
+\textbf{Especificação do reparo:} Corrigir a função de encerramento de comunicação. \\ \hline
+\textbf{Resultado após reparo:} A desconexão é concluída com sucesso. \\ \hline
+\end{tabular}
+\caption{CT-22 – Desconexão do Robô}
+\end{table}
+
+% ------------------------------------------
+
+% ==========================================
+% CT-23
+% ==========================================
+\begin{table}[H]
+\centering
+\begin{tabular}{|p{0.95\textwidth}|}
+\hline
+\textbf{CT-23 – Parada de Emergência} \\ \hline
+\textbf{Tipo:} Integrado \\ \hline
+\textbf{Objetivo:} Validar a interrupção imediata dos movimentos do robô em caso de emergência. \\ \hline
+\textbf{Pré-condições:} Robô em movimento (executando um trajeto longo). \\ \hline
+\textbf{Procedimentos:} Na interface web, clicar no botão "Parada de Emergência". Verificar o comportamento do robô. \\ \hline
+\textbf{Resultado esperado:} O robô para imediatamente (os motores devem ser desligados); A execução da sequência de comandos é abortada. \\ \hline
+\textbf{Especificação do reparo:} Implementar ou corrigir o endpoint de emergência no back-end e o código de interrupção dos motores no ASP32. \\ \hline
+\textbf{Resultado após reparo:} O robô para instantaneamente ao comando. \\ \hline
+\end{tabular}
+\caption{CT-23 – Parada de Emergência}
+\end{table}
+
+
 
 
 % \textcolor{red}{Com relação ao \textit{software}, será necessário apresentar os seguintes itens: % pacotes de componentes de \textit{software}, suas funções e características, e explicar as decisões de projeto:
