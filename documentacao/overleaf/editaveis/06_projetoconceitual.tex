@@ -54,7 +54,7 @@
 \textcolor{red}{Itens fundamentais:}
 
 \begin{itemize}
-    \item \textcolor{red}{ \textbf{Diagrama BPMN para entender o \textit{software} proposto:} deve deixar claro os principais atores do sistema, suas atividades (de negócios), insumos e resultados.}
+    \item \textcolor{green}{ \textbf{Diagrama BPMN para entender o \textit{software} proposto:} deve deixar claro os principais atores do sistema, suas atividades (de negócios), insumos e resultados.}
     \item \textcolor{red}{\textbf{\textit{Backlog} funcional do \textit{software}:}}
     \begin{itemize}
         \item \textcolor{red}{ Escrito no formato de histórias de usuário ou casos de uso (decisão da equipe);}
@@ -71,10 +71,10 @@
         \item \textcolor{red}{ Propósito do \textit{software} (qual o seu papel no sistema);}
         \item \textcolor{red}{ Estilo arquitetural contendo:}
         \begin{itemize}
-            \item \textcolor{red}{ Padrão adotado: MVC, MVP, Microsserviços, Monolítico, etc (Justificar);}
-            \item \textcolor{red}{ Linguagens de programação: Java, Python, C\#, JavaScript, etc.}
-            \item \textcolor{red}{ \textit{Frameworks} e bibliotecas: Spring Boot, .NET Core, React, Angular, Django, etc.}
-            \item \textcolor{red}{ Banco de dados: Relacional (PostgreSQL, MySQL, etc) X NãoSQL (MongoDB,etc). }
+            \item Padrão adotado MVP \textcolor{red}{Justificar}
+            \item Linguagens de programação: Java, C/C++ .
+            \item \textcolor{red}{ bibliotecas: Arduino}
+            \item Banco de dados: Relacional MySQL 
         \end{itemize}
         \item \textcolor{red}{ Diagrama de alto nível: representação esquemática dos componentes da arquitetura, suas responsabilidades e comunicações, esclarecendo a composição do \textit{front-end} e do \textit{back-end}.}
     \end{itemize}
@@ -95,6 +95,40 @@
         \item \textcolor{red}{ Resultado após reparo (o caso do teste ser necessário de ser repetido após reparo).}
     \end{itemize}
 \end{itemize}
+
+\subsection{Diagrama BPMN}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=1\textwidth]{figuras/BPMN_carro_do_ovo.png}
+    \caption{Diagrama BPMN Carro do Ovo}
+    \label{fig:bpmn}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=1\textwidth]{figuras/BPMN_PID_controle.png}
+    \caption{Diagrama BPMN Controle PID e Controle do Robô}
+    \label{fig:bpmn_descricao}
+\end{figure}
+
+\subsection{Backlog Funcional}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{figuras/backlog_funcional.png}
+    \caption{Backlog funcional com as Histórias de Usuário}
+    \label{fig:backlog_funcional}
+\end{figure}
+
+\subsection{Backlog Não Funcional}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{figuras/backlog_nao_funcional.png}
+    \caption{Backlog não funcional com os requisitos não funcionais}
+    \label{fig:backlog_nao_funcional}
+\end{figure}
 
 
 % \textcolor{red}{Com relação ao \textit{software}, será necessário apresentar os seguintes itens: % pacotes de componentes de \textit{software}, suas funções e características, e explicar as decisões de projeto:
