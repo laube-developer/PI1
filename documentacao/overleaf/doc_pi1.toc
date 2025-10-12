@@ -36,7 +36,8 @@
 \contentsline {subsection}{\numberline {4.5.7}Análise de dados}{27}{subsection.4.5.7}%
 \contentsline {subsection}{\numberline {4.5.8}Diagrama de estados}{28}{subsection.4.5.8}%
 \contentsline {subsection}{\numberline {4.5.9}Protótipo funcional do \textit {software}, navegável.}{29}{subsection.4.5.9}%
-\contentsline {subsection}{\numberline {4.5.10}Roteiro de testes funcionais}{32}{subsection.4.5.10}%
+\contentsline {subsection}{\numberline {4.5.10}Descrição da arquitetura da solução de software}{31}{subsection.4.5.10}%
+\contentsline {subsection}{\numberline {4.5.11}Roteiro de testes funcionais}{32}{subsection.4.5.11}%
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
 \contentsline {chapter}{\chapternumberline {5}\MakeTextUppercase []{Orçamento}}{39}{chapter.5}%
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
