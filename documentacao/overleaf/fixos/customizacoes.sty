@@ -45,7 +45,7 @@
 
 \renewcommand{\imprimircapa}{%
   \begin{capa}%
-    \center
+    \begin{center}
 	\AddToShipoutPicture*{\BackgroundPic}
 
 %	\begin{huge}
@@ -74,8 +74,17 @@
     \textbf{{\large\imprimirdata}}
     
     \vspace*{1in}
+    \end{center}
   \end{capa}
 }
+
+\makeatletter
+% Força a justificação APÓS QUALQUER TÍTULO DE SEÇÃO OU SUBSEÇÃO
+\def\aftersection{\justifying} 
+\def\aftersubsection{\justifying}
+% Opcional: Se precisar para capítulos, embora não seja o foco:
+%\def\afterchaptertitle{\justifying}
+\makeatother
 
 % ---
 % FIM DAS CUSTOMIZACOES PARA A FACULDADE UNB GAMA
