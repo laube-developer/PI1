@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.10.12)  13 OCT 2025 16:25
+=======
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.9.24)  12 OCT 2025 19:58
+>>>>>>> documentacao
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -963,6 +967,78 @@ Overfull \hbox (1.7602pt too wide) in paragraph at lines 9--10
 \T1/lmr/m/n/12 bots Af-fect Every-day Cam-pus Life? An Ex-plo-ra-tory Pos-ting Bo-ard Analy-sis and Interview-
  []
 
+<<<<<<< HEAD
+=======
+
+
+[3]) (fixos/listasAutomaticas.tex (doc_pi1.lof)
+
+[4
+
+] (doc_pi1.lot)
+
+[5
+
+]) (editaveis/01_abreviaturas.tex
+
+[6
+
+
+{/home/rafael-laube/.miktex/texmfs/install/fonts/enc/dvips/lm/lm-mathit.enc}]) 
+(editaveis/01_simbolos.tex
+
+[7
+
+
+{/home/rafael-laube/.miktex/texmfs/install/fonts/enc/dvips/lm/lm-rm.enc}{/home/
+rafael-laube/.miktex/texmfs/install/fonts/enc/dvips/lm/lm-mathsy.enc}])
+(fixos/indiceAutomatico.tex (doc_pi1.toc
+LaTeX Font Info:    Font shape `T1/lmss/bx/it' in size <12> not available
+(Font)              Font shape `T1/lmss/bx/sl' tried instead on input line 24.
+LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <12> not available
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 38.
+
+
+[8
+
+])
+
+[9]) (editaveis/03_introducao.tex
+Overfull \hbox (31.58148pt too wide) in paragraph at lines 15--16
+\T1/lmr/m/n/12 produtos similares, baixo número de empresas concorrentes ou núm
+ero estimado de consumidores
+ []
+
+<figuras/fga.png, id=315, 1091.277pt x 128.6406pt>
+File: figuras/fga.png Graphic file (type png)
+<use figuras/fga.png>
+Package pdftex.def Info: figuras/fga.png  used on input line 25.
+(pdftex.def)             Requested size: 455.0pt x 53.6361pt.
+) (editaveis/04_termodeaberturadoprojeto.tex
+
+[10
+
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{figure.1.1}) 
+has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.1 \chapter
+            {Termo de Abertura do Projeto} <./figuras/fga.png>]
+Overfull \hbox (22.66017pt too wide) in paragraph at lines 25--25
+[]\T1/lmr/m/n/12 Deve ter um prazo determinado para sua finalização. 
+ []
+
+
+Overfull \hbox (8.02098pt too wide) in paragraph at lines 29--30
+[][]\T1/lmr/m/n/12 Pessoas, empresas, instituições etc. que usufruirão dos prod
+utos, serviços e resultados
+ []
+
+
+
+>>>>>>> documentacao
 [11
 
 
@@ -974,9 +1050,67 @@ Package pdftex.def Info: figuras/fga.png  used on input line 39.
 (pdftex.def)             Requested size: 455.0pt x 53.6361pt.
 ) (editaveis/04_termodeaberturadoprojeto.tex [12 <./figuras/fga.png>] [13
 
+<<<<<<< HEAD
 ] [14]) (editaveis/05_equipe.tex [15]
 Overfull \hbox (89.78333pt too wide) in paragraph at lines 59--94
  [][] 
+=======
+Package babel Info: 'brazil' activates 'portuges' shorthands.
+(babel)             Reported on input line 1.
+[12{/home/rafael-laube/.miktex/texmfs/install/fonts/enc/dvips/lm/lm-ts1.enc}]
+Overfull \hbox (89.78333pt too wide) in paragraph at lines 59--94
+ [][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+
+[13
+
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{table.3.1}) h
+as been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.99 \end{landscape}
+                    ]
+
+[14
+pdfTeX warning (ext4): destination with the same identifier (name{table.3.2}) h
+as been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.99 \end{landscape}
+                    ]
+
+[15
+pdfTeX warning (ext4): destination with the same identifier (name{table.3.3}) h
+as been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.99 \end{landscape}
+                    ]) (editaveis/06_projetoconceitual.tex
+LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <17.28> not available
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 15.
+<figuras/Exemplo-diagrama-de-blocos.png, id=352, 310.66063pt x 56.21pt>
+File: figuras/Exemplo-diagrama-de-blocos.png Graphic file (type png)
+<use figuras/Exemplo-diagrama-de-blocos.png>
+Package pdftex.def Info: figuras/Exemplo-diagrama-de-blocos.png  used on input 
+line 31.
+(pdftex.def)             Requested size: 227.5pt x 41.16331pt.
+<figuras/Esquematico.png, id=353, 514.17094pt x 231.11343pt>
+File: figuras/Esquematico.png Graphic file (type png)
+<use figuras/Esquematico.png>
+Package pdftex.def Info: figuras/Esquematico.png  used on input line 32.
+(pdftex.def)             Requested size: 227.5pt x 102.25798pt.
+
+Overfull \hbox (21.69817pt too wide) in paragraph at lines 39--40
+[][]\T1/lmr/m/n/12 Com relação ao consumo energético do produto desenvolvido, s
+erá necessário apresentar
+>>>>>>> documentacao
  []
 
 
@@ -989,6 +1123,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 pdfTeX warning (ext4): destination with the same identifier (name{table.3.1}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
+<<<<<<< HEAD
 l.99 \end{landscape}
                     ] [17
 pdfTeX warning (ext4): destination with the same identifier (name{table.3.2}) has been already used, duplicate ignored
@@ -1039,21 +1174,40 @@ LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 89
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) [22{C:/Users/tanny/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}]
 <figuras/BPMN_carro_do_ovo.png, id=397, 763.35187pt x 298.56544pt>
+=======
+l.50 \end{itemize}
+                   <./figuras/Exemplo-diagrama-de-blocos.png> <./figuras/Esquem
+atico.png>]
+<figuras/BPMN_carro_do_ovo.png, id=371, 763.35187pt x 298.56544pt>
+>>>>>>> documentacao
 File: figuras/BPMN_carro_do_ovo.png Graphic file (type png)
 <use figuras/BPMN_carro_do_ovo.png>
 Package pdftex.def Info: figuras/BPMN_carro_do_ovo.png  used on input line 198.
 (pdftex.def)             Requested size: 455.0pt x 177.96071pt.
+<<<<<<< HEAD
  [23]
 <figuras/BPMN_PID_controle.png, id=405, 817.10269pt x 415.5525pt>
+=======
+<figuras/BPMN_PID_controle.png, id=372, 817.10269pt x 415.5525pt>
+>>>>>>> documentacao
 File: figuras/BPMN_PID_controle.png Graphic file (type png)
 <use figuras/BPMN_PID_controle.png>
 Package pdftex.def Info: figuras/BPMN_PID_controle.png  used on input line 205.
 (pdftex.def)             Requested size: 455.0pt x 231.39526pt.
+<<<<<<< HEAD
 <figuras/backlog_funcional.png, id=406, 1132.23pt x 973.6375pt>
+=======
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<figuras/backlog_funcional.png, id=373, 1132.23pt x 973.6375pt>
+>>>>>>> documentacao
 File: figuras/backlog_funcional.png Graphic file (type png)
 <use figuras/backlog_funcional.png>
 Package pdftex.def Info: figuras/backlog_funcional.png  used on input line 214.
 (pdftex.def)             Requested size: 455.0pt x 391.26059pt.
+<<<<<<< HEAD
  [24
 pdfTeX warning (ext4): destination with the same identifier (name{figure.4.3}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
@@ -1066,16 +1220,45 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.4.4}) h
 l.218 
        <./figuras/BPMN_carro_do_ovo.png> <./figuras/BPMN_PID_controle.png>]
 <figuras/backlog_nao_funcional.png, id=414, 1226.5825pt x 574.145pt>
+=======
+
+
+[18
+pdfTeX warning (ext4): destination with the same identifier (name{figure.4.3}) 
+has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.123 
+       <./figuras/BPMN_carro_do_ovo.png>]
+
+[19
+pdfTeX warning (ext4): destination with the same identifier (name{figure.4.4}) 
+has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.123 
+       <./figuras/BPMN_PID_controle.png>]
+<figuras/backlog_nao_funcional.png, id=385, 1226.5825pt x 574.145pt>
+>>>>>>> documentacao
 File: figuras/backlog_nao_funcional.png Graphic file (type png)
 <use figuras/backlog_nao_funcional.png>
 Package pdftex.def Info: figuras/backlog_nao_funcional.png  used on input line 223.
 (pdftex.def)             Requested size: 455.0pt x 212.97348pt.
+<<<<<<< HEAD
  [25
 pdfTeX warning (ext4): destination with the same identifier (name{figure.4.5}) has been already used, duplicate ignored
+=======
+
+
+[20
+pdfTeX warning (ext4): destination with the same identifier (name{figure.4.5}) 
+has been already used, duplicate ignored
+>>>>>>> documentacao
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
 l.227 
        <./figuras/backlog_funcional.png>]
+<<<<<<< HEAD
 <figuras/diagrama_casos_de_uso.png, id=420, 921.4425pt x 833.1125pt>
 File: figuras/diagrama_casos_de_uso.png Graphic file (type png)
 <use figuras/diagrama_casos_de_uso.png>
@@ -1146,11 +1329,252 @@ File: figuras/diagrama_de_estados.png Graphic file (type png)
 Package pdftex.def Info: figuras/diagrama_de_estados.png  used on input line 304.
 (pdftex.def)             Requested size: 455.0pt x 290.96812pt.
  [33
+=======
+<figuras/diagrama_casos_de_uso.png, id=391, 921.4425pt x 833.1125pt>
+File: figuras/diagrama_casos_de_uso.png Graphic file (type png)
+<use figuras/diagrama_casos_de_uso.png>
+Package pdftex.def Info: figuras/diagrama_casos_de_uso.png  used on input line 
+138.
+(pdftex.def)             Requested size: 455.0pt x 411.38135pt.
+
+
+[21
+pdfTeX warning (ext4): destination with the same identifier (name{figure.4.6}) 
+has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.142 
+       <./figuras/backlog_nao_funcional.png>]
+
+[22
+pdfTeX warning (ext4): destination with the same identifier (name{figure.4.7}) 
+has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.143 \clearpage
+                 <./figuras/diagrama_casos_de_uso.png>]
+Overfull \hbox (5.68513pt too wide) in paragraph at lines 150--151
+\T1/lmr/m/n/12 linguagem de programação Typescript. O framework permite chamada
+s de API assíncronas,
+ []
+
+
+Overfull \hbox (18.32935pt too wide) in paragraph at lines 152--153
+\T1/lmr/m/n/12 bem os componentes de um sistema controlador de um robô para exe
+cutar tarefas predefinidas.
+ []
+
+<figuras/arquitetura_da_solucao_de_software.png, id=402, 1797.71625pt x 805.810
+5pt>
+File: figuras/arquitetura_da_solucao_de_software.png Graphic file (type png)
+<use figuras/arquitetura_da_solucao_de_software.png>
+Package pdftex.def Info: figuras/arquitetura_da_solucao_de_software.png  used o
+n input line 161.
+(pdftex.def)             Requested size: 455.0pt x 203.94815pt.
+
+
+[23
+
+]
+
+[24
+pdfTeX warning (ext4): destination with the same identifier (name{figure.4.8}) 
+has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.166 \clearpage
+                 <./figuras/arquitetura_da_solucao_de_software.png>]
+<figuras/DER_banco_de_comandos.jpeg, id=413, 517.935pt x 403.5075pt>
+File: figuras/DER_banco_de_comandos.jpeg Graphic file (type jpg)
+<use figuras/DER_banco_de_comandos.jpeg>
+Package pdftex.def Info: figuras/DER_banco_de_comandos.jpeg  used on input line
+ 174.
+(pdftex.def)             Requested size: 364.00139pt x 283.59238pt.
+<figuras/DER_banco_de_posiÃ§Ãµes.jpeg, id=414, 1606.0pt x 623.32875pt>
+File: figuras/DER_banco_de_posiÃ§Ãµes.jpeg Graphic file (type jpg)
+<use figuras/DER_banco_de_posiÃ§Ãµes.jpeg>
+Package pdftex.def Info: figuras/DER_banco_de_posiÃ§Ãµes.jpeg  used on input li
+ne 183.
+(pdftex.def)             Requested size: 364.00139pt x 141.27963pt.
+<figuras/DER_usuario.png, id=415, 443.10544pt x 191.9672pt>
+File: figuras/DER_usuario.png Graphic file (type png)
+<use figuras/DER_usuario.png>
+Package pdftex.def Info: figuras/DER_usuario.png  used on input line 192.
+(pdftex.def)             Requested size: 364.00139pt x 157.69824pt.
+
+
+[25
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{figure.4.9}) 
+has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.196 
+      
+pdfTeX warning (ext4): destination with the same identifier (name{figure.4.10})
+ has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.196 
+       <./figuras/DER_banco_de_comandos.jpeg> <./figuras/DER_banco_de_posiÃ§Ãµe
+s.jpeg>]
+
+[26
+pdfTeX warning (ext4): destination with the same identifier (name{figure.4.11})
+ has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.197 \clearpage
+                 <./figuras/DER_usuario.png>]
+
+[27
+
+]
+<figuras/diagrama_de_estados.png, id=429, 814.39256pt x 520.79568pt>
+File: figuras/diagrama_de_estados.png Graphic file (type png)
+<use figuras/diagrama_de_estados.png>
+Package pdftex.def Info: figuras/diagrama_de_estados.png  used on input line 20
+9.
+(pdftex.def)             Requested size: 455.0pt x 290.96812pt.
+
+
+[28
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{figure.4.12})
+ has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.214 \clearpage
+                 <./figuras/diagrama_de_estados.png>]
+LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <14.4> not available
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 216.
+<figuras/prototipo_1_login.png, id=435, 1445.4pt x 1027.84pt>
+File: figuras/prototipo_1_login.png Graphic file (type png)
+<use figuras/prototipo_1_login.png>
+Package pdftex.def Info: figuras/prototipo_1_login.png  used on input line 220.
+
+(pdftex.def)             Requested size: 227.5pt x 161.77586pt.
+<figuras/prototipo_2_desconectado.png, id=436, 1445.4pt x 1027.84pt>
+File: figuras/prototipo_2_desconectado.png Graphic file (type png)
+<use figuras/prototipo_2_desconectado.png>
+Package pdftex.def Info: figuras/prototipo_2_desconectado.png  used on input li
+ne 227.
+(pdftex.def)             Requested size: 227.5pt x 161.77586pt.
+<figuras/prototipo_3_conectado.png, id=437, 1445.4pt x 1027.84pt>
+File: figuras/prototipo_3_conectado.png Graphic file (type png)
+<use figuras/prototipo_3_conectado.png>
+Package pdftex.def Info: figuras/prototipo_3_conectado.png  used on input line 
+234.
+(pdftex.def)             Requested size: 227.5pt x 161.77586pt.
+<figuras/protoripo_4_comandos.png, id=438, 1445.4pt x 1027.84pt>
+File: figuras/protoripo_4_comandos.png Graphic file (type png)
+<use figuras/protoripo_4_comandos.png>
+Package pdftex.def Info: figuras/protoripo_4_comandos.png  used on input line 2
+41.
+(pdftex.def)             Requested size: 227.5pt x 161.77586pt.
+
+
+[29
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{figure.4.13})
+ has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.245 
+      
+pdfTeX warning (ext4): destination with the same identifier (name{figure.4.14})
+ has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.245 
+      
+pdfTeX warning (ext4): destination with the same identifier (name{figure.4.15})
+ has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.245 
+       <./figuras/prototipo_1_login.png> <./figuras/prototipo_2_desconectado.pn
+g> <./figuras/prototipo_3_conectado.png>]
+<figuras/prototipo_5_deseja_enviar.png, id=446, 1445.4pt x 1027.84pt>
+File: figuras/prototipo_5_deseja_enviar.png Graphic file (type png)
+<use figuras/prototipo_5_deseja_enviar.png>
+Package pdftex.def Info: figuras/prototipo_5_deseja_enviar.png  used on input l
+ine 248.
+(pdftex.def)             Requested size: 227.5pt x 161.77586pt.
+<figuras/prototipo_6_enviado.png, id=447, 1445.4pt x 1027.84pt>
+File: figuras/prototipo_6_enviado.png Graphic file (type png)
+<use figuras/prototipo_6_enviado.png>
+Package pdftex.def Info: figuras/prototipo_6_enviado.png  used on input line 25
+5.
+(pdftex.def)             Requested size: 227.5pt x 161.77586pt.
+<figuras/prototipo_7_historico.png, id=448, 1445.4pt x 1027.84pt>
+File: figuras/prototipo_7_historico.png Graphic file (type png)
+<use figuras/prototipo_7_historico.png>
+Package pdftex.def Info: figuras/prototipo_7_historico.png  used on input line 
+262.
+(pdftex.def)             Requested size: 227.5pt x 161.77586pt.
+
+
+[30
+pdfTeX warning (ext4): destination with the same identifier (name{figure.4.16})
+ has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.266 
+      
+pdfTeX warning (ext4): destination with the same identifier (name{figure.4.17})
+ has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.266 
+      
+pdfTeX warning (ext4): destination with the same identifier (name{figure.4.18})
+ has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.266 
+       <./figuras/protoripo_4_comandos.png> <./figuras/prototipo_5_deseja_envia
+r.png> <./figuras/prototipo_6_enviado.png>]
+<figuras/prototipo_8_grafico.png, id=456, 1445.4pt x 1027.84pt>
+File: figuras/prototipo_8_grafico.png Graphic file (type png)
+<use figuras/prototipo_8_grafico.png>
+Package pdftex.def Info: figuras/prototipo_8_grafico.png  used on input line 26
+9.
+(pdftex.def)             Requested size: 227.5pt x 161.77586pt.
+
+Overfull \hbox (3.27676pt too wide) in paragraph at lines 276--277
+\T1/lmr/m/n/12 Existirá uma camada View de front-end, para exibir o estado do c
+arrinho e enviar comandos
+ []
+
+
+
+[31
+pdfTeX warning (ext4): destination with the same identifier (name{figure.4.19})
+ has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.282 \clearpage
+                
+pdfTeX warning (ext4): destination with the same identifier (name{figure.4.20})
+ has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.282 \clearpage
+                 <./figuras/prototipo_7_historico.png> <./figuras/prototipo_8_g
+rafico.png>]
+
+[32
+>>>>>>> documentacao
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{figure.4.12}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
+<<<<<<< HEAD
 l.309 \clearpage
                  <./figuras/diagrama_de_estados.png>]
 <figuras/prototipo_1_login.png, id=464, 1445.4pt x 1027.84pt>
@@ -1180,15 +1604,147 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.4.13}) 
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
 l.340 
+=======
+l.367 
+      
+pdfTeX warning (ext4): destination with the same identifier (name{table.4.5}) h
+as been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.367 
+      
+pdfTeX warning (ext4): destination with the same identifier (name{table.4.6}) h
+as been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.367 
+      ]
+
+[33
+pdfTeX warning (ext4): destination with the same identifier (name{table.4.7}) h
+as been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.451 
+      
+pdfTeX warning (ext4): destination with the same identifier (name{table.4.8}) h
+as been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.451 
+      
+pdfTeX warning (ext4): destination with the same identifier (name{table.4.9}) h
+as been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.451 
+      
+pdfTeX warning (ext4): destination with the same identifier (name{table.4.10}) 
+has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.451 
+      ]
+
+[34
+pdfTeX warning (ext4): destination with the same identifier (name{table.4.11}) 
+has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.535 
+      
+pdfTeX warning (ext4): destination with the same identifier (name{table.4.12}) 
+has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.535 
+      
+pdfTeX warning (ext4): destination with the same identifier (name{table.4.13}) 
+has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.535 
+      
+pdfTeX warning (ext4): destination with the same identifier (name{table.4.14}) 
+has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.535 
+      ]
+
+[35
+pdfTeX warning (ext4): destination with the same identifier (name{table.4.15}) 
+has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.619 
+      
+pdfTeX warning (ext4): destination with the same identifier (name{table.4.16}) 
+has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.619 
+      
+pdfTeX warning (ext4): destination with the same identifier (name{table.4.17}) 
+has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.619 
+      
+pdfTeX warning (ext4): destination with the same identifier (name{table.4.18}) 
+has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.619 
+      ]
+
+[36
+pdfTeX warning (ext4): destination with the same identifier (name{table.4.19}) 
+has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.682 
+      
+pdfTeX warning (ext4): destination with the same identifier (name{table.4.20}) 
+has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.682 
+      
+pdfTeX warning (ext4): destination with the same identifier (name{table.4.21}) 
+has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.682 
+      ]
+Underfull \hbox (badness 1496) in paragraph at lines 739--739
+[]|\T1/lmr/bx/n/12 Resultado esperado: \T1/lmr/m/n/12 O status da interface mud
+a para "Desconectado"; A
+ []
+
+
+
+[37
+pdfTeX warning (ext4): destination with the same identifier (name{table.4.22}) 
+has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.745 
+>>>>>>> documentacao
       
 pdfTeX warning (ext4): destination with the same identifier (name{figure.4.14}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
+<<<<<<< HEAD
 l.340 
+=======
+l.745 
+>>>>>>> documentacao
       
 pdfTeX warning (ext4): destination with the same identifier (name{figure.4.15}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
+<<<<<<< HEAD
 l.340 
        <./figuras/prototipo_1_login.png> <./figuras/prototipo_2_desconectado.png> <./figuras/prototipo_3_conectado.png>]
 <figuras/prototipo_5_deseja_enviar.png, id=475, 1445.4pt x 1027.84pt>
@@ -1238,8 +1794,17 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.4.20}) 
                                                   \__shipout_drop_firstpage_...
 l.377 \clearpage
                  <./figuras/prototipo_7_historico.png> <./figuras/prototipo_8_grafico.png>] [37
+=======
+l.745 
+      ]
+Underfull \hbox (badness 2005) in paragraph at lines 760--760
+[]|\T1/lmr/bx/n/12 Resultado esperado: \T1/lmr/m/n/12 O robô para imediatamente
+ (os motores devem ser
+ []
+>>>>>>> documentacao
 
 
+<<<<<<< HEAD
 pdfTeX warning (ext4): destination with the same identifier (name{table.4.5}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
@@ -1346,6 +1911,11 @@ pdfTeX warning (ext4): destination with the same identifier (name{table.4.25}) h
 l.840 
       ]) (editaveis/07_orcamento.tex [43
 pdfTeX warning (ext4): destination with the same identifier (name{table.4.26}) has been already used, duplicate ignored
+=======
+[38
+pdfTeX warning (ext4): destination with the same identifier (name{table.4.25}) 
+has been already used, duplicate ignored
+>>>>>>> documentacao
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
 l.1 \begin{landscape}
@@ -1354,7 +1924,13 @@ pdfTeX warning (ext4): destination with the same identifier (name{table.4.27}) h
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
 l.1 \begin{landscape}
+<<<<<<< HEAD
                      ] [44
+=======
+                     ]
+
+[39
+>>>>>>> documentacao
 
 
 
@@ -1367,12 +1943,26 @@ pdfTeX warning (ext4): destination with the same identifier (name{table.5.29}) h
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
 l.50 \end{landscape}
+<<<<<<< HEAD
                     ] [45
 pdfTeX warning (ext4): destination with the same identifier (name{table.5.30}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
 l.50 \end{landscape}
                     ]) (editaveis/08_cronograma.tex [46
+=======
+                    ]
+
+[40
+pdfTeX warning (ext4): destination with the same identifier (name{table.5.29}) 
+has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.50 \end{landscape}
+                    ]) (editaveis/08_cronograma.tex
+
+[41
+>>>>>>> documentacao
 
 
 
@@ -1391,10 +1981,21 @@ pdfTeX warning (ext4): destination with the same identifier (name{table.6.33}) h
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
 l.108 \end{landscape}
+<<<<<<< HEAD
                      ]) (editaveis/09_resultados.tex) (editaveis/10_licoes.tex [47
 
 
 ]
+=======
+                     ]) (editaveis/09_resultados.tex) (editaveis/10_licoes.tex
+
+[42
+
+
+]
+
+[43]
+>>>>>>> documentacao
 Overfull \hbox (1.87119pt too wide) in paragraph at lines 15--15
 \T1/lmr/bx/n/12 internos 
  []
@@ -1412,6 +2013,7 @@ Underfull \hbox (badness 5460) in paragraph at lines 40--40
 [48
 
 
+<<<<<<< HEAD
 pdfTeX warning (ext4): destination with the same identifier (name{table.8.34}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
@@ -1421,8 +2023,28 @@ l.53 \subsection
 \openout4 = `doc_pi1.brf'.
 
  [50]
+=======
+[44
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{table.8.33}) 
+has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.51 \subsection
+                {OrÃ§amento}]
+
+[45]) (doc_pi1.bbl (doc_pi1.brf)
+\tf@brf=\write4
+\openout4 = `doc_pi1.brf'.
+
+
+
+[46]
+>>>>>>> documentacao
 bibitemlist
 
+<<<<<<< HEAD
 LaTeX Warning: Empty `thebibliography' environment on input line 8.
 
 ) (editaveis/11_apendices.tex [51
@@ -1434,6 +2056,46 @@ LaTeX Warning: Empty `thebibliography' environment on input line 8.
 ] [54
 
 ]
+=======
+[47
+
+]
+Overfull \hbox (3.89801pt too wide) in paragraph at lines 21--21
+[]\T1/lmr/m/n/12 Apêndices são textos elaborados pelo autor a fim de complement
+ar sua argumentação. 
+ []
+
+
+
+[48
+
+]
+Overfull \hbox (3.89801pt too wide) in paragraph at lines 32--32
+[]\T1/lmr/m/n/12 Apêndices são textos elaborados pelo autor a fim de complement
+ar sua argumentação. 
+ []
+
+) (editaveis/12_anexos.tex
+
+[49
+
+]
+Overfull \hbox (3.89801pt too wide) in paragraph at lines 12--12
+[]\T1/lmr/m/n/12 Apêndices são textos elaborados pelo autor a fim de complement
+ar sua argumentação. 
+ []
+
+
+
+[50
+
+]
+Overfull \hbox (3.89801pt too wide) in paragraph at lines 22--22
+[]\T1/lmr/m/n/12 Apêndices são textos elaborados pelo autor a fim de complement
+ar sua argumentação. 
+ []
+
+>>>>>>> documentacao
 File: figuras/fga.png Graphic file (type png)
 <use figuras/fga.png>
 Package pdftex.def Info: figuras/fga.png  used on input line 27.
@@ -1441,11 +2103,20 @@ Package pdftex.def Info: figuras/fga.png  used on input line 27.
 )
 No file doc_pi1.ind.
 
+<<<<<<< HEAD
 AED: lastpage setting LastPage
 [55
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{figure.anexochapback.2.21}) has been already used, duplicate ignored
+=======
+
+[51
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{figure.anexoc
+hapback.2.21}) has been already used, duplicate ignored
+>>>>>>> documentacao
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
 l.65 \end{document}
@@ -1468,6 +2139,7 @@ Package rerunfilecheck Info: File `doc_pi1.brf' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
+<<<<<<< HEAD
  18954 strings out of 474486
  315519 string characters out of 5743754
  1953542 words of memory out of 5000000
@@ -1481,4 +2153,35 @@ PDF statistics:
  915 PDF objects out of 1000 (max. 8388607)
  216 named destinations out of 1000 (max. 500000)
  723 words of extra memory for PDF output out of 10000 (max. 10000000)
+=======
+ 18275 strings out of 470067
+ 305104 string characters out of 5482058
+ 741210 words of memory out of 5000000
+ 46024 multiletter control sequences out of 15000+600000
+ 713846 words of font info for 83 fonts, out of 8000000 for 9000
+ 0 hyphenation exceptions out of 8191
+ 99i,12n,107p,955b,677s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</home/rafael-laube/.miktex/texmfs/install/fonts/type1/public/lm/lmbx12.pfb><
+/home/rafael-laube/.miktex/texmfs/install/fonts/type1/public/lm/lmbxi10.pfb></h
+ome/rafael-laube/.miktex/texmfs/install/fonts/type1/public/lm/lmmi12.pfb></home
+/rafael-laube/.miktex/texmfs/install/fonts/type1/public/lm/lmmi8.pfb></home/raf
+ael-laube/.miktex/texmfs/install/fonts/type1/public/lm/lmr10.pfb></home/rafael-
+laube/.miktex/texmfs/install/fonts/type1/public/lm/lmr12.pfb></home/rafael-laub
+e/.miktex/texmfs/install/fonts/type1/public/lm/lmr8.pfb></home/rafael-laube/.mi
+ktex/texmfs/install/fonts/type1/public/lm/lmri10.pfb></home/rafael-laube/.mikte
+x/texmfs/install/fonts/type1/public/lm/lmri12.pfb></home/rafael-laube/.miktex/t
+exmfs/install/fonts/type1/public/lm/lmss10.pfb></home/rafael-laube/.miktex/texm
+fs/install/fonts/type1/public/lm/lmss12.pfb></home/rafael-laube/.miktex/texmfs/
+install/fonts/type1/public/lm/lmss17.pfb></home/rafael-laube/.miktex/texmfs/ins
+tall/fonts/type1/public/lm/lmssbo10.pfb></home/rafael-laube/.miktex/texmfs/inst
+all/fonts/type1/public/lm/lmssbx10.pfb></home/rafael-laube/.miktex/texmfs/insta
+ll/fonts/type1/public/lm/lmsso12.pfb></home/rafael-laube/.miktex/texmfs/install
+/fonts/type1/public/lm/lmsso17.pfb></home/rafael-laube/.miktex/texmfs/install/f
+onts/type1/public/lm/lmsy10.pfb>
+Output written on doc_pi1.pdf (52 pages, 1716971 bytes).
+PDF statistics:
+ 875 PDF objects out of 1000 (max. 8388607)
+ 202 named destinations out of 1000 (max. 500000)
+ 659 words of extra memory for PDF output out of 10000 (max. 10000000)
+>>>>>>> documentacao
 
