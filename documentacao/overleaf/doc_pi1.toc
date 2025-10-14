@@ -18,6 +18,7 @@
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
 \contentsline {chapter}{\chapternumberline {3}\MakeTextUppercase []{Equipe de Trabalho}}{15}{chapter.3}%
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+<<<<<<< HEAD
 \contentsline {chapter}{\chapternumberline {4}\MakeTextUppercase []{Projeto Conceitual do Produto}}{18}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Características gerais}{18}{section.4.1}%
 \contentsline {section}{\numberline {4.2}Estrutura}{18}{section.4.2}%
@@ -69,22 +70,92 @@
 \vspace {\cftbeforechapterskip }
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
 \contentsline {chapter}{\MakeTextUppercase []{Refer\^encias}}{40}{section*.12}%
+=======
+\contentsline {chapter}{\chapternumberline {4}\MakeTextUppercase []{Projeto Conceitual do Produto}}{16}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Características gerais}{16}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Estrutura}{16}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Descrição de \textit {hardware}}{16}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Análise de consumo energético}{17}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Descrição de \textit {software}}{18}{section.4.5}%
+\contentsline {subsection}{\numberline {4.5.1}Diagrama BPMN}{18}{subsection.4.5.1}%
+\contentsline {subsection}{\numberline {4.5.2}Backlog Funcional}{20}{subsection.4.5.2}%
+\contentsline {subsection}{\numberline {4.5.3}Backlog Não Funcional}{21}{subsection.4.5.3}%
+\contentsline {subsection}{\numberline {4.5.4}Diagrama de Casos de Uso}{22}{subsection.4.5.4}%
+\contentsline {subsection}{\numberline {4.5.5}Descrição da arquitetura da solução de software}{23}{subsection.4.5.5}%
+\contentsline {subsection}{\numberline {4.5.6}Persistência de dados}{25}{subsection.4.5.6}%
+\contentsline {subsubsection}{\numberline {4.5.6.1}Banco de Comandos}{25}{subsubsection.4.5.6.1}%
+\contentsline {subsubsection}{\numberline {4.5.6.2}Banco de Posições}{25}{subsubsection.4.5.6.2}%
+\contentsline {subsubsection}{\numberline {4.5.6.3}Autenticação e Sessão de Usuário}{26}{subsubsection.4.5.6.3}%
+\contentsline {subsection}{\numberline {4.5.7}Análise de dados}{27}{subsection.4.5.7}%
+\contentsline {subsection}{\numberline {4.5.8}Diagrama de estados}{28}{subsection.4.5.8}%
+\contentsline {subsection}{\numberline {4.5.9}Protótipo funcional do \textit {software}, navegável.}{29}{subsection.4.5.9}%
+\contentsline {subsection}{\numberline {4.5.10}Descrição da arquitetura da solução de software}{31}{subsection.4.5.10}%
+\contentsline {subsection}{\numberline {4.5.11}Roteiro de testes funcionais}{32}{subsection.4.5.11}%
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\contentsline {chapter}{\chapternumberline {5}\MakeTextUppercase []{Orçamento}}{39}{chapter.5}%
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\contentsline {chapter}{\chapternumberline {6}\MakeTextUppercase []{Cronograma}}{41}{chapter.6}%
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\contentsline {chapter}{\chapternumberline {7}\MakeTextUppercase []{Resultados Experimentais}}{42}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Características Gerais}{42}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Experimentos da estrutura}{42}{section.7.2}%
+\contentsline {section}{\numberline {7.3}Experimentos de \textit {hardware}}{42}{section.7.3}%
+\contentsline {section}{\numberline {7.4}Experimentos de consumo energético}{42}{section.7.4}%
+\contentsline {section}{\numberline {7.5}Experimentos de \textit {software}}{42}{section.7.5}%
+\contentsline {section}{\numberline {7.6}Experimentos de integração}{43}{section.7.6}%
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\contentsline {chapter}{\chapternumberline {8}\MakeTextUppercase []{Lições Aprendidas}}{44}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Análise SWOT}{44}{section.8.1}%
+\contentsline {section}{\numberline {8.2}Planejado x realizado}{44}{section.8.2}%
+\contentsline {subsection}{\numberline {8.2.1}Objetivos}{44}{subsection.8.2.1}%
+\contentsline {subsection}{\numberline {8.2.2}Prazos}{45}{subsection.8.2.2}%
+\contentsline {subsection}{\numberline {8.2.3}Orçamento}{45}{subsection.8.2.3}%
+\contentsline {subsection}{\numberline {8.2.4}Escopo}{45}{subsection.8.2.4}%
+\contentsline {section}{\numberline {8.3}Projeto}{45}{section.8.3}%
+\contentsline {subsection}{\numberline {8.3.1}Pontos fortes}{45}{subsection.8.3.1}%
+\contentsline {subsection}{\numberline {8.3.2}Pontos fracos}{45}{subsection.8.3.2}%
+\contentsline {section}{\numberline {8.4}Recomendações para projetos futuros}{45}{section.8.4}%
+\contentsline {section}{\numberline {8.5}Questões em aberto}{46}{section.8.5}%
+\contentsline {section}{\numberline {8.6}Desempenho dos fornecedores}{46}{section.8.6}%
+\contentsline {subsection}{\numberline {8.6.1}Fornecedores com desempenho acima do esperado}{46}{subsection.8.6.1}%
+\contentsline {subsection}{\numberline {8.6.2}Fornecedores com desempenho conforme esperado}{46}{subsection.8.6.2}%
+\contentsline {subsection}{\numberline {8.6.3}Fornecedores com desempenho abaixo do esperado}{46}{subsection.8.6.3}%
+\vspace {\cftbeforechapterskip }
+\setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
+\contentsline {chapter}{\MakeTextUppercase []{Refer\^encias}}{47}{section*.12}%
+>>>>>>> refs/remotes/origin/develop
 \renewcommand *{\cftappendixname }{AP\^ENDICE \space }
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
 \cftinsert {A}
+<<<<<<< HEAD
 \contentsline {appendix}{\chapternumberline {A}\MakeTextUppercase []{Primeiro Apêndice}}{41}{appendix.A}%
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
 \cftinsert {A}
 \contentsline {appendix}{\chapternumberline {B}\MakeTextUppercase []{Segundo Apêndice}}{42}{appendix.B}%
+=======
+\contentsline {appendix}{\chapternumberline {A}\MakeTextUppercase []{Primeiro Apêndice}}{48}{appendix.A}%
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
+\cftinsert {A}
+\contentsline {appendix}{\chapternumberline {B}\MakeTextUppercase []{Segundo Apêndice}}{49}{appendix.B}%
+>>>>>>> refs/remotes/origin/develop
 \cftinsert {AAA}
 \renewcommand *{\cftappendixname }{ANEXO \space }
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
 \cftinsert {A}
+<<<<<<< HEAD
 \contentsline {appendix}{\chapternumberline {A}\MakeTextUppercase []{Primeiro Anexo}}{43}{appendix.anexochapback.1}%
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
 \cftinsert {A}
 \contentsline {appendix}{\chapternumberline {B}\MakeTextUppercase []{Segundo Anexo}}{44}{appendix.anexochapback.2}%
+=======
+\contentsline {appendix}{\chapternumberline {A}\MakeTextUppercase []{Primeiro Anexo}}{50}{appendix.anexochapback.1}%
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
+\cftinsert {A}
+\contentsline {appendix}{\chapternumberline {B}\MakeTextUppercase []{Segundo Anexo}}{51}{appendix.anexochapback.2}%
+>>>>>>> refs/remotes/origin/develop
