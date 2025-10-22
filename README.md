@@ -37,5 +37,4 @@ O projeto terá duas branchs principais, a *main* e a *develop*. Antes de fazer 
 - [Documentação](/documentacao)
 - [Mecânica](/mecanica)
 - [Eletrônica](/eletronica)
-- [Controle](/controle)
-- [Lógica de missão](/logica_de_missao)
+- [Controle e Lógica (Software)](/logica_de_missao/pi1)
