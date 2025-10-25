@@ -36,31 +36,55 @@ export default function LoginPage() {
   }
 
   return (
-    <div style={{ maxWidth: 420, margin: '60px auto', padding: 20 }}>
-      <h1>{mode === 'login' ? 'Entrar' : 'Criar conta'}</h1>
+    <div className="min-h-screen flex items-center justify-center bg-gray-200">
+      <div className="bg-gray-300 rounded-xl shadow-xl p-8 w-full max-w-md flex flex-col items-center">
+        <img
+          src="/carrodoovo.png"
+          alt="Logo Carro do Ovo"
+          className="w-20 h-20 mb-4 rounded-full object-cover"
+        />
+        <h1 className="text-2xl font-bold mb-6">{mode === 'login' ? 'Entrar' : 'Criar Conta'}</h1>
 
-      <form onSubmit={handleSubmit}>
-        <label>Email</label><br/>
-        <input type="email" value={email} onChange={e => setEmail(e.target.value)} required /><br/>
+        <form className="w-full" onSubmit={handleSubmit}>
+          <input
+            type="email"
+            value={email}
+            onChange={e => setEmail(e.target.value)}
+            placeholder="Email"
+            required
+            className="w-full p-3 mb-4 rounded-lg border border-gray-400 focus:border-blue-500 focus:outline-none transition"
+          />
+          <input
+            type="password"
+            value={password}
+            onChange={e => setPassword(e.target.value)}
+            placeholder="Senha"
+            required
+            className="w-full p-3 mb-4 rounded-lg border border-gray-400 focus:border-blue-500 focus:outline-none transition"
+          />
 
-        <label>Senha</label><br/>
-        <input type="password" value={password} onChange={e => setPassword(e.target.value)} required /><br/><br/>
+          {error && <p className="text-red-600 mb-4 text-sm">{error}</p>}
 
-        <button type="submit" disabled={loading}>
-          {loading ? 'Aguarde...' : (mode === 'login' ? 'Entrar' : 'Cadastrar')}
-        </button>
-      </form>
+          <button
+            type="submit"
+            disabled={loading}
+            className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 rounded-lg transition disabled:opacity-50"
+          >
+            {loading ? 'Aguarde...' : mode === 'login' ? 'Entrar' : 'Cadastrar'}
+          </button>
+        </form>
 
-      {error && <p style={{ color: 'red' }}>{error}</p>}
-
-      <hr />
-      <p>
-        {mode === 'login' ? "Não tem conta?" : "Já tem conta?"}
-        {' '}
-        <button type="button" onClick={() => setMode(mode === 'login' ? 'signup' : 'login')}>
-          {mode === 'login' ? 'Criar conta' : 'Entrar'}
-        </button>
-      </p>
+        <p className="mt-6 text-sm">
+          {mode === 'login' ? "Não tem conta?" : "Já tem conta?"}{' '}
+          <button
+            type="button"
+            onClick={() => setMode(mode === 'login' ? 'signup' : 'login')}
+            className="text-blue-600 font-medium hover:underline"
+          >
+            {mode === 'login' ? 'Criar conta' : 'Entrar'}
+          </button>
+        </p>
+      </div>
     </div>
   )
 }
