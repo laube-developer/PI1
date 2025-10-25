@@ -1,38 +1,37 @@
-import { useState } from 'react'
-import { supabase } from '../lib/supabaseClient'
-import { useRouter } from 'next/router'
+// app/login/page.tsx
+'use client'
 
-export default function Login() {
+import { useState } from 'react'
+import { useRouter } from 'next/navigation'
+import { supabase } from '../../../lib/supabaseClient'
+
+export default function LoginPage() {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [loading, setLoading] = useState(false)
-  const [error, setError] = useState(null)
-  const [mode, setMode] = useState('login') // 'login' ou 'signup'
+  const [error, setError] = useState<string | null>(null)
+  const [mode, setMode] = useState<'login' | 'signup'>('login')
   const router = useRouter()
 
-  async function handleSubmit(e) {
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault()
     setError(null)
     setLoading(true)
 
-    if (mode === 'login') {
-      const { data, error } = await supabase.auth.signInWithPassword({
-        email,
-        password,
-      })
+    try {
+      if (mode === 'login') {
+        const { error } = await supabase.auth.signInWithPassword({ email, password })
+        if (error) throw error
+        router.push('/dashboard')
+      } else {
+        const { error } = await supabase.auth.signUp({ email, password })
+        if (error) throw error
+        setError('Conta criada! Verifique seu e-mail se for necessário confirmar.')
+      }
+    } catch (err: any) {
+      setError(err.message)
+    } finally {
       setLoading(false)
-      if (error) return setError(error.message)
-      router.push('/dashboard') // redireciona ao logar
-    } else {
-      // cadastrar
-      const { data, error } = await supabase.auth.signUp({
-        email,
-        password,
-      })
-      setLoading(false)
-      if (error) return setError(error.message)
-      // o Supabase pode enviar email de confirmação dependendo das configs
-      setError('Conta criada! Verifique seu e-mail se for necessário confirmar.')
     }
   }
 
@@ -58,7 +57,7 @@ export default function Login() {
       <p>
         {mode === 'login' ? "Não tem conta?" : "Já tem conta?"}
         {' '}
-        <button onClick={() => setMode(mode === 'login' ? 'signup' : 'login')}>
+        <button type="button" onClick={() => setMode(mode === 'login' ? 'signup' : 'login')}>
           {mode === 'login' ? 'Criar conta' : 'Entrar'}
         </button>
       </p>
