@@ -1,10 +1,17 @@
-// pages/dashboard.js
-import { useEffect, useState } from 'react'
-import { supabase } from '../lib/supabaseClient'
-import { useRouter } from 'next/router'
+// app/dashboard/page.tsx
+'use client'
 
-export default function Dashboard() {
-  const [user, setUser] = useState(null)
+import { useEffect, useState } from 'react'
+import { useRouter } from 'next/navigation'
+import { supabase } from '../../..//lib/supabaseClient'
+
+interface User {
+  email: string
+  // adicione outros campos do usuário se precisar
+}
+
+export default function DashboardPage() {
+  const [user, setUser] = useState<User | null>(null)
   const router = useRouter()
 
   useEffect(() => {
@@ -13,20 +20,20 @@ export default function Dashboard() {
       if (!data.session) {
         router.push('/login')
       } else {
-        setUser(data.session.user)
+        setUser(data.session.user as User)
       }
     })
 
-    // opcional: escuta mudanças de auth (login/logout)
+    // escuta mudanças de auth (login/logout)
     const { data: listener } = supabase.auth.onAuthStateChange((_event, session) => {
       if (!session) router.push('/login')
-      else setUser(session.user)
+      else setUser(session.user as User)
     })
 
     return () => {
       listener.subscription.unsubscribe()
     }
-  }, [])
+  }, [router])
 
   async function handleLogout() {
     await supabase.auth.signOut()
