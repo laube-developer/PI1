@@ -3,9 +3,8 @@
 #include "commands.h"
 
 namespace executor {
-  void setup();     
-  void tick();      
+  void setup();
+  void tick();          
   void emergencyStop();
-  bool isBusy();   
-  bool currentCommand(Command& out);
 }
+

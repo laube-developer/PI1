@@ -1,9 +1,10 @@
 #pragma once
 #include <Arduino.h>
 
-enum class CmdType : uint8_t { NONE=0, FORWARD, TURN, STOP };
+enum class CmdType : uint8_t { NONE=0, SET_VEL, STOP_ALL };
 
 struct Command {
   CmdType type = CmdType::NONE;
-  float   value = 0.0f; 
+  uint8_t left  = 0;
+  uint8_t right = 0;
 };
