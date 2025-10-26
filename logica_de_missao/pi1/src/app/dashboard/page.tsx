@@ -4,18 +4,36 @@
 import { useEffect, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { supabase } from '../../..//lib/supabaseClient'
+import Sidebar from '../../../components/Sidebar'
+import ComandoButton from '../../../components/ComandoButton'
+import { FaLongArrowAltUp } from 'react-icons/fa'
+import { HiArrowUturnRight } from 'react-icons/hi2'
+import { BsBoxSeamFill } from 'react-icons/bs'
+import { Andar, Comando, comandos_aceitos, Largar, Virar } from '../../../interfaces/comandos'
+import Button from '../../../components/Button'
+import { IoMdClose } from 'react-icons/io'
 
 interface User {
   email: string
   // adicione outros campos do usuário se precisar
 }
 
+
+export type SideBarStateProps = {
+  isConnected: boolean
+}
+
 export default function DashboardPage() {
   const [user, setUser] = useState<User | null>(null)
+  const [sidebarState, setSidebarState] = useState<SideBarStateProps>({
+    isConnected: false
+  })
+
+  const [comandos, setComandos] = useState<Comando[]>([])
+
   const router = useRouter()
 
   useEffect(() => {
-    // pega sessão atual
     supabase.auth.getSession().then(({ data }) => {
       if (!data.session) {
         router.push('/login')
@@ -24,7 +42,6 @@ export default function DashboardPage() {
       }
     })
 
-    // escuta mudanças de auth (login/logout)
     const { data: listener } = supabase.auth.onAuthStateChange((_event, session) => {
       if (!session) router.push('/login')
       else setUser(session.user as User)
@@ -40,62 +57,129 @@ export default function DashboardPage() {
     router.push('/login')
   }
 
+  const adicionarAndar = ()=>{
+
+    const novoComando: Andar = {tipo: "Andar", distancia: 0}
+    
+    setComandos([...comandos, novoComando])
+  }
+
+  const adicionarVirar = ()=>{
+    const novoComando: Virar = {tipo: "Virar", lado: "Esquerda"}
+
+    setComandos([...comandos, novoComando])
+  }
+
+  const alterarDistancia = (id: number, distancia: number)=>{
+    const novoComando: Andar = {tipo: "Andar", distancia: distancia}
+    const novoArray = [...comandos]
+    
+    novoArray[id] = novoComando
+
+    setComandos(novoArray)
+  }
+
+  const mudarDirecao = (id: number, lado: string)=>{
+    if (lado != "Esquerda" && lado != "Direita"){
+      return;
+    }
+
+    const novoComando: Virar = {tipo: "Virar", lado: lado}
+    const novoArray = [...comandos]
+    
+    novoArray[id] = novoComando
+
+    setComandos(novoArray)
+  }
+
+  const adicionarLargar = () => {
+
+    const novoComando: Largar = {tipo: "Largar"}
+    setComandos([...comandos, novoComando])
+  }
+
+  const removerComando = (id: number) => {
+    if (id > comandos.length -1) return
+
+    const novoArray = [...comandos]
+    novoArray.splice(id, 1)
+
+    setComandos(novoArray)
+  }
+
   if (!user) return <p>Verificando sessão...</p>
 
   return (
     <div className="min-h-screen flex bg-gray-100">
-      {/* Sidebar */}
-      <aside className="w-20 md:w-24 bg-gray-300 flex flex-col items-center py-6 space-y-4 border-r border-gray-400">
-        <div className="flex flex-col items-center space-y-2">
-          <img
-            src="/carrodoovo.png"
-            alt="Logo Carro do Ovo"
-            className="w-12 h-12 rounded-full object-cover"
-          />
-          <span className="text-xs font-bold text-gray-900 text-center">CARRO DO OVO</span>
-        </div>
-
-        <button className="w-12 md:w-16 bg-gray-200 hover:bg-gray-400 text-gray-900 py-2 rounded-lg text-xs flex items-center justify-center">
-          Conectar
-        </button>
-
-        <button className="w-12 md:w-16 bg-gray-500 text-white py-2 rounded-lg text-xs flex items-center justify-center">
-          Enviar
-        </button>
-
-        <button className="w-12 md:w-16 bg-gray-200 hover:bg-gray-400 text-gray-900 py-2 rounded-lg text-xs flex items-center justify-center">
-          Histórico
-        </button>
-
-        <div className="mt-auto">
-          <button
-            onClick={handleLogout}
-            className="w-12 md:w-16 bg-red-500 hover:bg-red-600 text-white py-2 rounded-lg text-xs flex items-center justify-center"
-          >
-            Logout
-          </button>
-        </div>
-      </aside>
+      <Sidebar handleLogout={handleLogout} sidebarState={sidebarState} setSideBarState={setSidebarState}/>
 
       {/* Main content */}
-      <main className="flex-1 p-6 flex flex-col items-center justify-center">
-        <h1 className="text-2xl font-bold text-gray-900 mb-4">
-            Bem-vindo, {user.email}
-        </h1>
-        <p className="text-gray-700 mb-6 text-center">Sem comandos adicionados. Adicione-os no menu de comandos!.</p>
+      <main className="flex-1 p-6 flex flex-col items-center justify-center bg-slate-200">
+
+        {!comandos.length && (<>
+          <h1 className="text-2xl font-bold text-gray-900 mb-4">
+              Bem-vindo, {user.email}
+          </h1>
+          <p className="text-gray-700 mb-6 text-center">Sem comandos adicionados. Adicione-os no menu de comandos!.</p>
+        </>)}
+
+        {comandos.length > 0 && (
+          <div className='flex flex-row gap-2'>
+            <div className='w-max flex flex-col gap-3 justify-center px-5'>
+                <p className='font-bold'>Início</p>
+
+            </div>
+
+            {comandos.map((comando, id) => (
+              <div className='w-30 bg-white p-4 rounded-md shadow flex flex-col gap-3' key={`comando_${id}`}>
+                <div className='flex flex-row justify-between'>
+                  <p className='font-bold'>{comando.tipo}</p>
+                  <Button icon={IoMdClose} color='error' handleClick={()=> removerComando(id)} className="w-max p-2"/>
+                </div>
+
+                {comando.tipo == "Andar" && (<div className='flex flex-row gap-2 items-center'>
+                  <input value={comando.distancia} onChange={(event)=> alterarDistancia(id, Number(event.target.value))} placeholder='distância...' type='number' className='w-full bg-slate-200 rounded-md p-1 w-35'/>
+                  <p>cm</p>
+                </div>)}
+
+                {comando.tipo == "Virar" && (<div className='flex flex-row gap-2 items-center'>
+                  <select value={comando.lado} onChange={(event) => mudarDirecao(id, event.target.value)}>
+                    <option defaultChecked value="Direita">Direita</option>
+                    <option value="Esquerda">Esquerda</option>
+                  </select>
+                </div>)}
+
+                
+
+              </div>
+            ))}
+
+            <div className='w-max flex flex-col gap-3 justify-center px-5'>
+                <p className='font-bold'>Fim</p>
+
+            </div>
+          </div>
+        )}
+
+        {/* <div>
+          <p className='font-bold'>Comandos: </p>
+          <p>{JSON.stringify(comandos)}</p>
+        </div> */}
 
         {/* Comandos à direita */}
         <div className="fixed bottom-6 right-6 bg-gray-300 p-4 rounded-xl flex flex-col space-y-2">
             <span className="font-bold text-gray-900 mb-2 text-center">COMANDOS</span>
-            <button className="bg-white hover:bg-gray-200 py-2 px-4 rounded flex items-center justify-between">
-            Andar <span>↑</span>
-            </button>
-            <button className="bg-white hover:bg-gray-200 py-2 px-4 rounded flex items-center justify-between">
-            Virar <span>↩</span>
-            </button>
-            <button className="bg-white hover:bg-gray-200 py-2 px-4 rounded flex items-center justify-between">
-            Largar <span>◯</span>
-            </button>
+            <ComandoButton icon={FaLongArrowAltUp} iconPos='right' handleClick={adicionarAndar}>
+              Andar
+            </ComandoButton>
+
+            <ComandoButton icon={HiArrowUturnRight} iconPos='right' handleClick={adicionarVirar}>
+              Virar
+            </ComandoButton>
+
+            <ComandoButton icon={BsBoxSeamFill } iconPos='right' handleClick={adicionarLargar}>
+              Largar
+            </ComandoButton>
         </div>
         </main>
     </div>
