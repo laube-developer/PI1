@@ -1,7 +1,7 @@
 # Dockerfile para Ambiente de Desenvolvimento Local (npm run dev)
 # Objetivo: Rapidez no rebuild e suporte a hot-reload via volume mount.
 # Ele instala TODAS as dependências (dev e prod).
-FROM node:18-alpine
+FROM node:lts-alpine
 
 WORKDIR /app
 
