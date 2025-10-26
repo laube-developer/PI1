@@ -1,0 +1,37 @@
+# docker compose -f docker-compose-prod.yml up -d --build
+
+services:
+  next-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - '3000:3000'
+    restart: always
+    depends_on:
+      - supabase-db
+      - timescaledb
+    networks:
+      - app_network
+  
+  timescaledb:
+    image: timescale/timescaledb:latest-pg17
+    container_name: pi_timescale
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: carro_do_ovo_2025
+      POSTGRES_DB: pi_time_series_db
+    ports:
+      - '5433:5432'
+    volumes:
+      - timescaledb_data:/var/lib/postgresql/data
+    networks:
+      - app_network
+
+networks:
+  app_network:
+    driver: bridge
+
+volumes:
+  supabase_db_data:
+  timescaledb_data:
