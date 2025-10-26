@@ -1,0 +1,23 @@
+# Dockerfile para Ambiente de Desenvolvimento Local (npm run dev)
+# Objetivo: Rapidez no rebuild e suporte a hot-reload via volume mount.
+# Ele instala TODAS as dependências (dev e prod).
+FROM node:18-alpine
+
+WORKDIR /app
+
+# Copia os arquivos de definição de dependência
+COPY package*.json ./
+
+# Instala TODAS as dependências para que o hot-reload funcione
+RUN npm ci
+
+# Copia o restante do código-fonte
+COPY . .
+
+EXPOSE 3000
+
+# Define o usuário node
+USER node
+
+# O comando final é definido no docker-compose-dev.yml
+CMD ["npm", "run", "dev"]
