@@ -40,7 +40,7 @@ Abra [http://localhost:3000](http://localhost:3000) no navegador.
 
 | Atividade | Área | Data Início | Data de Entrega | Status |
 | --- | :---: | :---: | :---: | :---: |
-| `Interface de Login (Login + logout)` | Front-end Produção | 14/10/2025 | 18/10/2025 | ![](https://geps.dev/progress/10) |
+| `Interface de Login (Login + logout)` | Front-end Produção | 14/10/2025 | 18/10/2025 | ![](https://geps.dev/progress/100) |
 | `Inserção de comandos` | Front-end | 19/10/2025 | 23/10/2025 | ![](https://geps.dev/progress/0) |
 | `Interface de Interpretação dos comandos` | Controle | 14/10/2025 | 19/10/2025 | ![](https://geps.dev/progress/0) |
 | `Remoção de comandos na fila` | Front-end | 24/10/2025 | 29/10/2025 | ![](https://geps.dev/progress/0) |
