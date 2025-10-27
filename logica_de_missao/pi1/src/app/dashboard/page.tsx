@@ -108,11 +108,23 @@ export default function DashboardPage() {
     setComandos(novoArray)
   }
 
+  const handleEnviar = () => {
+    if (!sidebarState.isConnected) {
+        alert("Conecte-se ao carrinho para enviar os comandos");
+        return;
+    } else if(comandos.length == 0) {
+      alert("Nenhum comando foi inserido!");
+      return;
+    }
+    
+    console.log("Comandos enviados!");
+  }
+
   if (!user) return <p>Verificando sessão...</p>
 
   return (
     <div className="min-h-screen flex bg-gray-100">
-      <Sidebar handleLogout={handleLogout} sidebarState={sidebarState} setSideBarState={setSidebarState}/>
+      <Sidebar handleLogout={handleLogout} sidebarState={sidebarState} setSideBarState={setSidebarState} handleEnviar={handleEnviar}/>
 
       {/* Main content */}
       <main className="flex-1 p-6 flex flex-col items-center justify-center bg-slate-200">
