@@ -1,21 +1,40 @@
 
 export type comandos_aceitos = "Andar" | "Virar" | "Largar"
+export type direcoes_aceitas = "Esquerda" | "Direita"
 
-interface Comando {
-  tipo: comandos_aceitos
+abstract class Comando {
+  tipo: comandos_aceitos;
+
+  constructor (tipo: comandos_aceitos){
+    this.tipo = tipo;
+  }
 }
 
-interface Andar extends Comando {
+class Andar extends Comando {
   distancia: number;
-  
+
+  constructor (distancia: number){
+    super("Andar");
+
+    this.distancia = distancia;
+  }
 }
 
-interface Virar extends Comando {
-  lado: "Direita" | "Esquerda"
+class Virar extends Comando {
+  direcao: direcoes_aceitas;
+
+  constructor (direcao: direcoes_aceitas){
+    super("Virar");
+
+    this.direcao = direcao;
+  }
 }
 
-interface Largar extends Comando {
+class Largar extends Comando {
+  constructor (){
+    super("Largar");
 
+  }
 }
 
-export type { Comando, Andar, Virar, Largar}
+export {Comando, Andar, Virar, Largar}

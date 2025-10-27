@@ -4,6 +4,7 @@ import Button from "../Button"
 
 import { FaLongArrowAltUp } from "react-icons/fa";
 import { SideBarStateProps } from "@/app/dashboard/page";
+import { PiSignOut } from "react-icons/pi";
 
 
 type SidebarProps = {
@@ -35,13 +36,12 @@ export default function Sidebar({handleLogout, sidebarState, setSideBarState}: S
         <Button className="bg-gray-500 text-white">Enviar</Button>
         <Button>Histórico</Button>
 
-        <div className="mt-auto">
-            <button
-            onClick={handleLogout}
-            className="w-full md:w-16 bg-red-500 hover:bg-red-600 text-white py-2 rounded-lg text-xs flex items-center justify-center"
-            >
-            Logout
-            </button>
+        <div className="mt-auto w-full">
+            <Button
+                handleClick={handleLogout}
+                color="error"
+                icon={PiSignOut}
+            >Logout</Button>
         </div>
         </aside>
     )
