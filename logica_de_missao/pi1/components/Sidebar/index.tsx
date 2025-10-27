@@ -10,10 +10,11 @@ import { PiSignOut } from "react-icons/pi";
 type SidebarProps = {
     handleLogout: MouseEventHandler<HTMLButtonElement>,
     sidebarState: SideBarStateProps,
-    setSideBarState: Dispatch<SetStateAction<SideBarStateProps>>
+    setSideBarState: Dispatch<SetStateAction<SideBarStateProps>>,
+    handleEnviar: MouseEventHandler<HTMLButtonElement>
 }
 
-export default function Sidebar({handleLogout, sidebarState, setSideBarState}: SidebarProps){
+export default function Sidebar({handleLogout, sidebarState, setSideBarState, handleEnviar}: SidebarProps){
     const conectar = ()=>{
         setSideBarState({...sidebarState, isConnected: !sidebarState.isConnected})
     }
@@ -29,11 +30,14 @@ export default function Sidebar({handleLogout, sidebarState, setSideBarState}: S
             <span className="text-xs font-bold text-gray-900 text-center">CARRO DO OVO</span>
         </div>
 
-        <Button handleClick={conectar}>
-            {!sidebarState.isConnected ? "Conectar" : "Desconectar"}
+        <Button handleClick={conectar} className={sidebarState.isConnected ? "!text-green-700 font-bold" : ""}>
+            {!sidebarState.isConnected ? "Conectar" : "Conectado"}
         </Button>
 
-        <Button className="bg-gray-500 text-white">Enviar</Button>
+        <Button  handleClick={handleEnviar}
+            className="bg-gray-500 text-white">Enviar
+        </Button>
+
         <Button>Histórico</Button>
 
         <div className="mt-auto w-full">
