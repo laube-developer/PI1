@@ -108,7 +108,7 @@ export default function DashboardPage() {
   }
 
   const alterarDistancia = (id: number, distancia: number)=>{
-    const novoComando = new Andar(comandos[id].id, distancia);
+    const novoComando = new Andar(comandos[id].id, Math.abs(distancia));
     const novoArray = [...comandos]
     
     novoArray[id] = novoComando;
@@ -222,6 +222,7 @@ export default function DashboardPage() {
                                   onChange={(event)=> alterarDistancia(id, Number(event.target.value))}
                                   type='number'
                                   className='w-full bg-slate-200 rounded-md p-1 w-35'
+                                  min={0}
                                 />
                                 <p>cm</p>
                               </div>
