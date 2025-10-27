@@ -12,6 +12,7 @@ import { BsBoxSeamFill } from 'react-icons/bs'
 import { Andar, Comando, comandos_aceitos, Largar, Virar } from '../../../interfaces/comandos'
 import Button from '../../../components/Button'
 import { IoMdClose } from 'react-icons/io'
+import { DragDropContext, Droppable, Draggable, DropResult } from '@hello-pangea/dnd'
 
 interface User {
   email: string
@@ -59,19 +60,19 @@ export default function DashboardPage() {
 
   const adicionarAndar = ()=>{
 
-    const novoComando: Andar = {tipo: "Andar", distancia: 0}
+    const novoComando: Andar = {id: crypto.randomUUID(),tipo: "Andar", distancia: 0}
     
     setComandos([...comandos, novoComando])
   }
 
   const adicionarVirar = ()=>{
-    const novoComando: Virar = {tipo: "Virar", lado: "Esquerda"}
+    const novoComando: Virar = {id: crypto.randomUUID(),tipo: "Virar", lado: "Esquerda"}
 
     setComandos([...comandos, novoComando])
   }
 
   const alterarDistancia = (id: number, distancia: number)=>{
-    const novoComando: Andar = {tipo: "Andar", distancia: distancia}
+    const novoComando: Andar = {id: crypto.randomUUID(),tipo: "Andar", distancia: distancia}
     const novoArray = [...comandos]
     
     novoArray[id] = novoComando
@@ -84,7 +85,7 @@ export default function DashboardPage() {
       return;
     }
 
-    const novoComando: Virar = {tipo: "Virar", lado: lado}
+    const novoComando: Virar = {id: crypto.randomUUID(),tipo: "Virar", lado: lado}
     const novoArray = [...comandos]
     
     novoArray[id] = novoComando
@@ -94,7 +95,7 @@ export default function DashboardPage() {
 
   const adicionarLargar = () => {
 
-    const novoComando: Largar = {tipo: "Largar"}
+    const novoComando: Largar = {id: crypto.randomUUID(),tipo: "Largar"}
     setComandos([...comandos, novoComando])
   }
 
@@ -124,41 +125,80 @@ export default function DashboardPage() {
         </>)}
 
         {comandos.length > 0 && (
-          <div className='flex flex-row gap-2'>
-            <div className='w-max flex flex-col gap-3 justify-center px-5'>
+          <DragDropContext
+            onDragEnd={(result: DropResult) => {
+              if (!result.destination) return
+
+              const novaOrdem = Array.from(comandos)
+              const [removido] = novaOrdem.splice(result.source.index, 1)
+              novaOrdem.splice(result.destination.index, 0, removido)
+
+              setComandos(novaOrdem)
+            }}
+          >
+            <div className='flex flex-row gap-2 items-start'>
+              <div className='w-max flex flex-col gap-3 justify-center px-5'>
                 <p className='font-bold'>Início</p>
-
-            </div>
-
-            {comandos.map((comando, id) => (
-              <div className='w-30 bg-white p-4 rounded-md shadow flex flex-col gap-3' key={`comando_${id}`}>
-                <div className='flex flex-row justify-between'>
-                  <p className='font-bold'>{comando.tipo}</p>
-                  <Button icon={IoMdClose} color='error' handleClick={()=> removerComando(id)} className="w-max p-2"/>
-                </div>
-
-                {comando.tipo == "Andar" && (<div className='flex flex-row gap-2 items-center'>
-                  <input value={comando.distancia} onChange={(event)=> alterarDistancia(id, Number(event.target.value))} placeholder='distância...' type='number' className='w-full bg-slate-200 rounded-md p-1 w-35'/>
-                  <p>cm</p>
-                </div>)}
-
-                {comando.tipo == "Virar" && (<div className='flex flex-row gap-2 items-center'>
-                  <select value={comando.lado} onChange={(event) => mudarDirecao(id, event.target.value)}>
-                    <option defaultChecked value="Direita">Direita</option>
-                    <option value="Esquerda">Esquerda</option>
-                  </select>
-                </div>)}
-
-                
-
               </div>
-            ))}
 
-            <div className='w-max flex flex-col gap-3 justify-center px-5'>
+              <Droppable droppableId="comandos" direction="horizontal">
+                {(provided) => (
+                  <div
+                    className="flex flex-row gap-2"
+                    {...provided.droppableProps}
+                    ref={provided.innerRef}
+                  >
+                    {comandos.map((comando, id) => (
+                      <Draggable key={comando.id} draggableId={comando.id} index={id}>
+                        {(provided) => (
+                          <div
+                            ref={provided.innerRef}
+                            {...provided.draggableProps}
+                            {...provided.dragHandleProps}
+                            className='w-30 bg-white p-4 rounded-md shadow flex flex-col gap-3 cursor-move'
+                          >
+                            <div className='flex flex-row justify-between'>
+                              <p className='font-bold'>{comando.tipo}</p>
+                              <Button icon={IoMdClose} color='error' handleClick={()=> removerComando(id)} className="w-max p-2"/>
+                            </div>
+
+                            {comando.tipo == "Andar" && (
+                              <div className='flex flex-row gap-2 items-center'>
+                                <input
+                                  value={comando.distancia}
+                                  onChange={(event)=> alterarDistancia(id, Number(event.target.value))}
+                                  type='number'
+                                  className='w-full bg-slate-200 rounded-md p-1 w-35'
+                                />
+                                <p>cm</p>
+                              </div>
+                            )}
+
+                            {comando.tipo == "Virar" && (
+                              <div className='flex flex-row gap-2 items-center'>
+                                <select
+                                  value={comando.lado}
+                                  onChange={(event) => mudarDirecao(id, event.target.value)}
+                                >
+                                  <option value="Direita">Direita</option>
+                                  <option value="Esquerda">Esquerda</option>
+                                </select>
+                              </div>
+                            )}
+                          </div>
+                        )}
+                      </Draggable>
+                    ))}
+                    {provided.placeholder}
+                  </div>
+                )}
+              </Droppable>
+
+              <div className='w-max flex flex-col gap-3 justify-center px-5'>
                 <p className='font-bold'>Fim</p>
-
+              </div>
             </div>
-          </div>
+          </DragDropContext>
         )}
 
         {/* <div>
