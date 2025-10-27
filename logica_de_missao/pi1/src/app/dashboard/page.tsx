@@ -108,7 +108,7 @@ export default function DashboardPage() {
   }
 
   const alterarDistancia = (id: number, distancia: number)=>{
-    const novoComando = new Andar(crypto.randomUUID(), distancia);
+    const novoComando = new Andar(comandos[id].id, distancia);
     const novoArray = [...comandos]
     
     novoArray[id] = novoComando;
@@ -121,7 +121,7 @@ export default function DashboardPage() {
       return;
     }
 
-    const novoComando = new Virar(crypto.randomUUID(), direcao as 'Direita' | 'Esquerda');
+    const novoComando = new Virar(comandos[id].id, direcao as 'Direita' | 'Esquerda');
     const novoArray = [...comandos];
     
     novoArray[id] = novoComando;
