@@ -4,8 +4,10 @@ export type direcoes_aceitas = "Esquerda" | "Direita"
 
 abstract class Comando {
   tipo: comandos_aceitos;
+  id: string;
 
-  constructor (tipo: comandos_aceitos){
+  constructor (id: string, tipo: comandos_aceitos){
+    this.id = id;
     this.tipo = tipo;
   }
 }
@@ -13,8 +15,8 @@ abstract class Comando {
 class Andar extends Comando {
   distancia: number;
 
-  constructor (distancia: number){
-    super("Andar");
+  constructor (id: string, distancia: number){
+    super(id, "Andar");
 
     this.distancia = distancia;
   }
@@ -23,16 +25,16 @@ class Andar extends Comando {
 class Virar extends Comando {
   direcao: direcoes_aceitas;
 
-  constructor (direcao: direcoes_aceitas){
-    super("Virar");
+  constructor (id: string, direcao: direcoes_aceitas){
+    super(id, "Virar");
 
     this.direcao = direcao;
   }
 }
 
 class Largar extends Comando {
-  constructor (){
-    super("Largar");
+  constructor (id: string){
+    super(id, "Largar");
 
   }
 }

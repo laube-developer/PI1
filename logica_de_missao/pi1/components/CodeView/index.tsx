@@ -37,7 +37,7 @@ export default function CodeView({code}: CodeViewProps){
 
     return (
         <div 
-            className={`"w-full p-2 rounded-lg shadow-inner text-sm flex flex-col gap-2 ${!isShow ? "h-max" : ""}`}
+            className={`"w-full  p-2 rounded-lg shadow-inner text-sm flex flex-col gap-2 ${!isShow ? "h-max" : ""}`}
             style={{ backgroundColor: '#282A36' }}
         >
             <Button
@@ -47,7 +47,7 @@ export default function CodeView({code}: CodeViewProps){
                 handleClick={() => setShow(!isShow)}
                 children={!isShow ? "Ver JSON comandos" : "Fechar" }
             />
-            {isShow && <div dangerouslySetInnerHTML={{__html: html}}></div>}
+            {isShow && <div dangerouslySetInnerHTML={{__html: html}} className='overflow-x-scroll'></div>}
             
         </div>
     );

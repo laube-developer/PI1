@@ -12,6 +12,7 @@ import { Andar, Comando, comandos_aceitos, Largar, Virar } from '../../../interf
 import Button from '../../../components/Button'
 import { IoMdClose } from 'react-icons/io'
 import CodeView from '../../../components/CodeView' // Agora é um Client Component
+import { DragDropContext, Droppable, Draggable, DropResult } from '@hello-pangea/dnd'
 
 interface User {
   email: string
@@ -64,14 +65,14 @@ export default function DashboardPage() {
       switch (objeto.tipo) {
         case "Andar":
           // Garante que 'distancia' é um número
-          return new Andar(objeto.distancia ?? 0);
+          return new Andar(crypto.randomUUID(), objeto.distancia ?? 0);
         case "Virar":
           // Garante que 'direcao' é um valor aceito, ou usa um padrão
           const direcao = (objeto.direcao === 'Direita' || objeto.direcao === 'Esquerda') ? objeto.direcao : 'Esquerda';
-          return new Virar(direcao);
+          return new Virar(crypto.randomUUID(), direcao);
         case "Largar":
-          return new Largar();
-
+          return new Largar(crypto.randomUUID());
+          
         default:
           console.error("Tipo de comando desconhecido", objeto.tipo);
           return null;
@@ -97,18 +98,18 @@ export default function DashboardPage() {
   }
 
   const adicionarAndar = ()=>{
-    const novoComando = new Andar(0)
+    const novoComando = new Andar(crypto.randomUUID(), 0)
     setComandos([...comandos, novoComando])
   }
 
   const adicionarVirar = ()=>{
-    const novoComando = new Virar("Esquerda")
+    const novoComando = new Virar(crypto.randomUUID(), "Esquerda")
     setComandos([...comandos, novoComando])
   }
 
   const alterarDistancia = (id: number, distancia: number)=>{
-    const novoComando = new Andar(distancia);
-    const novoArray = [...comandos];
+    const novoComando = new Andar(crypto.randomUUID(), distancia);
+    const novoArray = [...comandos]
     
     novoArray[id] = novoComando;
 
@@ -120,7 +121,7 @@ export default function DashboardPage() {
       return;
     }
 
-    const novoComando = new Virar(direcao as 'Direita' | 'Esquerda');
+    const novoComando = new Virar(crypto.randomUUID(), direcao as 'Direita' | 'Esquerda');
     const novoArray = [...comandos];
     
     novoArray[id] = novoComando;
@@ -129,7 +130,7 @@ export default function DashboardPage() {
   }
 
   const adicionarLargar = () => {
-    const novoComando = new Largar();
+    const novoComando = new Largar(crypto.randomUUID());
     setComandos([...comandos, novoComando])
   }
 
@@ -142,11 +143,23 @@ export default function DashboardPage() {
     setComandos(novoArray);
   }
 
+  const handleEnviar = () => {
+    if (!sidebarState.isConnected) {
+        alert("Conecte-se ao carrinho para enviar os comandos");
+        return;
+    } else if(comandos.length == 0) {
+      alert("Nenhum comando foi inserido!");
+      return;
+    }
+    
+    console.log("Comandos enviados!");
+  }
+
   if (!user) return <p>Verificando sessão...</p>
 
   return (
     <div className="min-h-screen flex bg-gray-100">
-      <Sidebar handleLogout={handleLogout} sidebarState={sidebarState} setSideBarState={setSidebarState}/>
+      <Sidebar handleLogout={handleLogout} sidebarState={sidebarState} setSideBarState={setSidebarState} handleEnviar={handleEnviar}/>
 
       {/* Main content */}
       <main className="flex-1 p-6 flex flex-row items-center justify-center bg-slate-200 relative">
@@ -165,41 +178,80 @@ export default function DashboardPage() {
         )}
 
         {comandos.length > 0 && (
-          <div className='flex flex-row gap-2'>
-            <div className='w-max flex flex-col gap-3 justify-center px-5'>
+          <DragDropContext
+            onDragEnd={(result: DropResult) => {
+              if (!result.destination) return
+
+              const novaOrdem = Array.from(comandos)
+              const [removido] = novaOrdem.splice(result.source.index, 1)
+              novaOrdem.splice(result.destination.index, 0, removido)
+
+              setComandos(novaOrdem)
+            }}
+          >
+            <div className='flex flex-row gap-2 items-start'>
+              <div className='w-max flex flex-col gap-3 justify-center px-5'>
                 <p className='font-bold'>Início</p>
-
-            </div>
-
-            {comandos.map((comando, id) => (
-              <div className='w-30 bg-white p-4 rounded-md shadow flex flex-col gap-3' key={`comando_${id}`}>
-                <div className='flex flex-row justify-between'>
-                  <p className='font-bold'>{comando.tipo}</p>
-                  <Button icon={IoMdClose} color='error' handleClick={()=> removerComando(id)} className="w-max p-2"/>
-                </div>
-
-                {comando instanceof Andar && (<div className='flex flex-row gap-2 items-center'>
-                  <input value={comando.distancia} onChange={(event)=> alterarDistancia(id, Number(event.target.value))} placeholder='distância...' type='number' className='w-full bg-slate-200 rounded-md p-1 w-35'/>
-                  <p>cm</p>
-                </div>)}
-
-                {comando instanceof Virar && (<div className='flex flex-row gap-2 items-center'>
-                  {/* Corrigido: usando comando.direcao que é a propriedade da classe Virar */}
-                  <select value={comando.direcao} onChange={(event) => mudarDirecao(id, event.target.value)}>
-                    <option defaultChecked value="Direita">Direita</option>
-                    <option value="Esquerda">Esquerda</option>
-                  </select>
-                </div>)}
-                
-
               </div>
-            ))}
 
-            <div className='w-max flex flex-col gap-3 justify-center px-5'>
+              <Droppable droppableId="comandos" direction="horizontal">
+                {(provided) => (
+                  <div
+                    className="flex flex-row gap-2"
+                    {...provided.droppableProps}
+                    ref={provided.innerRef}
+                  >
+                    {comandos.map((comando, id) => (
+                      <Draggable key={comando.id} draggableId={comando.id} index={id}>
+                        {(provided) => (
+                          <div
+                            ref={provided.innerRef}
+                            {...provided.draggableProps}
+                            {...provided.dragHandleProps}
+                            className='w-30 bg-white p-4 rounded-md shadow flex flex-col gap-3 cursor-move'
+                          >
+                            <div className='flex flex-row justify-between'>
+                              <p className='font-bold'>{comando.tipo}</p>
+                              <Button icon={IoMdClose} color='error' handleClick={()=> removerComando(id)} className="w-max p-2"/>
+                            </div>
+
+                            {comando instanceof Andar && (
+                              <div className='flex flex-row gap-2 items-center'>
+                                <input
+                                  value={comando.distancia}
+                                  onChange={(event)=> alterarDistancia(id, Number(event.target.value))}
+                                  type='number'
+                                  className='w-full bg-slate-200 rounded-md p-1 w-35'
+                                />
+                                <p>cm</p>
+                              </div>
+                            )}
+
+                            {comando instanceof Virar && (
+                              <div className='flex flex-row gap-2 items-center'>
+                                <select
+                                  value={comando.direcao}
+                                  onChange={(event) => mudarDirecao(id, event.target.value)}
+                                >
+                                  <option value="Direita">Direita</option>
+                                  <option value="Esquerda">Esquerda</option>
+                                </select>
+                              </div>
+                            )}
+                          </div>
+                        )}
+                      </Draggable>
+                    ))}
+                    {provided.placeholder}
+                  </div>
+                )}
+              </Droppable>
+
+              <div className='w-max flex flex-col gap-3 justify-center px-5'>
                 <p className='font-bold'>Fim</p>
-
+              </div>
             </div>
-          </div>
+          </DragDropContext>
         )}
 
         {/* Comandos à direita */}
