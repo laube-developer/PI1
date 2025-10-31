@@ -3,20 +3,20 @@ import { Dispatch, MouseEventHandler, SetStateAction } from "react"
 import Button from "../Button"
 
 import { FaLongArrowAltUp } from "react-icons/fa";
-import { SideBarStateProps } from "@/app/dashboard/page";
+import { ModelStateProps } from "@/app/dashboard/page";
 import { PiSignOut } from "react-icons/pi";
 
 
 type SidebarProps = {
     handleLogout: MouseEventHandler<HTMLButtonElement>,
-    sidebarState: SideBarStateProps,
-    setSideBarState: Dispatch<SetStateAction<SideBarStateProps>>,
+    modelState: ModelStateProps,
+    setModelState: Dispatch<SetStateAction<ModelStateProps>>,
     handleEnviar: MouseEventHandler<HTMLButtonElement>
 }
 
-export default function Sidebar({handleLogout, sidebarState, setSideBarState, handleEnviar}: SidebarProps){
+export default function Sidebar({handleLogout, modelState, setModelState, handleEnviar}: SidebarProps){
     const conectar = ()=>{
-        setSideBarState({...sidebarState, isConnected: !sidebarState.isConnected})
+        setModelState({...modelState, isConnected: !modelState.isConnected})
     }
 
     return (
@@ -30,8 +30,8 @@ export default function Sidebar({handleLogout, sidebarState, setSideBarState, ha
             <span className="text-xs font-bold text-gray-900 text-center">CARRO DO OVO</span>
         </div>
 
-        <Button handleClick={conectar} className={sidebarState.isConnected ? "!text-green-700 font-bold" : ""}>
-            {!sidebarState.isConnected ? "Conectar" : "Conectado"}
+        <Button handleClick={conectar} className={modelState.isConnected ? "!text-green-500 font-bold" : ""}>
+            {!modelState.isConnected ? "Conectar" : "Conectado"}
         </Button>
 
         <Button  handleClick={handleEnviar}
@@ -40,6 +40,15 @@ export default function Sidebar({handleLogout, sidebarState, setSideBarState, ha
 
         <Button>Histórico</Button>
 
+
+        <div className="h-full overflow-y-auto">
+          {modelState.mensagensRecebidas.map((mensagem, index) => (
+            <div key={index} className='w-full mt-8 bg-white p-4 rounded-md shadow !text-sm'>
+              <p className='font-mono text-sm'>{mensagem}</p>
+            </div>
+          ))}
+        </div>
+
         <div className="mt-auto w-full">
             <Button
                 handleClick={handleLogout}
@@ -47,6 +56,8 @@ export default function Sidebar({handleLogout, sidebarState, setSideBarState, ha
                 icon={PiSignOut}
             >Logout</Button>
         </div>
+
+        
         </aside>
     )
 }
