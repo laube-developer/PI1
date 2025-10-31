@@ -13,6 +13,8 @@ import Button from '../../../components/Button'
 import { IoMdClose } from 'react-icons/io'
 import CodeView from '../../../components/CodeView' // Agora é um Client Component
 import { DragDropContext, Droppable, Draggable, DropResult } from '@hello-pangea/dnd'
+import mqtt from 'mqtt'
+import { MQTTService } from '../../../lib/mqtt'
 
 interface User {
   email: string
@@ -25,14 +27,18 @@ interface ComandoSalvo {
 }
 
 
-export type SideBarStateProps = {
-  isConnected: boolean
+export type ModelStateProps = {
+  isConnected: boolean,
+  mensagensRecebidas: string[],
+  client: mqtt.MqttClient | null,
 }
 
 export default function DashboardPage() {
   const [user, setUser] = useState<User | null>(null)
-  const [sidebarState, setSidebarState] = useState<SideBarStateProps>({
-    isConnected: false
+  const [modelState, setModelState] = useState<ModelStateProps>({
+    isConnected: false,
+    mensagensRecebidas: [],
+    client: null,
   })
 
   const [comandos, setComandos] = useState<Comando[]>([])
@@ -144,7 +150,7 @@ export default function DashboardPage() {
   }
 
   const handleEnviar = () => {
-    if (!sidebarState.isConnected) {
+    if (!modelState.isConnected) {
         alert("Conecte-se ao carrinho para enviar os comandos");
         return;
     } else if(comandos.length == 0) {
@@ -159,7 +165,7 @@ export default function DashboardPage() {
 
   return (
     <div className="min-h-screen flex bg-gray-100">
-      <Sidebar handleLogout={handleLogout} sidebarState={sidebarState} setSideBarState={setSidebarState} handleEnviar={handleEnviar}/>
+      <Sidebar handleLogout={handleLogout} modelState={modelState} setModelState={setModelState} handleEnviar={handleEnviar}/>
 
       {/* Main content */}
       <main className="flex-1 p-6 flex flex-row items-center justify-center bg-slate-200 relative">
@@ -176,6 +182,8 @@ export default function DashboardPage() {
             <CodeView code={JSON.stringify(comandos, null, 2)}></CodeView>
           </div>
         )}
+
+        
 
         {comandos.length > 0 && (
           <DragDropContext
