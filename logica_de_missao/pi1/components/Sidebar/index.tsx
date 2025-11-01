@@ -3,20 +3,20 @@ import { Dispatch, MouseEventHandler, SetStateAction } from "react"
 import Button from "../Button"
 
 import { FaLongArrowAltUp } from "react-icons/fa";
-import { ModelStateProps } from "@/app/dashboard/page";
 import { PiSignOut } from "react-icons/pi";
+import { AppState } from "../../entidades/appstate";
 
 
 type SidebarProps = {
     handleLogout: MouseEventHandler<HTMLButtonElement>,
-    modelState: ModelStateProps,
-    setModelState: Dispatch<SetStateAction<ModelStateProps>>,
+    modelState: AppState,
+    setModelState: Dispatch<SetStateAction<AppState>>,
     handleEnviar: MouseEventHandler<HTMLButtonElement>
 }
 
 export default function Sidebar({handleLogout, modelState, setModelState, handleEnviar}: SidebarProps){
     const conectar = ()=>{
-        setModelState({...modelState, isConnected: !modelState.isConnected})
+        setModelState(modelState.setConnected(!modelState.isConnected()))
     }
 
     return (
@@ -30,8 +30,17 @@ export default function Sidebar({handleLogout, modelState, setModelState, handle
             <span className="text-xs font-bold text-gray-900 text-center">CARRO DO OVO</span>
         </div>
 
-        <Button handleClick={conectar} className={modelState.isConnected ? "!text-green-500 font-bold" : ""}>
-            {!modelState.isConnected ? "Conectar" : "Conectado"}
+        <div className="w-full text-xs flex flex-col items-start">
+            <b>Status: </b>
+            {modelState.isConnected() ? (
+                <span className="text-green-600 font-bold">Conectado</span>
+            ) : (
+                <span className="text-red-600 font-bold">Desconectado</span>
+            )}
+        </div>
+
+        <Button handleClick={conectar} smoth color={!modelState.isConnected() ? "success" : "error"}>
+            {!modelState.isConnected() ? "Conectar" : "Desconectar"}
         </Button>
 
         <Button  handleClick={handleEnviar}
@@ -42,7 +51,7 @@ export default function Sidebar({handleLogout, modelState, setModelState, handle
 
 
         <div className="h-full overflow-y-auto">
-          {modelState.mensagensRecebidas.map((mensagem, index) => (
+          {modelState.mensagensRecebidas().map((mensagem, index) => (
             <div key={index} className='w-full mt-8 bg-white p-4 rounded-md shadow !text-sm'>
               <p className='font-mono text-sm'>{mensagem}</p>
             </div>

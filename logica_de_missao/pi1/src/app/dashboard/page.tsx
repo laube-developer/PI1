@@ -15,7 +15,6 @@ import { DragDropContext, Droppable, Draggable, DropResult } from '@hello-pangea
 import { MQTTService } from '../../../lib/mqtt'
 import { AppState } from '../../../entidades/appstate'
 import { User } from '../../../entidades/user'
-import { ComandoSalvo } from '../../../entidades/comandosSalvos'
 
 
 export default function DashboardPage() {
@@ -41,17 +40,6 @@ export default function DashboardPage() {
       listener.subscription.unsubscribe()
     }
   }, [router])
-
-  //Carrega os comando salvos da sessão anterior
-  useEffect(()=>{
-    const comandosSalvosNoNavegador: ComandoSalvo[] = JSON.parse(localStorage.getItem('comandos') || "[]");
-
-    const comandosReidratados = comandosSalvosNoNavegador
-    .map(AppState.reidratarComando)
-    .filter((comando): comando is Comando => comando !== null)
-
-    setModelState(modelState.atualizarListaComandos(comandosReidratados))
-  }, [])
 
   useEffect(()=> {
     localStorage.setItem('comandos', JSON.stringify(modelState.comandos));
