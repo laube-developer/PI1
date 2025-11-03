@@ -29,6 +29,8 @@
 #define M2_DIR_B 33
 #define M2_PWM   14
 
+#define EGG_MOTOR_PIN  13
+
 // ===== PWM =====
 #define PWM_FREQ_HZ   20000
 #define PWM_RES_BITS  8

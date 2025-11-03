@@ -16,6 +16,8 @@ namespace executor {
         motors::setVel(c.left, c.right);
       } else if (c.type == CmdType::STOP_ALL) {
         motors::stop();
+      } else if (c.type == CmdType::DEPOSIT_EGG) { 
+        motors::depositEgg();                     
       }
     }
   }
