@@ -12,6 +12,16 @@ namespace motors {
     Serial.printf(LOG_PREFIX "SET_VEL L=%u R=%u\n", left, right);
   }
 
+  void depositEgg() {
+    #if SIMULATE 
+      Serial.println(LOG_PREFIX "DEPOSIT EGG (Motor de depósito acionado)");
+    #else // Implementação de "ligar" o motor por 500ms
+      digitalWrite(EGG_MOTOR_PIN, HIGH);
+      delay(500); // Roda por 500ms 
+      digitalWrite(EGG_MOTOR_PIN, LOW);
+    #endif
+  }
+
   void stop() {
     Serial.println(LOG_PREFIX "STOP ALL");
   }
@@ -24,6 +34,10 @@ namespace motors {
     Serial.println(LOG_PREFIX "SIMULATE=0 -> habilitando GPIO/PWM");
     pinMode(M1_DIR_A, OUTPUT); pinMode(M1_DIR_B, OUTPUT);
     pinMode(M2_DIR_A, OUTPUT); pinMode(M2_DIR_B, OUTPUT);
+
+    // Configuração do motor para depósito do ovo
+    pinMode(EGG_MOTOR_PIN, OUTPUT); 
+    digitalWrite(EGG_MOTOR_PIN, LOW); 
 
     ledcSetup(PWM_CH_M1, PWM_FREQ_HZ, PWM_RES_BITS);
     ledcAttachPin(M1_PWM, PWM_CH_M1);
@@ -47,5 +61,3 @@ namespace motors {
   }
 
 #endif
-
-} 
