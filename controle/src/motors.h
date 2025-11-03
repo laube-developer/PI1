@@ -8,4 +8,6 @@ namespace motors {
   void setVel(uint8_t left, uint8_t right);
 
   void stop();
+  
+  void depositEgg();
 }

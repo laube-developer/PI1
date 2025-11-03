@@ -50,9 +50,15 @@ namespace demo {
     if (now - tStart >= SEQ[idx].duration_ms) {
       idx++;
       if (idx >= N) {
+        // Sequência terminou, primeiro depositar o ovo
+        Command d; d.type = CmdType::DEPOSIT_EGG; 
+        cmdq::push(d);                            
+        Serial.println(LOG_PREFIX "DEMO depositing egg..."); 
+
+        // Depois parar tudo
         Command s; s.type = CmdType::STOP_ALL;
         cmdq::push(s);
-        Serial.println(LOG_PREFIX "DEMO finished");
+        Serial.println(LOG_PREFIX "DEMO finished (STOP)");
         return;
       }
       Command c; c.type = CmdType::SET_VEL; c.left = SEQ[idx].left; c.right = SEQ[idx].right;
