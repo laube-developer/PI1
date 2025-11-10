@@ -2,9 +2,9 @@
 import { Dispatch, MouseEventHandler, SetStateAction } from "react"
 import Button from "../Button"
 
-import { FaLongArrowAltUp } from "react-icons/fa";
 import { PiSignOut } from "react-icons/pi";
 import { AppState } from "../../entidades/appstate";
+import { conectar, desconectar } from "../../actions/actions";
 
 
 type SidebarProps = {
@@ -15,8 +15,31 @@ type SidebarProps = {
 }
 
 export default function Sidebar({handleLogout, modelState, setModelState, handleEnviar}: SidebarProps){
-    const conectar = ()=>{
-        setModelState(modelState.setConnected(!modelState.isConnected()))
+    const handleConectar = async ()=>{
+        setModelState(
+            modelState
+            .setConexaoEstado("conectando")
+        )
+        await conectar()
+
+        setModelState(
+            modelState
+            .setConexaoEstado("conectado")
+        )
+    }
+
+    const handleDesconectar = async ()=>{
+        setModelState(
+            modelState
+            .setConexaoEstado("desconectando")
+        )
+
+        await desconectar();
+
+        setModelState(
+            modelState
+            .setConexaoEstado("desconectado")
+        )
     }
 
     return (
@@ -32,15 +55,19 @@ export default function Sidebar({handleLogout, modelState, setModelState, handle
 
         <div className="w-full text-xs flex flex-col items-start">
             <b>Status: </b>
-            {modelState.isConnected() ? (
+            {modelState.conexaoEstado() == "conectado" ? (
                 <span className="text-green-600 font-bold">Conectado</span>
             ) : (
                 <span className="text-red-600 font-bold">Desconectado</span>
             )}
         </div>
 
-        <Button handleClick={conectar} smoth color={!modelState.isConnected() ? "success" : "error"}>
-            {!modelState.isConnected() ? "Conectar" : "Desconectar"}
+        <Button
+            handleClick={modelState.conexaoEstado() == "conectado" ? handleDesconectar : handleConectar}
+            smoth
+            color={modelState.conexaoEstado() == "desconectado" ? "success" : "error"}
+        >
+            {modelState.conexaoEstado() === "desconectado" ? "Conectar" : "Desconectar"}
         </Button>
 
         <Button  handleClick={handleEnviar}
