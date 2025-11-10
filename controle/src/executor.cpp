@@ -22,6 +22,9 @@ namespace executor {
     }
   }
 
-  void emergencyStop() { motors::stop(); }
+  void emergencyStop() { 
+    cmdq::clear();
+    motors::stop();
+   }
 
 }
