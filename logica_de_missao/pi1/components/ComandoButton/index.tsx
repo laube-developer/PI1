@@ -5,7 +5,7 @@ type ButtonProps = {
     handleClick?: MouseEventHandler<HTMLButtonElement>,
     children?: ReactNode;
     className?: string | (() => string);
-    disable?: boolean,
+    disabled?: boolean,
     color?:  "primary" | "secondary" | "success" | "warn" | "error",
     icon?: IconType
     iconPos?: "right" | "left"
@@ -25,25 +25,25 @@ export default function ComandoButton({
     handleClick,
     children,
     className = '',
-    disable = false,
+    disabled = false,
     color = 'primary',
     icon : Icon,
     iconPos = "left"
 }: ButtonProps){
-    const baseClasses = "bg-white hover:bg-gray-200 py-2 px-4 rounded grid grid-cols-[4rem_1rem] items-center justify-between";
+    const baseClasses = "bg-white py-2 px-4 rounded grid grid-cols-[4rem_1rem] items-center justify-between";
 
     const colorClasses = COLOR_CLASSES[color] || COLOR_CLASSES.primary;
 
-    const interactionClasses = disable
+    const interactionClasses = disabled
         ? DISABLED_CLASSES
         : `cursor-pointer active:scale-[0.99] focus:outline-none focus:ring-4 focus:ring-opacity-50`;
 
-    const finalClasses = `${baseClasses} ${interactionClasses} ${disable ? DISABLED_CLASSES : colorClasses} ${className}`;
+    const finalClasses = `${baseClasses} ${interactionClasses} ${disabled ? DISABLED_CLASSES : colorClasses} ${className}`;
 
     return (
         <button
             className={finalClasses}
-            onClick={handleClick}
+            onClick={!disabled ? handleClick : ()=>{}}
             >
             {iconPos == "left" ? (<>
                 {Icon && <Icon />}

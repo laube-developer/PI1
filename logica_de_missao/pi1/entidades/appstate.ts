@@ -3,58 +3,55 @@ import { User } from "./user"
 import { Andar, Comando, Largar, Virar } from "./comandos"
 import { ComandoSalvo } from "./comandosSalvos"
 
+type ConnectionState = "conectando" | "conectado" | "desconectando" | "desconectado"
+
 type AppStateUpdate = {
-    isConnected?: boolean,
+    conexaoEstado?: ConnectionState,
     mensagensRecebidas?: string[],
-    client?: mqtt.MqttClient | null,
     user?: User | null,
     comandos?: Comando[]
+    jaTemLargar?: boolean
 }
 
 export class AppState {
-    private isConnectedState: boolean = false
+    private conexaoEstadoState: ConnectionState = "desconectado"
     private mensagensRecebidasState: string[] = []
-    private clientState?: mqtt.MqttClient | null = null
     private userState: User | null = null
     private comandosState: Comando[] = []
+    private jaTemLargarState: boolean = false;
 
     constructor(
-        isConnected?: boolean,
+        conexaoEstado?: ConnectionState,
         mensagensRecebidas?: string[],
-        client?: mqtt.MqttClient | null,
         user?: User | null,
-        comandos?: Comando[]
+        comandos?: Comando[],
+        jaTemLargar?: boolean
     ) {
-        if (isConnected !== undefined) this.isConnectedState = isConnected
+        if (conexaoEstado !== undefined) this.conexaoEstadoState = conexaoEstado
         if (mensagensRecebidas !== undefined) this.mensagensRecebidasState = mensagensRecebidas
-        if (client !== undefined) this.clientState = client
         if (user !== undefined) this.userState = user
         if (comandos !== undefined) this.comandosState = comandos
+        if (jaTemLargar !== undefined) this.jaTemLargarState = jaTemLargar
     }
 
     private getEstadoAtualizado(update: AppStateUpdate): AppState {
         return new AppState(
-            update.isConnected !== undefined ? update.isConnected : this.isConnectedState,
+            update.conexaoEstado !== undefined ? update.conexaoEstado : this.conexaoEstadoState,
             update.mensagensRecebidas !== undefined ? update.mensagensRecebidas : this.mensagensRecebidasState,
-            update.client !== undefined ? update.client : this.clientState,
             update.user !== undefined ? update.user : this.userState,
-            update.comandos !== undefined ? update.comandos : this.comandosState
+            update.comandos !== undefined ? [...update.comandos] : this.comandosState,
+            update.jaTemLargar !== undefined ? update.jaTemLargar : this.jaTemLargarState
         )
     }       
 
-    isConnected(): boolean{return this.isConnectedState}
-    setConnected(state: boolean) {
-        return this.getEstadoAtualizado({isConnected: state})
+    conexaoEstado(): ConnectionState{return this.conexaoEstadoState}
+    setConexaoEstado(state: ConnectionState) {
+        return this.getEstadoAtualizado({conexaoEstado: state})
     }
 
     mensagensRecebidas(): string[] {return this.mensagensRecebidasState}
     addMsgLista(msg: string) {
         return this.getEstadoAtualizado({mensagensRecebidas: [...this.mensagensRecebidasState, msg]})
-    }
-
-    client(){return this.clientState}
-    setClient(mqtt_client: mqtt.MqttClient){
-        return this.getEstadoAtualizado({client: mqtt_client})
     }
 
     user(){return this.userState}
@@ -76,11 +73,15 @@ export class AppState {
 
     adicionarLargar(){
         const novoComando = new Largar(crypto.randomUUID());
-        return this.getEstadoAtualizado({comandos: [...this.comandosState, novoComando]})
+        return this.getEstadoAtualizado({
+            comandos: [...this.comandosState, novoComando],
+            jaTemLargar: true
+        })
     }
 
     alterarDistancia(id: number, distancia: number){
-        if (this.comandosState[id].tipo != "Andar") return
+        if (this.comandosState[id].tipo != "Andar") return this
+        console.log("Alterando distância do comando", id, "para", distancia);
         const novoComando = new Andar(this.comandosState[id].id, Math.abs(distancia))
         let novaLista = [...this.comandosState];
         novaLista[id] = novoComando;
@@ -88,7 +89,8 @@ export class AppState {
     }
 
     alterarDirecao(id: number, direcao: "Esquerda" | "Direita"){
-        if (this.comandosState[id].tipo != "Virar") return
+        if (this.comandosState[id].tipo != "Virar") return this
+        console.log("Alterando direção do comando", id, "para", direcao);
         const novoComando = new Virar(this.comandosState[id].id, direcao)
         let novaLista = [...this.comandosState];
         novaLista[id] = novoComando;
@@ -96,14 +98,19 @@ export class AppState {
     }
     
     removerComando(id: number){
-        if (id > this.comandosState.length -1) return;
+        if (id > this.comandosState.length -1) return this;
+        console.log("Removendo comando", id);
         let novaLista = [...this.comandosState];
         novaLista.splice(id, 1);
-        return this.getEstadoAtualizado({comandos: novaLista})
+        return this.getEstadoAtualizado({comandos: novaLista, jaTemLargar: this.comandosState[id].tipo === "Largar" ? false : this.jaTemLargarState})
     }
 
     atualizarListaComandos(comandos: Comando[]){
         return this.getEstadoAtualizado({comandos: comandos})
+    }
+
+    jaTemLargar(): boolean {
+        return this.jaTemLargarState;
     }
 
     static reidratarComando = (objeto: ComandoSalvo): Comando | null => {

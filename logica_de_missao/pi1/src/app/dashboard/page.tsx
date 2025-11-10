@@ -12,9 +12,9 @@ import Button from '../../../components/Button'
 import { IoMdClose } from 'react-icons/io'
 import CodeView from '../../../components/CodeView' // Agora é um Client Component
 import { DragDropContext, Droppable, Draggable, DropResult } from '@hello-pangea/dnd'
-import { MQTTService } from '../../../lib/mqtt'
 import { AppState } from '../../../entidades/appstate'
 import { User } from '../../../entidades/user'
+import { enviarMensagem } from '../../../actions/actions'
 
 
 export default function DashboardPage() {
@@ -63,13 +63,17 @@ export default function DashboardPage() {
   }
 
   const handleEnviar = () => {
-    if (!modelState.isConnected()) {
+    if (modelState.conexaoEstado() !== "conectado") {
         alert("Conecte-se ao carrinho para enviar os comandos");
         return;
-    } else if(modelState.comandos().length == 0) {
+    }
+    
+    if (modelState.comandos().length == 0) {
       alert("Nenhum comando foi inserido!");
       return;
     }
+
+    enviarMensagem("carrodoovo/comandos", JSON.stringify(modelState.comandos()));
     
     console.log("Comandos enviados!");
   }
@@ -95,8 +99,6 @@ export default function DashboardPage() {
             <CodeView code={JSON.stringify(modelState.comandos(), null, 2)}></CodeView>
           </div>
         )}
-
-        
 
         {modelState.comandos().length > 0 && (
           <DragDropContext
@@ -133,14 +135,19 @@ export default function DashboardPage() {
                           >
                             <div className='flex flex-row justify-between'>
                               <p className='font-bold'>{comando.tipo}</p>
-                              <Button icon={IoMdClose} color='error' handleClick={()=> modelState.removerComando(id)} className="w-max p-2"/>
+                              <Button
+                                handleClick={()=> setModelState(modelState.removerComando(id))}
+                                icon={IoMdClose}
+                                color='error'
+                                className="w-max p-2"
+                              />
                             </div>
 
                             {comando instanceof Andar && (
                               <div className='flex flex-row gap-2 items-center'>
                                 <input
                                   value={comando.distancia}
-                                  onChange={(event)=> modelState.alterarDistancia(id, Number(event.target.value))}
+                                  onChange={(event)=> setModelState(modelState.alterarDistancia(id, Number(event.target.value)))}
                                   type='number'
                                   className='w-full bg-slate-200 rounded-md p-1 w-35'
                                   min={0}
@@ -153,7 +160,7 @@ export default function DashboardPage() {
                               <div className='flex flex-row gap-2 items-center'>
                                 <select
                                   value={comando.direcao}
-                                  onChange={(event) => modelState.alterarDirecao(id, event.target.value as "Direita" | "Esquerda")}
+                                  onChange={(event) => setModelState(modelState.alterarDirecao(id, event.target.value as "Direita" | "Esquerda"))}
                                 >
                                   <option value="Direita">Direita</option>
                                   <option value="Esquerda">Esquerda</option>
@@ -179,18 +186,34 @@ export default function DashboardPage() {
         {/* Comandos à direita */}
         <div className="fixed bottom-6 right-6 bg-gray-300 p-4 rounded-xl flex flex-col space-y-2">
             <span className="font-bold text-gray-900 mb-2 text-center">COMANDOS</span>
-            <ComandoButton icon={FaLongArrowAltUp} iconPos='right' handleClick={adicionarAndar}>
+            <ComandoButton
+              icon={FaLongArrowAltUp}
+              iconPos='right'
+              handleClick={adicionarAndar}
+              disabled={modelState.conexaoEstado() !== "conectado" || modelState.jaTemLargar()}
+            >
               Andar
             </ComandoButton>
 
-            <ComandoButton icon={HiArrowUturnRight} iconPos='right' handleClick={adicionarVirar}>
+            <ComandoButton
+              icon={HiArrowUturnRight}
+              iconPos='right'
+              handleClick={adicionarVirar}
+              disabled={modelState.conexaoEstado() !== "conectado" || modelState.jaTemLargar()}
+            >
               Virar
             </ComandoButton>
 
-            <ComandoButton icon={BsBoxSeamFill } iconPos='right' handleClick={adicionarLargar}>
+            <ComandoButton
+              icon={BsBoxSeamFill }
+              iconPos='right'
+              handleClick={adicionarLargar}
+              disabled={modelState.conexaoEstado() !== "conectado" || modelState.jaTemLargar()}
+            >
               Largar
             </ComandoButton>
         </div>
+        
         </main>
     </div>
   )

@@ -32,9 +32,13 @@ services:
       - app_network
     user: root
     environment:
+      MQTT_HOST: host.docker.internal,
+      MQTT_PORT: 1883,
       CHOKIDAR_USEPOLLING: "true"
       # Opcional: Se necessário, aumente o número máximo de observadores (inotify)
       WATCHPACK_POLLING: "true"
+    extra_hosts:
+      - "host.docker.internal:host-gateway" # Define o DNS mágico para apontar para o host
 
 networks:
   app_network:

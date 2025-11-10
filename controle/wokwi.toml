@@ -1,0 +1,16 @@
+[wokwi]
+version = 1
+
+# Aponte para os artefatos gerados pelo PlatformIO (build antes de simular!)
+firmware = ".pio/build/esp32dev/firmware.bin"
+elf      = ".pio/build/esp32dev/firmware.elf"   # opcional, acelera a simulação
+
+# (opcional) Serial por TCP para você conectar um monitor externo (RFC2217)
+# Ex.: conectar em "rfc2217://localhost:4000" com baud 115200
+rfc2217ServerPort = 4000
+
+# (opcional) Port-forward: mapeia http://localhost:8180 -> porta 80 do ESP32 simulado
+# Útil quando você rodar um servidor HTTP no firmware.
+[[net.forward]]
+from = "localhost:8180"
+to   = "target:80"
