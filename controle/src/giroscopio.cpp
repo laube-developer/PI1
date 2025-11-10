@@ -27,12 +27,12 @@ void setupGiroscopio() {
 }
 
 DadosGiroscopio lerGiroscopio() {
-  DadosGiroscopio dadosLidos
+  DadosGiroscopio dadosLidos;
   sensors_event_t a, g, temp;
   mpu.getEvent(&a, &g, &temp);
-  dadosLidos.x = g.gyro.x * SENSORS_RADS_TO_DEGS;
-  dadosLidos.y = g.gyro.y * SENSORS_RADS_TO_DEGS;
-  dadosLidos.z = g.gyro.z * SENSORS_RADS_TO_DEGS;
+  dadosLidos.x = g.gyro.x * SENSORS_RADS_TO_DPS;
+  dadosLidos.y = g.gyro.y * SENSORS_RADS_TO_DPS;
+  dadosLidos.z = g.gyro.z * SENSORS_RADS_TO_DPS;
 
    return dadosLidos;
 }

@@ -1,4 +1,5 @@
-#include "enviarDados.h"
+#include <Arduino.h>
+#include "GiroenviarDados.h"
 
 void enviarDadosGiroscopio(DadosGiroscopio dados) {
  Serial.print("Giroscópio X: ");
