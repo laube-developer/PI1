@@ -123,6 +123,7 @@ export default function DashboardPage() {
                     className="flex flex-row gap-2"
                     {...provided.droppableProps}
                     ref={provided.innerRef}
+                    data-testid="command-list"
                   >
                     {modelState.comandos().map((comando, id) => (
                       <Draggable key={comando.id} draggableId={comando.id} index={id}>
@@ -131,6 +132,7 @@ export default function DashboardPage() {
                             ref={provided.innerRef}
                             {...provided.draggableProps}
                             {...provided.dragHandleProps}
+                            data-testid={`command-card-${id}`}
                             className='w-30 bg-white p-4 rounded-md shadow flex flex-col gap-3 cursor-move'
                           >
                             <div className='flex flex-row justify-between'>
