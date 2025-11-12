@@ -1,46 +1,32 @@
 "use client"
 import { Dispatch, MouseEventHandler, SetStateAction } from "react"
 import Button from "../Button"
-
 import { PiSignOut } from "react-icons/pi";
+import { IoIosRefresh } from "react-icons/io"; 
 import { AppState } from "../../entidades/appstate";
-import { conectar, desconectar } from "../../actions/actions";
 
 
 type SidebarProps = {
-    handleLogout: MouseEventHandler<HTMLButtonElement>,
-    modelState: AppState,
-    setModelState: Dispatch<SetStateAction<AppState>>,
-    handleEnviar: MouseEventHandler<HTMLButtonElement>
+    handleLogout: MouseEventHandler<HTMLButtonElement>;
+    modelState: AppState;
+    setModelState: Dispatch<SetStateAction<AppState>>;
+    handleEnviar: MouseEventHandler<HTMLButtonElement>;
+    
+    isConnected: boolean; 
+    handleReconnect: () => void; 
+    handleDisconnect: () => void;
 }
 
-export default function Sidebar({handleLogout, modelState, setModelState, handleEnviar}: SidebarProps){
-    const handleConectar = async ()=>{
-        setModelState(
-            modelState
-            .setConexaoEstado("conectando")
-        )
-        await conectar()
-
-        setModelState(
-            modelState
-            .setConexaoEstado("conectado")
-        )
-    }
-
-    const handleDesconectar = async ()=>{
-        setModelState(
-            modelState
-            .setConexaoEstado("desconectando")
-        )
-
-        await desconectar();
-
-        setModelState(
-            modelState
-            .setConexaoEstado("desconectado")
-        )
-    }
+export default function Sidebar({
+    handleLogout, 
+    modelState, 
+    setModelState, 
+    handleEnviar,
+    isConnected, 
+    handleReconnect,
+    handleDisconnect 
+}: SidebarProps){
+    const conexaoEstadoTexto = isConnected ? "conectado" : "desconectado";
 
     return (
         <aside className="w-30 md:w-35 bg-gray-300 flex flex-col items-center py-6 px-3 space-y-4 border-r border-gray-400">
@@ -55,23 +41,36 @@ export default function Sidebar({handleLogout, modelState, setModelState, handle
 
         <div className="w-full text-xs flex flex-col items-start">
             <b>Status: </b>
-            {modelState.conexaoEstado() == "conectado" ? (
+            {isConnected ? (
                 <span className="text-green-600 font-bold">Conectado</span>
             ) : (
                 <span className="text-red-600 font-bold">Desconectado</span>
             )}
         </div>
 
-        <Button
-            handleClick={modelState.conexaoEstado() == "conectado" ? handleDesconectar : handleConectar}
-            smoth
-            color={modelState.conexaoEstado() == "desconectado" ? "success" : "error"}
-        >
-            {modelState.conexaoEstado() === "desconectado" ? "Conectar" : "Desconectar"}
-        </Button>
+        {isConnected ? (
+            <Button
+                handleClick={handleDisconnect} 
+                color="error"
+            >
+                Desconectar
+            </Button>
+        ) : (
+            <Button
+                handleClick={handleReconnect} 
+                color="success"
+                icon={IoIosRefresh}
+            >
+                Tentar Reconectar
+            </Button>
+        )}
 
-        <Button  handleClick={handleEnviar}
-            className="bg-gray-500 text-white">Enviar
+        <Button  
+            handleClick={handleEnviar}
+            className="bg-gray-500 text-white"
+            disabled={!isConnected} 
+        >
+            Enviar
         </Button>
 
         <Button>Histórico</Button>
@@ -97,4 +96,3 @@ export default function Sidebar({handleLogout, modelState, setModelState, handle
         </aside>
     )
 }
-    

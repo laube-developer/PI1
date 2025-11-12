@@ -10,6 +10,8 @@ abstract class Comando {
     this.id = id;
     this.tipo = tipo;
   }
+
+  abstract toString(): string;
 }
 
 class Andar extends Comando {
@@ -19,6 +21,10 @@ class Andar extends Comando {
     super(id, "Andar");
 
     this.distancia = distancia;
+  }
+
+  toString() {
+    return `${this.tipo}:${this.distancia}`;
   }
 }
 
@@ -30,12 +36,20 @@ class Virar extends Comando {
 
     this.direcao = direcao;
   }
+
+  toString() {
+    return `${this.tipo}:${this.direcao}`;
+  }
 }
 
 class Largar extends Comando {
   constructor (id: string){
     super(id, "Largar");
 
+  }
+
+  toString() {
+    return this.tipo;
   }
 }
 

@@ -5,7 +5,7 @@ type ButtonProps = {
     handleClick?: MouseEventHandler<HTMLButtonElement>,
     children?: ReactNode;
     className?: string | (() => string);
-    disable?: boolean,
+    disabled?: boolean,
     color?:  "primary" | "secondary" | "success" | "warn" | "error",
     icon?: IconType
     iconPos?: "right" | "left",
@@ -35,7 +35,7 @@ export default function Button({
     handleClick,
     children,
     className = '',
-    disable = false,
+    disabled = false,
     color = 'primary',
     icon : Icon,
     iconPos = "left",
@@ -46,11 +46,11 @@ export default function Button({
 
     const colorClasses = (smoth ? SMOTH_COLOR_CLASSES[color] : COLOR_CLASSES[color]) || COLOR_CLASSES.primary;
 
-    const interactionClasses = disable
+    const interactionClasses = disabled
         ? DISABLED_CLASSES
         : `cursor-pointer active:scale-[0.99] focus:outline-none focus:ring-4 focus:ring-opacity-50`;
 
-    const finalClasses = `${baseClasses} ${interactionClasses} ${disable ? DISABLED_CLASSES : colorClasses} ${className}`;
+    const finalClasses = `${baseClasses} ${interactionClasses} ${disabled ? DISABLED_CLASSES : colorClasses} ${className}`;
 
     return (
         <button

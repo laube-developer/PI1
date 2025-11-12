@@ -14,13 +14,16 @@ import CodeView from '../../../components/CodeView' // Agora é um Client Compon
 import { DragDropContext, Droppable, Draggable, DropResult } from '@hello-pangea/dnd'
 import { AppState } from '../../../entidades/appstate'
 import { User } from '../../../entidades/user'
-import { enviarMensagem } from '../../../actions/actions'
+
+import { useMQTTClient } from '../../../hooks/useMQTTClient'
 
 
 export default function DashboardPage() {
   const [modelState, setModelState] = useState<AppState>(new AppState())
 
   const router = useRouter()
+
+  const {isConnected, publish, disconnect, reconnect} = useMQTTClient();
 
   useEffect(() => {
     supabase.auth.getSession().then(({ data }) => {
@@ -63,7 +66,7 @@ export default function DashboardPage() {
   }
 
   const handleEnviar = () => {
-    if (modelState.conexaoEstado() !== "conectado") {
+    if (!isConnected) {
         alert("Conecte-se ao carrinho para enviar os comandos");
         return;
     }
@@ -73,16 +76,18 @@ export default function DashboardPage() {
       return;
     }
 
-    enviarMensagem("carrodoovo/comandos", JSON.stringify(modelState.comandos()));
+
+    publish("carrodoovo/comandos", JSON.stringify(modelState.comandos()));
     
-    console.log("Comandos enviados!");
+    alert("Comandos enviados com sucesso!");
+
   }
 
   if (!modelState.user()) return <p>Verificando sessão...</p>
 
   return (
     <div className="min-h-screen flex bg-gray-100">
-      <Sidebar handleLogout={handleLogout} modelState={modelState} setModelState={setModelState} handleEnviar={handleEnviar}/>
+      <Sidebar handleDisconnect={disconnect} isConnected={isConnected} handleReconnect={reconnect} handleLogout={handleLogout} modelState={modelState} setModelState={setModelState} handleEnviar={handleEnviar}/>
 
       {/* Main content */}
       <main className="flex-1 p-6 flex flex-row items-center justify-center bg-slate-200 relative">
@@ -190,7 +195,7 @@ export default function DashboardPage() {
               icon={FaLongArrowAltUp}
               iconPos='right'
               handleClick={adicionarAndar}
-              disabled={modelState.conexaoEstado() !== "conectado" || modelState.jaTemLargar()}
+              disabled={!isConnected || modelState.jaTemLargar()}
             >
               Andar
             </ComandoButton>
@@ -199,7 +204,7 @@ export default function DashboardPage() {
               icon={HiArrowUturnRight}
               iconPos='right'
               handleClick={adicionarVirar}
-              disabled={modelState.conexaoEstado() !== "conectado" || modelState.jaTemLargar()}
+              disabled={!isConnected || modelState.jaTemLargar()}
             >
               Virar
             </ComandoButton>
@@ -208,7 +213,7 @@ export default function DashboardPage() {
               icon={BsBoxSeamFill }
               iconPos='right'
               handleClick={adicionarLargar}
-              disabled={modelState.conexaoEstado() !== "conectado" || modelState.jaTemLargar()}
+              disabled={!isConnected || modelState.jaTemLargar()}
             >
               Largar
             </ComandoButton>
