@@ -16,6 +16,6 @@ namespace cmdq {
     out=buffer[head]; head=(head+1)%CAPACITY; count--; return true;
   }
 
-  bool   empty(){ return count==0; }
-  size_t size(){  return count;    }
+  bool empty(){ return count==0; }
+  size_t size(){ return count; }
 }

@@ -1,35 +1,47 @@
 #include <Arduino.h>
 #include "config.h"
 #include "motors.h"
-#include "command_queue.h"
-#include "executor.h"
-#include "demo_feed.h"
-#include "tipos_de_dados.h"
+#include "encoder.h"
 #include "giroscopio.h"
-#include "GiroenviarDados.h"
-
-DadosGiroscopio meusDadosSensor;
 
 void setup() {
   Serial.begin(115200);
-  delay(200);
-  Serial.println();
-  Serial.println("=== Carro do Ovo — Simulacao: Velocidades por Roda (fila interna) ===");
-  motors::setup();
-  cmdq::clear();
-  executor::setup();
-  demo::setup();
+  delay(500);
+  
+  motors::initialize();
+  inicializarEncoders();
   setupGiroscopio();
 }
 
+float totalDeAmostrasX = 0;
+float somaTotalAmostrasX = 0;
+
+float totalDeAmostrasY = 0;
+float somaTotalAmostrasY = 0;
+
+float totalDeAmostrasZ = 0;
+float somaTotalAmostrasZ = 0;
+
 void loop() {
-  demo::tick();
+  //DadosEncoder dados = lerDadosEncoders();
+  //enviarDadosEncoders(dados);
 
-  executor::tick();
+  // motors::andarDoisMotoresFrente();
+  // delay(3000);
 
-  meusDadosSensor = lerGiroscopio();
+  // motors::pararDoisMotores();
+  // delay(2000);
 
-  enviarDadosGiroscopio(meusDadosSensor);
-  
-  delay(2);
+  DadosGiroscopio dadosG = lerGiroscopio();
+  totalDeAmostrasX++;
+  somaTotalAmostrasX += dadosG.x;
+  totalDeAmostrasY++;
+  somaTotalAmostrasY += dadosG.y;
+  totalDeAmostrasZ++;
+  somaTotalAmostrasZ += dadosG.z;
+  Serial.println("Media x: " + String(somaTotalAmostrasX/totalDeAmostrasX) + 
+                 " | Media y: " + String(somaTotalAmostrasY/totalDeAmostrasY) + 
+                 " | Media z: " + String(somaTotalAmostrasZ/totalDeAmostrasZ));
+
+  delay(100);
 }

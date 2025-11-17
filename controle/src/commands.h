@@ -1,7 +1,7 @@
 #pragma once
 #include <Arduino.h>
 
-enum class CmdType : uint8_t { NONE=0, SET_VEL, STOP_ALL, DEPOSIT_EGG }; 
+enum class CmdType : uint8_t { NONE=0, SET_VEL, STOP_ALL, DEPOSIT_EGG, FORWARD, TURN }; 
 
 struct Command {
   CmdType type = CmdType::NONE;

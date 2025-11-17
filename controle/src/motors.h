@@ -3,11 +3,25 @@
 #include "config.h"
 
 namespace motors {
-  void setup();
+    void initialize();
 
-  void setVel(uint8_t left, uint8_t right);
+    void andarMotor1Frente();
+    
+    void andarMotor1Tras();
+    
+    void pararMotor1();
+    
+    void andarMotor2Frente();
+    
+    void andarMotor2Tras();
+    
+    void pararMotor2();
+    
+    void andarDoisMotoresFrente();
+    
+    void pararDoisMotores();
 
-  void stop();
-  
-  void depositEgg();
+    void virarDireita();
+
+    void virarEsquerda();
 }
