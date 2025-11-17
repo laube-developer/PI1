@@ -2,13 +2,14 @@
 #include <Adafruit_Sensor.h>
 #include <Wire.h>
 #include "giroscopio.h"
+#include <Arduino.h>
 
 Adafruit_MPU6050 mpu;
 
 void setupGiroscopio() {
 
   Serial.println("Iniciando Giroscópio MPU-6050");
-  Wire.begin(18, 19);
+  Wire.begin(21, 22); //pinos SDA e SCL do ESP32
   if (!mpu.begin()) {
     Serial.println("Falha ao encontrar o MPU-6050. Verifique a conexão.");
     while (1) {
@@ -34,5 +35,19 @@ DadosGiroscopio lerGiroscopio() {
   dadosLidos.y = g.gyro.y * SENSORS_RADS_TO_DPS;
   dadosLidos.z = g.gyro.z * SENSORS_RADS_TO_DPS;
 
-   return dadosLidos;
+  return dadosLidos;
+}
+
+void enviarDadosGiroscopio(DadosGiroscopio dados) {
+ Serial.print("Giroscópio X: ");
+ Serial.print(dados.x);
+ Serial.print(" deg/s\t");
+
+ Serial.print("Giroscópio Y: ");
+ Serial.print(dados.y);
+ Serial.print(" deg/s\t");
+
+ Serial.print("Giroscópio Z: ");
+ Serial.print(dados.z);
+ Serial.println(" deg/s");
 }

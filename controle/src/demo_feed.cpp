@@ -10,7 +10,7 @@ struct Step {
 };
 
 static const Step SEQ[] = {
-  { 1000,  0,   0   },  
+  { 1000,  0,   0   },
   { 1500,  120,  90 },  
   { 2000,  150, 130 },  
   { 1500,  160, 160 },  
@@ -38,7 +38,10 @@ namespace demo {
     const unsigned long now = millis();
 
     if (!started) {
-      Command c; c.type = CmdType::SET_VEL; c.left = SEQ[idx].left; c.right = SEQ[idx].right;
+      Command c;
+      c.type = CmdType::SET_VEL;
+      c.left = SEQ[idx].left;
+      c.right = SEQ[idx].right;
       cmdq::push(c);
       Serial.printf(LOG_PREFIX "DEMO step %u -> L=%u R=%u for %ums\n",
         (unsigned)idx, c.left, c.right, (unsigned)SEQ[idx].duration_ms);
@@ -49,6 +52,7 @@ namespace demo {
 
     if (now - tStart >= SEQ[idx].duration_ms) {
       idx++;
+
       if (idx >= N) {
         // Sequência terminou, primeiro depositar o ovo
         Command d; d.type = CmdType::DEPOSIT_EGG; 
@@ -61,7 +65,10 @@ namespace demo {
         Serial.println(LOG_PREFIX "DEMO finished (STOP)");
         return;
       }
-      Command c; c.type = CmdType::SET_VEL; c.left = SEQ[idx].left; c.right = SEQ[idx].right;
+      Command c;
+      c.type = CmdType::SET_VEL;
+      c.left = SEQ[idx].left;
+      c.right = SEQ[idx].right;
       cmdq::push(c);
       Serial.printf(LOG_PREFIX "DEMO step %u -> L=%u R=%u for %ums\n",
         (unsigned)idx, c.left, c.right, (unsigned)SEQ[idx].duration_ms);
