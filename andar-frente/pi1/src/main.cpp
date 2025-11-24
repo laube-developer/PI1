@@ -2,117 +2,86 @@
 #include "config.h"
 #include "motors.h"
 #include "giroscopio.h"
-
-// --- Ganhos de Controle ---
-const float Kp = 8.0f;     // Ganho Proporcional (Ajuste Rápido)
-const float Ki = 0.05f;     // Ganho Integral (Elimina Erro Estático)
-const int VELOCIDADE_BASE = 100;
-
-// --- Variáveis de Estado ---
-float gyroZOffset = 0.0f;
-float anguloAtual = 0.0f;      // Posição angular integrada (em graus)
-float erroAcumulado = 0.0f;    // Termo Integral acumulado (para o Termo I)
-unsigned long prevMillisLoop = 0;
+#include "giroscopio-scale_factor.h"
+#include "pid.h"
 
 unsigned long startTime = 0;
+float omega = 0.0;
+bool concluido = false;
 
 void setup() {
   Serial.begin(115200);
   delay(500);
 
-  Serial.println("Iniciando controle PI no Ângulo (por giroscopio) - versao 3.0");
+  Serial.println("--- Robô Diferencial: Teste de Navegação - versão 2.8---");
 
   motors::initialize();
   setupGiroscopio();
-
-  // Calibração do giroscópio (offset em Z).
-  Serial.println("Calibrando giroscopio (Z) - por favor mantenha o robo parado...");
-  float soma = 0.0f;
-  const int n = 200;
-  for (int i = 0; i < n; ++i) {
-    DadosGiroscopio dados = lerGiroscopio();
-    soma += dados.z;
-    delay(5);
-  }
-  gyroZOffset = soma / (float)n;
-  Serial.print("Offset Z: "); Serial.println(gyroZOffset);
-
+  //k_rate_calibrado(90.0f);
   startTime = millis();
 }
 
-void pra_frente() {
-  unsigned long now = millis();
-  if (prevMillisLoop == 0) prevMillisLoop = now;
-  float dt = (now - prevMillisLoop) / 1000.0f; 
-  prevMillisLoop = now;
+// float moverRobo(float anguloDesejado) {
+//   dados estadoGiro = getAnguloAtual();
+//   float anguloAtual = estadoGiro.angulo;
+//   unsigned long deltaT = estadoGiro.deltaTempo;
 
-  DadosGiroscopio dados = lerGiroscopio();
-  float erro_taxa = dados.z - gyroZOffset;
+//   float ajusteF = pid_control(anguloAtual, anguloDesejado, deltaT);
+//   int ajuste = (int)round(ajusteF);
 
-  const float DEAD_BAND = 0.5f;
-  if (abs(erro_taxa) > DEAD_BAND) {
-      anguloAtual += erro_taxa * dt;
-  }
+//   // O ajuste positivo diminui a roda esquerda e aumenta a direita (vira à direita)
+//   // O ajuste negativo aumenta a roda esquerda e diminui a direita (vira à esquerda)
+//   int velE = constrain(VELOCIDADE_BASE - ajuste, 0, 100);
+//   int velD = constrain(VELOCIDADE_BASE + ajuste, 0, 100);
 
-  // Setpoint de 0.0f (ir para frente reto)
-  float erro_posicao = 0.0f - anguloAtual; 
+//   motors::andarDoisMotoresFrente(velE, velD);
 
-  // --- CÁLCULO DO CONTROLE PI ---
+//   // --- Debug Serial ---
+//   Serial.print("Ang: "); Serial.print(anguloAtual, 2);
+//   Serial.print(" | Ajuste: "); Serial.print(ajuste);
+//   Serial.print(" | V_E: "); Serial.print(velE);
+//   Serial.print(" | V_D: "); Serial.println(velD);
 
-  float termoP = Kp * erro_posicao; 
+//   return anguloAtual;
+// }
 
-  if (abs(erro_posicao) > 0.1f) { // Acumula I apenas se o erro de posição for significativo
-    erroAcumulado += erro_posicao * dt;
-  }
+dados virar_esquerda(dados estadoGiro) {
+  //dados estadoGiro = getAnguloAtual();
 
-  // Limita o acúmulo integral para que o termo I não fique muito grande
-  const float LIMITE_INTEGRAL = 5.0f; 
-  erroAcumulado = constrain(erroAcumulado, -LIMITE_INTEGRAL, LIMITE_INTEGRAL);
-
-  float termoI = Ki * erroAcumulado;
-
-  // Ajuste Total: Soma dos termos P e I
-  // O sinal do ajuste: negativo corrige p/ direita; positivo corrige p/ esquerda.
-  float ajusteF = termoP + termoI; 
-  
-  // Limita o ajuste total para não saturar demais o motor
-  const float LIMITE_AJUSTE = 100.0f;
-  ajusteF = constrain(ajusteF, -LIMITE_AJUSTE, LIMITE_AJUSTE);
-
+  float ajusteF = pid_control(estadoGiro.angulo, -90.0, estadoGiro.deltaTempo);
   int ajuste = (int)round(ajusteF);
 
-  // --- APLICAÇÃO NAS RODAS ---
-  
-  const int MAX_VEL = 255;
-  const int MIN_VEL = 0;
+  // O ajuste positivo diminui a roda esquerda e aumenta a direita (vira à direita)
+  // O ajuste negativo aumenta a roda esquerda e diminui a direita (vira à esquerda)
 
-  int velE = constrain(VELOCIDADE_BASE - ajuste, MIN_VEL, MAX_VEL);
-  int velD = constrain(VELOCIDADE_BASE + ajuste, MIN_VEL, MAX_VEL);
+  int velE = constrain(VELOCIDADE_BASE - ajuste, 0, 0);
+  int velD = constrain(VELOCIDADE_BASE + ajuste, 0, 150);
 
-  motors::andarDoisMotoresFrente(velE, velD);
+  if (estadoGiro.angulo > 90.0) {
+    motors::andarDoisMotoresTras(velE, velD);
+  }
+  else {
+    motors::andarDoisMotoresFrente(velE, velD);
+  }
 
   // --- Debug Serial ---
-  Serial.print("Ang: "); Serial.print(anguloAtual, 2);
-  Serial.print(" | e_Pos: "); Serial.print(erro_posicao, 2);
-  Serial.print(" | P: "); Serial.print(termoP, 1);
-  Serial.print(" | I: "); Serial.print(termoI, 1);
+  Serial.print("Ang: "); Serial.print(estadoGiro.angulo, 2);
   Serial.print(" | Ajuste: "); Serial.print(ajuste);
   Serial.print(" | V_E: "); Serial.print(velE);
   Serial.print(" | V_D: "); Serial.println(velD);
-  
-  delay(50); // control loop ~20Hz
-}
 
-void pra_direita() {
-  motors::andarDoisMotoresFrente(100, 200);
-  delay(500);
+  return estadoGiro;
 }
 
 void loop() {
-  unsigned long currentTime = millis();
-  if (currentTime - startTime < 5000) {
-    pra_frente();
-  } else {
+  if (concluido) {
     motors::pararDoisMotores();
+    return;
   }
+
+  dados a = getAnguloAtual();
+  dados estadoGiro = virar_esquerda(a);
+  omega = estadoGiro.angulo;
+  
+  if (abs(omega - 87.44) < 7.0) concluido = true;
 }
