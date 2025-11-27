@@ -1,11 +1,10 @@
 #pragma once
 
+#define VELOCIDADE_BASE 150  // Velocidade base dos motores (0-255)
+
 // ===== Giroscópio =====
-//#define K_RATE 1.0292       // Definir após k_rate_calibrado();
-
-#define K_RATE 0.995355f
-
-#define VELOCIDADE_BASE 100
+#define K_RATE 1.0292       // Definir após k_rate_calibrado();
+//#define K_RATE 0.995355f
 #define ALPHA_OMEGA 0.15f    // Filtro passa-baixa para omega
 #define ALPHA_THETA 0.98f    // Filtro passa-baixa para theta
 
