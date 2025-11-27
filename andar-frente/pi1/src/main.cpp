@@ -4,46 +4,44 @@
 #include "giroscopio.h"
 #include "giroscopio-scale_factor.h"
 #include "pid.h"
+#include "encoder.h"
 
-unsigned long startTime = 0;
-float omega = 0.0;
 bool concluido = false;
+int DISTANCIA_ALVO_CM = 50;
+int DISTANCIA_COMANDO = DISTANCIA_ALVO_CM - 6;
 
 void setup() {
   Serial.begin(115200);
   delay(500);
 
-  Serial.println("--- Robô Diferencial: Teste de Navegação - versão 2.8---");
+  Serial.println("--- Robô Diferencial: Teste de Navegação: Encoder - versão 6.1 ---");
 
   motors::initialize();
   setupGiroscopio();
-  //k_rate_calibrado(90.0f);
-  startTime = millis();
+  inicializarEncoders();
 }
 
-// float moverRobo(float anguloDesejado) {
-//   dados estadoGiro = getAnguloAtual();
-//   float anguloAtual = estadoGiro.angulo;
-//   unsigned long deltaT = estadoGiro.deltaTempo;
+void andarPraFrente() {
+  dados estadoGiro = getAnguloAtual();
+  float anguloAtual = estadoGiro.angulo;
+  unsigned long deltaT = estadoGiro.deltaTempo;
 
-//   float ajusteF = pid_control(anguloAtual, anguloDesejado, deltaT);
-//   int ajuste = (int)round(ajusteF);
+  float ajusteF = pid_control(anguloAtual, 0.0f, deltaT);
+  int ajuste = (int)round(ajusteF);
 
-//   // O ajuste positivo diminui a roda esquerda e aumenta a direita (vira à direita)
-//   // O ajuste negativo aumenta a roda esquerda e diminui a direita (vira à esquerda)
-//   int velE = constrain(VELOCIDADE_BASE - ajuste, 0, 100);
-//   int velD = constrain(VELOCIDADE_BASE + ajuste, 0, 100);
+  // O ajuste positivo diminui a roda esquerda e aumenta a direita (vira à direita)
+  // O ajuste negativo aumenta a roda esquerda e diminui a direita (vira à esquerda)
+  int velE = constrain(VELOCIDADE_BASE - ajuste, 0, 180);
+  int velD = constrain(VELOCIDADE_BASE + ajuste, 0, 180);
 
-//   motors::andarDoisMotoresFrente(velE, velD);
+  motors::andarDoisMotoresFrente(velE, velD);
 
-//   // --- Debug Serial ---
-//   Serial.print("Ang: "); Serial.print(anguloAtual, 2);
-//   Serial.print(" | Ajuste: "); Serial.print(ajuste);
-//   Serial.print(" | V_E: "); Serial.print(velE);
-//   Serial.print(" | V_D: "); Serial.println(velD);
-
-//   return anguloAtual;
-// }
+  // --- Debug Serial ---
+  Serial.print("Ang: "); Serial.print(anguloAtual, 2);
+  Serial.print(" | Ajuste: "); Serial.print(ajuste);
+  Serial.print(" | V_E: "); Serial.print(velE);
+  Serial.print(" | V_D: "); Serial.println(velD);
+}
 
 dados virar_esquerda(dados estadoGiro) {
   //dados estadoGiro = getAnguloAtual();
@@ -79,9 +77,21 @@ void loop() {
     return;
   }
 
-  dados a = getAnguloAtual();
-  dados estadoGiro = virar_esquerda(a);
-  omega = estadoGiro.angulo;
+  // dados a = getAnguloAtual();
+  // dados estadoGiro = virar_esquerda(a);
+  // omega = estadoGiro.angulo;
   
-  if (abs(omega - 87.44) < 7.0) concluido = true;
+  //if (abs(omega - 87.44) < 7.0) concluido = true;
+
+  motors::andarDoisMotoresFrente(255, 255);
+
+  Serial.println("Andando pra frente...");
+
+  // andarPraFrente();
+  // DadosEncoders dadosEnc = lerDadosEncoders();
+  // enviarDadosEncoders();
+
+  // if ((float)dadosEnc.distanciaTotalCm >= DISTANCIA_COMANDO) {
+  //   concluido = true;
+  // }
 }
