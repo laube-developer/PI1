@@ -28,8 +28,10 @@ export default function LoginPage() {
         if (error) throw error
         setError('Conta criada! Verifique seu e-mail se for necessário confirmar.')
       }
-    } catch (err: any) {
-      setError(err.message)
+    } catch (err) {
+      if (err instanceof Error) {
+        setError(err.message)
+      }
     } finally {
       setLoading(false)
     }

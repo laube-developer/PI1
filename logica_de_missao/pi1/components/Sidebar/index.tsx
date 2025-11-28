@@ -2,44 +2,24 @@
 import { Dispatch, MouseEventHandler, SetStateAction } from "react"
 import Button from "../Button"
 
+import { FaLongArrowAltUp } from "react-icons/fa";
 import { PiSignOut } from "react-icons/pi";
-import { AppState } from "../../entidades/appstate";
-import { conectar, desconectar } from "../../actions/actions";
 
+
+type SideBarStateProps = {
+    isConnected: boolean;
+}
 
 type SidebarProps = {
     handleLogout: MouseEventHandler<HTMLButtonElement>,
-    modelState: AppState,
-    setModelState: Dispatch<SetStateAction<AppState>>,
+    sidebarState: SideBarStateProps,
+    setSideBarState: Dispatch<SetStateAction<SideBarStateProps>>,
     handleEnviar: MouseEventHandler<HTMLButtonElement>
 }
 
-export default function Sidebar({handleLogout, modelState, setModelState, handleEnviar}: SidebarProps){
-    const handleConectar = async ()=>{
-        setModelState(
-            modelState
-            .setConexaoEstado("conectando")
-        )
-        await conectar()
-
-        setModelState(
-            modelState
-            .setConexaoEstado("conectado")
-        )
-    }
-
-    const handleDesconectar = async ()=>{
-        setModelState(
-            modelState
-            .setConexaoEstado("desconectando")
-        )
-
-        await desconectar();
-
-        setModelState(
-            modelState
-            .setConexaoEstado("desconectado")
-        )
+export default function Sidebar({handleLogout, sidebarState, setSideBarState, handleEnviar}: SidebarProps){
+    const conectar = ()=>{
+        setSideBarState({...sidebarState, isConnected: !sidebarState.isConnected})
     }
 
     return (
@@ -53,21 +33,8 @@ export default function Sidebar({handleLogout, modelState, setModelState, handle
             <span className="text-xs font-bold text-gray-900 text-center">CARRO DO OVO</span>
         </div>
 
-        <div className="w-full text-xs flex flex-col items-start">
-            <b>Status: </b>
-            {modelState.conexaoEstado() == "conectado" ? (
-                <span className="text-green-600 font-bold">Conectado</span>
-            ) : (
-                <span className="text-red-600 font-bold">Desconectado</span>
-            )}
-        </div>
-
-        <Button
-            handleClick={modelState.conexaoEstado() == "conectado" ? handleDesconectar : handleConectar}
-            smoth
-            color={modelState.conexaoEstado() == "desconectado" ? "success" : "error"}
-        >
-            {modelState.conexaoEstado() === "desconectado" ? "Conectar" : "Desconectar"}
+        <Button handleClick={conectar} className={sidebarState.isConnected ? "!text-green-700 font-bold" : ""}>
+            {!sidebarState.isConnected ? "Conectar" : "Conectado"}
         </Button>
 
         <Button  handleClick={handleEnviar}
@@ -76,15 +43,6 @@ export default function Sidebar({handleLogout, modelState, setModelState, handle
 
         <Button>Histórico</Button>
 
-
-        <div className="h-full overflow-y-auto">
-          {modelState.mensagensRecebidas().map((mensagem, index) => (
-            <div key={index} className='w-full mt-8 bg-white p-4 rounded-md shadow !text-sm'>
-              <p className='font-mono text-sm'>{mensagem}</p>
-            </div>
-          ))}
-        </div>
-
         <div className="mt-auto w-full">
             <Button
                 handleClick={handleLogout}
@@ -92,8 +50,6 @@ export default function Sidebar({handleLogout, modelState, setModelState, handle
                 icon={PiSignOut}
             >Logout</Button>
         </div>
-
-        
         </aside>
     )
 }

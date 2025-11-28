@@ -3,7 +3,7 @@
 import {codeToHtml} from 'shiki'
 import { useState, useEffect } from 'react';
 import Button from '../Button';
-import { IoIosArrowDown, IoIosArrowUp, IoMdArrowDropdownCircle, IoMdArrowDropupCircle } from 'react-icons/io';
+import { IoIosArrowDown, IoIosArrowUp } from 'react-icons/io';
 
 type CodeViewProps = {
     code: string
@@ -45,8 +45,9 @@ export default function CodeView({code}: CodeViewProps){
                 iconSize={20}
                 className={"bg-transparent"}
                 handleClick={() => setShow(!isShow)}
-                children={!isShow ? "Ver JSON comandos" : "Fechar" }
-            />
+            >
+                {!isShow ? "Ver JSON comandos" : "Fechar" }
+            </Button>
             {isShow && <div dangerouslySetInnerHTML={{__html: html}} className='overflow-x-scroll'></div>}
             
         </div>
