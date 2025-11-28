@@ -6,6 +6,12 @@ import { IoIosRefresh } from "react-icons/io";
 import { AppState } from "../../entidades/appstate";
 import { IoIosWarning } from "react-icons/io";
 
+import { FaLongArrowAltUp } from "react-icons/fa";
+
+
+type SideBarStateProps = {
+    isConnected: boolean;
+}
 
 type SidebarProps = {
     handleLogout: MouseEventHandler<HTMLButtonElement>;
@@ -19,17 +25,10 @@ type SidebarProps = {
     handleParadaEmergencia: () => void;
 }
 
-export default function Sidebar({
-    handleLogout, 
-    modelState, 
-    setModelState, 
-    handleEnviar,
-    isConnected, 
-    handleReconnect,
-    handleDisconnect,
-    handleParadaEmergencia
-}: SidebarProps){
-    const conexaoEstadoTexto = isConnected ? "conectado" : "desconectado";
+export default function Sidebar({handleLogout, sidebarState, setSideBarState, handleEnviar}: SidebarProps){
+    const conectar = ()=>{
+        setSideBarState({...sidebarState, isConnected: !sidebarState.isConnected})
+    }
 
     return (
         <aside className="w-30 md:w-35 bg-gray-300 flex flex-col items-center py-6 px-3 space-y-4 border-r border-gray-400">
@@ -85,15 +84,6 @@ export default function Sidebar({
 
         <Button>Histórico</Button>
 
-
-        <div className="h-full overflow-y-auto">
-          {modelState.mensagensRecebidas().map((mensagem, index) => (
-            <div key={index} className='w-full mt-8 bg-white p-4 rounded-md shadow !text-sm'>
-              <p className='font-mono text-sm'>{mensagem}</p>
-            </div>
-          ))}
-        </div>
-
         <div className="mt-auto w-full">
             <Button
                 handleClick={handleLogout}
@@ -101,8 +91,6 @@ export default function Sidebar({
                 icon={PiSignOut}
             >Logout</Button>
         </div>
-
-        
         </aside>
     )
 }
