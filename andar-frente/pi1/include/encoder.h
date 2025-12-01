@@ -18,13 +18,20 @@ struct Enconders {
     volatile unsigned long ultimoTempo = 0;
 };
 
+struct RobotPos {
+    float x = 0.0f;
+    float y = 0.0f;
+    float theta = 0.0f;
+}
+
 struct DadosEncoders {
     float distanciaEsquerdaCm = 0.0f;
     float distanciaDireitaCm = 0.0f;
     float distanciaTotalCm = 0.0f;
+    struct RobotPos pos;
 };
 
-void odometria_update(int pulsosE, int pulsosD);
+void calcularOdometria(float delta_theta);
 
 void reiniciarEncoders();
 
