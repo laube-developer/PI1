@@ -83,15 +83,15 @@ void loop() {
   
   //if (abs(omega - 87.44) < 7.0) concluido = true;
 
-  motors::andarDoisMotoresFrente(255, 255);
+  // motors::andarDoisMotoresFrente(255, 255);
 
-  Serial.println("Andando pra frente...");
+  // Serial.println("Andando pra frente...");
 
-  // andarPraFrente();
-  // DadosEncoders dadosEnc = lerDadosEncoders();
-  // enviarDadosEncoders();
+  andarPraFrente();
+  DadosEncoders dadosEnc = lerDadosEncoders();
+  enviarDadosEncoders();
 
-  // if ((float)dadosEnc.distanciaTotalCm >= DISTANCIA_COMANDO) {
-  //   concluido = true;
-  // }
+  if ((float)dadosEnc.pos.y >= DISTANCIA_COMANDO) {
+    concluido = true;
+  }
 }

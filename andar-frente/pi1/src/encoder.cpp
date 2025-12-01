@@ -22,6 +22,15 @@ IRAM_ATTR void isrDir() {
   encDir.ultimoEstado = estado;
 }
 
+void calcularOdometria(float delta_theta) {
+  float new_theta = delta_theta/2;
+  float delta_x = dados.distanciaTotalCm * cos (dados.pos.theta + new_theta);
+  float delta_y = dados.distanciaTotalCm * sin (dados.pos.theta + new_theta);
+
+  dados.pos.x += delta_x; dados.pos.y += delta_y;
+  dados.pos.theta += delta_theta;
+}
+
 void reiniciarEncoders() {
   noInterrupts();
     encEsq.pulsos = 0;
@@ -49,6 +58,10 @@ DadosEncoders lerDadosEncoders() {
   dados.distanciaEsquerdaCm += (float)pulsosE * CM_POR_PULSO;
   dados.distanciaDireitaCm += (float)pulsosD * CM_POR_PULSO;
   dados.distanciaTotalCm  = (dados.distanciaEsquerdaCm + dados.distanciaDireitaCm) / 2.0f;
+
+  float delta_theta = (dados.distanciaDireitaCm - dados.distanciaEsquerdaCm)/DISTANCIA_ENTRE_RODAS_CM;
+
+  calcularOdometria(float delta_theta);
 
   return dados;
 }
