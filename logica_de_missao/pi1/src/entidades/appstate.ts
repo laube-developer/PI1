@@ -1,4 +1,3 @@
-import mqtt from "mqtt"
 import { User } from "./user"
 import { Andar, Comando, Largar, Virar } from "./comandos"
 import { ComandoSalvo } from "./comandosSalvos"
@@ -83,7 +82,7 @@ export class AppState {
         if (this.comandosState[id].tipo != "Andar") return this
         console.log("Alterando distância do comando", id, "para", distancia);
         const novoComando = new Andar(this.comandosState[id].id, Math.abs(distancia))
-        let novaLista = [...this.comandosState];
+        const novaLista = [...this.comandosState];
         novaLista[id] = novoComando;
         return this.getEstadoAtualizado({comandos: novaLista})
     }
@@ -92,7 +91,7 @@ export class AppState {
         if (this.comandosState[id].tipo != "Virar") return this
         console.log("Alterando direção do comando", id, "para", direcao);
         const novoComando = new Virar(this.comandosState[id].id, direcao)
-        let novaLista = [...this.comandosState];
+        const novaLista = [...this.comandosState];
         novaLista[id] = novoComando;
         return this.getEstadoAtualizado({comandos: novaLista})
     }
@@ -100,7 +99,7 @@ export class AppState {
     removerComando(id: number){
         if (id > this.comandosState.length -1) return this;
         console.log("Removendo comando", id);
-        let novaLista = [...this.comandosState];
+        const novaLista = [...this.comandosState];
         novaLista.splice(id, 1);
         return this.getEstadoAtualizado({comandos: novaLista, jaTemLargar: this.comandosState[id].tipo === "Largar" ? false : this.jaTemLargarState})
     }
@@ -114,6 +113,9 @@ export class AppState {
     }
 
     static reidratarComando = (objeto: ComandoSalvo): Comando | null => {
+        if (!objeto) {
+            return null;
+        }
         switch (objeto.tipo) {
           case "Andar":
             // Garante que 'distancia' é um número

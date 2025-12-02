@@ -38,7 +38,9 @@ export default function ComandoButton({
         ? DISABLED_CLASSES
         : `cursor-pointer active:scale-[0.99] focus:outline-none focus:ring-4 focus:ring-opacity-50`;
 
-    const finalClasses = `${baseClasses} ${interactionClasses} ${disabled ? DISABLED_CLASSES : colorClasses} ${className}`;
+    const resolvedClassName = typeof className === 'function' ? className() : className;
+
+    const finalClasses = `${baseClasses} ${interactionClasses} ${disabled ? DISABLED_CLASSES : colorClasses} ${resolvedClassName}`;
 
     return (
         <button
