@@ -8,13 +8,14 @@
 
 bool concluido = false;
 int DISTANCIA_ALVO_CM = 50;
-int DISTANCIA_COMANDO = DISTANCIA_ALVO_CM - 6;
+int DISTANCIA_COMANDO = DISTANCIA_ALVO_CM;
+float omega = 0.0f;
 
 void setup() {
   Serial.begin(115200);
   delay(500);
 
-  Serial.println("--- Robô Diferencial: Teste de Navegação: Encoder - versão 6.1 ---");
+  Serial.println("--- Robô Diferencial: Teste de Navegação: Giroscópio - versão 1.2 ---");
 
   motors::initialize();
   setupGiroscopio();
@@ -41,6 +42,34 @@ void andarPraFrente() {
   Serial.print(" | Ajuste: "); Serial.print(ajuste);
   Serial.print(" | V_E: "); Serial.print(velE);
   Serial.print(" | V_D: "); Serial.println(velD);
+}
+
+dados virar_direita(dados estadoGiro) {
+  //dados estadoGiro = getAnguloAtual();
+
+  float ajusteF = pid_control(estadoGiro.angulo, -90.0, estadoGiro.deltaTempo);
+  int ajuste = (int)round(ajusteF);
+
+  // O ajuste positivo diminui a roda esquerda e aumenta a direita (vira à direita)
+  // O ajuste negativo aumenta a roda esquerda e diminui a direita (vira à esquerda)
+
+  int velE = constrain(VELOCIDADE_BASE + ajuste, 0, 150);
+  int velD = constrain(VELOCIDADE_BASE - ajuste, 0, 0);
+
+  if (estadoGiro.angulo > 90.0) {
+    motors::andarDoisMotoresTras(velE, velD);
+  }
+  else {
+    motors::andarDoisMotoresFrente(velE, velD);
+  }
+
+  // --- Debug Serial ---
+  Serial.print("Ang: "); Serial.print(estadoGiro.angulo, 2);
+  Serial.print(" | Ajuste: "); Serial.print(ajuste);
+  Serial.print(" | V_E: "); Serial.print(velE);
+  Serial.print(" | V_D: "); Serial.println(velD);
+
+  return estadoGiro;
 }
 
 dados virar_esquerda(dados estadoGiro) {
@@ -77,21 +106,26 @@ void loop() {
     return;
   }
 
-  // dados a = getAnguloAtual();
-  // dados estadoGiro = virar_esquerda(a);
-  // omega = estadoGiro.angulo;
+  dados a = getAnguloAtual();
+  //dados estadoGiro = virar_esquerda(a);
+  dados estadoGiro = virar_direita(a);
+  omega = estadoGiro.angulo;
   
-  //if (abs(omega - 87.44) < 7.0) concluido = true;
+  if(abs(omega) >= 80.0f) {
+    motors::pararDoisMotores();
+    concluido = true;
+  }
 
   // motors::andarDoisMotoresFrente(255, 255);
 
   // Serial.println("Andando pra frente...");
 
-  andarPraFrente();
-  DadosEncoders dadosEnc = lerDadosEncoders();
-  enviarDadosEncoders();
+  //// ANDAR PARA FRENTE COM PID, ENCONDER E GIROSCÓPIO
+  // andarPraFrente();
+  // DadosEncoders dadosEnc = lerDadosEncoders();
+  // enviarDadosEncoders();
 
-  if ((float)dadosEnc.pos.y >= DISTANCIA_COMANDO) {
-    concluido = true;
-  }
+  // if ((float)dadosEnc.distanciaEsquerdaCm >= DISTANCIA_COMANDO) {
+  //   concluido = true;
+  // }
 }

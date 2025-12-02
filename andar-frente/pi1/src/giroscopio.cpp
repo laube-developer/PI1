@@ -58,8 +58,8 @@ dados getAnguloAtual() {
     // Elimina parte do ruído do giroscópio com bias, deadband e K_RATE
     float omega_bruto = lerGiroscopio();
     double omega_corrigido = (omega_bruto - bias_z) * K_RATE;
-    omega_filtrado = (ALPHA_OMEGA * omega_corrigido) + (1.0f - ALPHA_OMEGA) * omega_filtrado;
-    //omega_filtrado = omega_corrigido; // Sem filtro para resposta mais rápida
+    //omega_filtrado = (ALPHA_OMEGA * omega_corrigido) + (1.0f - ALPHA_OMEGA) * omega_filtrado;
+    omega_filtrado = omega_corrigido; // Sem filtro para resposta mais rápida
     
     double omega_usado = omega_filtrado;
     if (abs(omega_filtrado) < deadband) {
@@ -68,8 +68,8 @@ dados getAnguloAtual() {
 
     // Suaviza o drift
     float anguloPrev = anguloAtual + omega_usado * dt;
-    anguloAtual = ALPHA_THETA * anguloPrev + (1.0f - ALPHA_THETA) * anguloAtual;
-    //anguloAtual = anguloPrev; // Sem filtro para resposta mais rápida
+    //anguloAtual = ALPHA_THETA * anguloPrev + (1.0f - ALPHA_THETA) * anguloAtual;
+    anguloAtual = anguloPrev; // Sem filtro para resposta mais rápida
     Serial.print("Angulo Atual: "); Serial.println(anguloAtual, 2);
     return {anguloAtual, dt};
 }
