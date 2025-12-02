@@ -50,19 +50,22 @@ export default function Button({
         ? DISABLED_CLASSES
         : `cursor-pointer active:scale-[0.99] focus:outline-none focus:ring-4 focus:ring-opacity-50`;
 
-    const finalClasses = `${baseClasses} ${interactionClasses} ${disabled ? DISABLED_CLASSES : colorClasses} ${className}`;
+    const resolvedClassName = typeof className === 'function' ? className() : className;
+
+    const finalClasses = `${baseClasses} ${interactionClasses} ${disabled ? DISABLED_CLASSES : colorClasses} ${resolvedClassName}`;
 
     return (
         <button
             className={finalClasses}
             onClick={handleClick}
+            disabled={disabled}
             >
             {iconPos == "left" ? (<>
-                {Icon && <Icon size={iconSize}/>}
+                {Icon && <span data-testid="button-icon"><Icon size={iconSize}/></span>}
                 {children}
             </>) : ( <>
                 {children}
-                {Icon && <Icon size={iconSize}/>}
+                {Icon && <span data-testid="button-icon"><Icon size={iconSize}/></span>}
             </>)}
         </button>
     )
