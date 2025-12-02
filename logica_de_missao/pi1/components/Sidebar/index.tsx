@@ -1,12 +1,15 @@
 "use client"
 import { Dispatch, MouseEventHandler, SetStateAction } from "react"
 import Button from "../Button"
-import { PiSignOut } from "react-icons/pi";
 import { IoIosRefresh } from "react-icons/io"; 
 import { AppState } from "../../entidades/appstate";
 import { IoIosWarning } from "react-icons/io";
 
 import { FaLongArrowAltUp } from "react-icons/fa";
+import Link from "next/link"
+
+import { PiSignOut } from "react-icons/pi";
+import { Comando } from "@/entidades/comandos";
 
 
 type SideBarStateProps = {
@@ -14,18 +17,15 @@ type SideBarStateProps = {
 }
 
 type SidebarProps = {
-    handleLogout: MouseEventHandler<HTMLButtonElement>;
-    modelState: AppState;
-    setModelState: Dispatch<SetStateAction<AppState>>;
-    handleEnviar: MouseEventHandler<HTMLButtonElement>;
-    
-    isConnected: boolean; 
-    handleReconnect: () => void; 
-    handleDisconnect: () => void;
-    handleParadaEmergencia: () => void;
+    handleLogout: MouseEventHandler<HTMLButtonElement>,
+    sidebarState: SideBarStateProps,
+    setSideBarState: Dispatch<SetStateAction<SideBarStateProps>>,
+    handleEnviar: MouseEventHandler<HTMLButtonElement>,
+    handleSalvar: MouseEventHandler<HTMLButtonElement>,
+    comandos: Comando[]
 }
 
-export default function Sidebar({handleLogout, sidebarState, setSideBarState, handleEnviar}: SidebarProps){
+export default function Sidebar({handleLogout, sidebarState, setSideBarState, handleEnviar, handleSalvar, comandos}: SidebarProps){
     const conectar = ()=>{
         setSideBarState({...sidebarState, isConnected: !sidebarState.isConnected})
     }
@@ -75,14 +75,32 @@ export default function Sidebar({handleLogout, sidebarState, setSideBarState, ha
             Enviar
         </Button>
 
+<<<<<<< HEAD
         <Button color="warn"
         icon={IoIosWarning}
         iconPos="left"
         iconSize={30}
         handleClick={handleParadaEmergencia}
         > Parada de Emergência</Button>
+=======
+        <Button  handleClick={handleEnviar}
+            className="bg-gray-500 text-white"
+            disabled={comandos.length === 0}
+            >Enviar
+        </Button>
+>>>>>>> 643772f (adiciona os testes restantes, gráfico de deslocamento e histórico de corridas)
 
-        <Button>Histórico</Button>
+        <Button
+            handleClick={handleSalvar}
+            className="bg-blue-500 text-white"
+            disabled={comandos.length === 0}
+        >
+            Salvar
+        </Button>
+
+        <Link href="/dashboard/historico" className="w-full">
+            <Button className="w-full">Histórico</Button>
+        </Link>
 
         <div className="mt-auto w-full">
             <Button
