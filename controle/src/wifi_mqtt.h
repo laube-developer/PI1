@@ -1,11 +1,9 @@
 #pragma once
-#include <Arduino.h> 
+#include <Arduino.h>
 
-void inicializarWifi();
+void inicializarMqttWifi();
 void mqtt_tick();
 void enviarDadosMQTT(long pulsosE, long pulsosD);
 
-// ⭐️ CORREÇÃO: Força a ligação C (necessária para a maioria dos callbacks MQTT)
-extern "C" {
-    void callback(char* topic, byte* payload, unsigned int length);
-}
+void ouvirComandosRecebidos(char *topic, byte *payload, unsigned int length);
+void parseListaDeComandos(byte *payload, unsigned int length);

@@ -7,4 +7,3 @@ namespace executor {
   void tick();          
   void emergencyStop();
 }
-

@@ -76,18 +76,49 @@ export default function DashboardPage() {
       return;
     }
 
+    let comandosString = ""
 
-    publish("carrodoovo/comandos", JSON.stringify(modelState.comandos()));
-    
-    alert("Comandos enviados com sucesso!");
+    const comandos = modelState.comandos().map((c, i, array) => {
+      if (c instanceof Andar) {
+        const and = c as Andar;
+        comandosString += `F:${c.distancia},`;
+      } else if (c instanceof Virar){
+        const vir = c as Virar;
+        comandosString += c.direcao == "Esquerda" ? "L," : "R,";
+        
+      } else {
+        comandosString += "D,"
+      }
+    });
 
+    console.log(comandosString)
+
+    publish("carrodoovo/comandos", comandosString)
+    .then(() => {
+      alert("Comandos enviados.")
+    })
+    .catch(()=> alert("Falha ao enviar os comandos."))
+  }
+
+  const paradaEmergencial = () => {
+    publish("carrodoovo/paradaDeEmergencia", "parada");
   }
 
   if (!modelState.user()) return <p>Verificando sessão...</p>
 
   return (
     <div className="min-h-screen flex bg-gray-100">
-      <Sidebar handleDisconnect={disconnect} isConnected={isConnected} handleReconnect={reconnect} handleLogout={handleLogout} modelState={modelState} setModelState={setModelState} handleEnviar={handleEnviar}/>
+      <Sidebar
+        handleDisconnect={disconnect}
+        isConnected={isConnected}
+        handleReconnect={reconnect}
+        handleLogout={handleLogout}
+        modelState={modelState}
+        setModelState={setModelState}
+        handleEnviar={handleEnviar}
+        handleParadaEmergencia={paradaEmergencial}
+        
+        />
 
       {/* Main content */}
       <main className="flex-1 p-6 flex flex-row items-center justify-center bg-slate-200 relative">

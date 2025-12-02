@@ -4,6 +4,7 @@ import Button from "../Button"
 import { PiSignOut } from "react-icons/pi";
 import { IoIosRefresh } from "react-icons/io"; 
 import { AppState } from "../../entidades/appstate";
+import { IoIosWarning } from "react-icons/io";
 
 
 type SidebarProps = {
@@ -15,6 +16,7 @@ type SidebarProps = {
     isConnected: boolean; 
     handleReconnect: () => void; 
     handleDisconnect: () => void;
+    handleParadaEmergencia: () => void;
 }
 
 export default function Sidebar({
@@ -24,7 +26,8 @@ export default function Sidebar({
     handleEnviar,
     isConnected, 
     handleReconnect,
-    handleDisconnect 
+    handleDisconnect,
+    handleParadaEmergencia
 }: SidebarProps){
     const conexaoEstadoTexto = isConnected ? "conectado" : "desconectado";
 
@@ -72,6 +75,13 @@ export default function Sidebar({
         >
             Enviar
         </Button>
+
+        <Button color="warn"
+        icon={IoIosWarning}
+        iconPos="left"
+        iconSize={30}
+        handleClick={handleParadaEmergencia}
+        > Parada de Emergência</Button>
 
         <Button>Histórico</Button>
 

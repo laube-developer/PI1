@@ -42,7 +42,7 @@ class Virar extends Comando {
   }
 }
 
-class Largar extends Comando {
+class Depositar extends Comando {
   constructor (id: string){
     super(id, "Largar");
 
@@ -53,4 +53,4 @@ class Largar extends Comando {
   }
 }
 
-export {Comando, Andar, Virar, Largar}
+export {Comando, Andar, Virar, Depositar}
