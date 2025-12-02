@@ -2,7 +2,7 @@
 
 #include "encoder.h"
 
-Enconders encEsq;;
+Enconders encEsq;
 Enconders encDir;
 DadosEncoders dados;
 
@@ -61,7 +61,7 @@ DadosEncoders lerDadosEncoders() {
 
   float delta_theta = (dados.distanciaDireitaCm - dados.distanciaEsquerdaCm)/DISTANCIA_ENTRE_RODAS_CM;
 
-  calcularOdometria(float delta_theta);
+  calcularOdometria(delta_theta);
 
   return dados;
 }
