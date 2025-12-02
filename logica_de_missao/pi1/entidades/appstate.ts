@@ -1,6 +1,6 @@
 import mqtt from "mqtt"
 import { User } from "./user"
-import { Andar, Comando, Largar, Virar } from "./comandos"
+import { Andar, Comando, Depositar, Virar } from "./comandos"
 import { ComandoSalvo } from "./comandosSalvos"
 
 type ConnectionState = "conectando" | "conectado" | "desconectando" | "desconectado"
@@ -72,7 +72,7 @@ export class AppState {
     }
 
     adicionarLargar(){
-        const novoComando = new Largar(crypto.randomUUID());
+        const novoComando = new Depositar(crypto.randomUUID());
         return this.getEstadoAtualizado({
             comandos: [...this.comandosState, novoComando],
             jaTemLargar: true
@@ -123,7 +123,7 @@ export class AppState {
             const direcao = (objeto.direcao === 'Direita' || objeto.direcao === 'Esquerda') ? objeto.direcao : 'Esquerda';
             return new Virar(crypto.randomUUID(), direcao);
           case "Largar":
-            return new Largar(crypto.randomUUID());
+            return new Depositar(crypto.randomUUID());
             
           default:
             console.error("Tipo de comando desconhecido", objeto.tipo);
