@@ -7,22 +7,19 @@ import ComandoButton from '../../../components/ComandoButton'
 import { FaLongArrowAltUp } from 'react-icons/fa'
 import { HiArrowUturnRight } from 'react-icons/hi2'
 import { BsBoxSeamFill } from 'react-icons/bs'
-import { Andar, Comando, Virar } from '../../../entidades/comandos'
+import { Andar, Comando, Virar } from '@/entidades/comandos'
 import Button from '../../../components/Button'
 import { IoMdClose } from 'react-icons/io'
 import CodeView from '../../../components/CodeView'
 import { DragDropContext, Droppable, Draggable, DropResult } from '@hello-pangea/dnd'
-import { AppState } from '../../../entidades/appstate'
-import { User } from '../../../entidades/user'
-import { enviarMensagem } from '../../../actions/actions'
+import { AppState } from '@/entidades/appstate'
+import { User } from '@/entidades/user'
+import { enviarMensagem, salvarHistorico } from '../../../actions/actions'
 import GraficoDeslocamento from '../../../components/GraficoDeslocamento'
 import { getMQTTClient } from '../../../lib/mqtt'
 import { MqttClient } from 'mqtt'
 
-interface Ponto {
-  x: number;
-  y: number;
-}
+import { Ponto } from '@/entidades/ponto';
 
 type SideBarStateProps = {
   isConnected: boolean;
@@ -128,6 +125,26 @@ export default function DashboardPage() {
     console.log("Comandos enviados!");
   }
 
+  const handleSalvarHistorico = async () => {
+    if (modelState.comandos().length === 0) {
+      alert("Nenhum comando para salvar!");
+      return;
+    }
+
+    try {
+      await salvarHistorico(
+        modelState.comandos(),
+        calcularDeslocamentoComandado(),
+        posicoesReais,
+        modelState.user()!.id
+      );
+      alert("Histórico salvo com sucesso!");
+    } catch (error) {
+      console.error(error);
+      alert("Erro ao salvar o histórico.");
+    }
+  };
+
   const calcularDeslocamentoComandado = (): Ponto[] => {
     const pontos: Ponto[] = [{ x: 0, y: 0 }];
     let x = 0;
@@ -156,7 +173,14 @@ export default function DashboardPage() {
 
   return (
     <div className="min-h-screen flex bg-gray-100">
-      <Sidebar handleLogout={handleLogout} sidebarState={sidebarState} setSideBarState={setSideBarState} handleEnviar={handleEnviar}/>
+      <Sidebar 
+        handleLogout={handleLogout} 
+        sidebarState={sidebarState} 
+        setSideBarState={setSideBarState} 
+        handleEnviar={handleEnviar}
+        handleSalvar={handleSalvarHistorico}
+        comandos={modelState.comandos()}
+      />
 
       {/* Main content */}
       <main className="flex-1 p-6 flex flex-col items-center justify-center bg-slate-200 relative">

@@ -10,6 +10,13 @@ abstract class Comando {
     this.id = id;
     this.tipo = tipo;
   }
+
+  toJSON() {
+    return {
+      tipo: this.tipo,
+      id: this.id
+    };
+  }
 }
 
 class Andar extends Comando {
@@ -19,6 +26,13 @@ class Andar extends Comando {
     super(id, "Andar");
 
     this.distancia = distancia;
+  }
+
+  toJSON() {
+    return {
+      ...super.toJSON(),
+      distancia: this.distancia
+    };
   }
 }
 
@@ -30,12 +44,22 @@ class Virar extends Comando {
 
     this.direcao = direcao;
   }
+
+  toJSON() {
+    return {
+      ...super.toJSON(),
+      direcao: this.direcao
+    };
+  }
 }
 
 class Largar extends Comando {
   constructor (id: string){
     super(id, "Largar");
+  }
 
+  toJSON() {
+    return super.toJSON();
   }
 }
 

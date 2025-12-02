@@ -21,14 +21,25 @@ jest.mock('next/navigation', () => ({
   useRouter: jest.fn(),
 }));
 
+// Mock the lib/mqtt.ts module
+jest.mock('../../../lib/mqtt', () => ({
+    getMQTTClient: jest.fn(() => ({
+        connected: true, // Simulate connected state
+        publish: jest.fn(),
+        subscribe: jest.fn(),
+        on: jest.fn(),
+        off: jest.fn(), // Add the 'off' method
+        end: jest.fn(),
+    })),
+    disconnectMQTTClient: jest.fn(),
+}));
+
 // Mock the action that sends MQTT messages
 jest.mock('../../../actions/actions', () => ({
     enviarMensagem: jest.fn(),
     conectar: jest.fn().mockResolvedValue(undefined),
     desconectar: jest.fn().mockResolvedValue(undefined)
 }));
-
-// Mock the CodeView component to avoid issues with its dependencies (shiki)
 jest.mock('../../../components/CodeView', () => {
     return jest.fn(() => <div>Code View Mock</div>);
 });
@@ -78,13 +89,27 @@ describe('Dashboard Page', () => {
     describe('CT-18 – Inserção de Comandos de Virar e Depositar', () => {
         it('deve adicionar comandos à lista na UI ao clicar nos botões', async () => {
             render(<DashboardPage />);
-            await screen.findByText(/Bem-vindo, test@example.com/i);
+            await screen.findByText(/Bem-vindo, test@example.com/i); // Wait for initial render content
+
+            // Click to connect (enables command buttons)
             fireEvent.click(screen.getByRole('button', { name: /conectar/i }));
+            
+            // Wait for "Conectado" to appear, indicating the connection state has updated
+            await screen.findByText('Conectado');
+
+            // Click command buttons
             fireEvent.click(screen.getByRole('button', { name: /virar/i }));
             fireEvent.click(screen.getByRole('button', { name: /largar/i }));
-            await screen.findByText('Virar');
-            await screen.findByText('Largar');
-            expect(screen.getAllByText(/Virar|Largar/)).toHaveLength(2);
+
+            // Now, commands should be in the list, so command-list should be rendered
+            const commandList = await screen.findByTestId('command-list');
+
+            // Ensure the specific command cards are found within the command list
+            expect(within(commandList).getByTestId('command-card-0')).toHaveTextContent('Virar');
+            expect(within(commandList).getByTestId('command-card-1')).toHaveTextContent('Largar');
+
+            // Ensure there are exactly two command cards displayed within the command list
+            expect(within(commandList).getAllByText(/Virar|Largar/)).toHaveLength(2);
         });
     });
 });
