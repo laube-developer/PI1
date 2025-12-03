@@ -8,10 +8,11 @@
 #include "commands.h"
 #include "command_queue.h"
 #include "executor.h"
+#include "Arduino.h"
 
-const char *ssid = "rede"; //Nome da rede
-const char *password = "senha";
-const char *mqtt_server = "192.168.0.197"; //ip da máquina que vai rodar
+const char *ssid = "iPhone de Rafael"; //Nome da rede
+const char *password = "laube2024";
+const char *mqtt_server = "172.20.10.3"; //ip da máquina que vai rodar
 
 WiFiClient espClient;
 PubSubClient client(espClient);
@@ -59,10 +60,14 @@ void reconnect_mqtt()
       if (client.subscribe("carrodoovo/#"))
       {
         Serial.println("Inscrito em carrodoovo/#");
+        digitalWrite(2, HIGH);
+
+
       }
       else
       {
         Serial.println("Falha ao inscrever");
+        digitalWrite(2, LOW);
       }
     }
     else
@@ -180,12 +185,15 @@ void inicializarMqttWifi()
 
   client.setServer(mqtt_server, 1883);
   client.setCallback(ouvirComandosRecebidos);
+  pinMode(2, OUTPUT);
+
 }
 
 void mqtt_tick()
 {
   if (!client.connected())
   {
+    digitalWrite(2, LOW);
     reconnect_mqtt();
   }
 

@@ -1,14 +1,18 @@
 #pragma once
 
-typedef struct {
-  float x;
-  float y;
-  float z;
-} DadosGiroscopio;
-
+struct dados {
+    float angulo;
+    unsigned long deltaTempo;
+};
 
 void setupGiroscopio();
 
-DadosGiroscopio lerGiroscopio();
+float lerGiroscopio();
 
-void enviarDadosGiroscopio(DadosGiroscopio dados);
+void enviarDadosGiroscopio(float dados);
+
+dados getAnguloAtual();
+
+void calibracaoGiroscopio();
+
+void zerarGiroscopio();

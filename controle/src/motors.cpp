@@ -93,4 +93,14 @@ namespace motors {
         delay(530);
         motors::pararMotor2();
     }
+
+    void andarDoisMotoresTras(int velocidadeEsquerdo, int velocidadeDireito){
+      digitalWrite(IN1, LOW);
+      digitalWrite(IN2, HIGH);
+      digitalWrite(IN3, LOW);
+      digitalWrite(IN4, HIGH);
+    
+      analogWrite(ENA, velocidadeEsquerdo);
+      analogWrite(ENB, velocidadeDireito);
+    }
 }
