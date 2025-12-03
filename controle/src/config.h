@@ -12,6 +12,7 @@
 #define WIFI_PASS ""
 
 
+
 // ===== MQTT =====
 // Pode usar um broker público p/ testes:
 #define MQTT_HOST "test.mosquitto.org"
@@ -30,8 +31,10 @@
 #define ENA 32
 #define ENB 33
 
+#define K_RATE 0.995355f
+#define VELOCIDADE_BASE 150
 
-#define EGG_MOTOR_PIN  12
+#define EGG_MOTOR_PIN  13
 
 // ===== PWM =====
 #define PWM_FREQ_HZ   20000
@@ -46,3 +49,7 @@
 
 // ===== Log =====
 #define LOG_PREFIX "[CTRL] "
+
+// Pinos do Giroscópio (MPU-6050)
+#define SDA_PIN 21
+#define SCL_PIN 22

@@ -6,6 +6,7 @@
 #include "wifi_mqtt.h"
 #include "command_queue.h"
 #include "executor.h"
+#include "egg.h"
 
 void setup() {
   Serial.begin(115200);
@@ -13,11 +14,19 @@ void setup() {
 
   inicializarMqttWifi();
   executor::setup();
-  Serial.print("\n\n\n======Iniciando teste de excução dos comandos enviados 3\n\n\n");
+  setupEggMotor();
+  motors::initialize();
+  setupGiroscopio();
+  inicializarEncoders();
+  Serial.print("\n\n\n======Teste motor andar reto\n\n\n");
 }
 
 void loop() {
   mqtt_tick();
   delay(100);
   executor::tick();
+
+  DadosEncoders encoders = lerDadosEncoders();
+  dados giro = getAnguloAtual();
+
 }

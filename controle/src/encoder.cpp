@@ -1,42 +1,101 @@
-// include/encoder.h
+// src/encoder.cpp
 
-#pragma once
+#include "encoder.h"
 
-#include <Arduino.h>
+Enconders encEsq;
+Enconders encDir;
+DadosEncoders dados;
 
-const float PULSOS_POR_REVOLUCAO = 20.0f;
-const float RAIO_RODA_CM = 3.4f;
-const float DISTANCIA_ENTRE_RODAS_CM = 16.0f;
-const float CM_POR_PULSO = (2.0f * 3.1415f * RAIO_RODA_CM) / PULSOS_POR_REVOLUCAO;
+IRAM_ATTR void isrEsq()
+{
+  int estado = digitalRead(pinoD0Esq);
+  if (estado == HIGH && encEsq.ultimoEstado == LOW)
+  {
+    encEsq.pulsos++;
+  }
+  encEsq.ultimoEstado = estado;
+}
 
-const int pinoD0Esq = 18; 
-const int pinoD0Dir = 19;
+IRAM_ATTR void isrDir()
+{
+  int estado = digitalRead(pinoD0Dir);
+  if (estado == HIGH && encDir.ultimoEstado == LOW)
+  {
+    encDir.pulsos++;
+  }
+  encDir.ultimoEstado = estado;
+}
 
-struct Enconders {
-    volatile long pulsos = 0;
-    volatile int ultimoEstado = LOW;
-    volatile unsigned long ultimoTempo = 0;
-};
+void calcularOdometria(float delta_theta)
+{
+  float new_theta = delta_theta / 2;
+  float delta_x = dados.distanciaTotalCm * cos(dados.pos.theta + new_theta);
+  float delta_y = dados.distanciaTotalCm * sin(dados.pos.theta + new_theta);
 
-struct RobotPos {
-    float x = 0.0f;
-    float y = 0.0f;
-    float theta = 0.0f;
-};
+  dados.pos.x += delta_x;
+  dados.pos.y += delta_y;
+  dados.pos.theta += delta_theta;
+}
 
-struct DadosEncoders {
-    float distanciaEsquerdaCm = 0.0f;
-    float distanciaDireitaCm = 0.0f;
-    float distanciaTotalCm = 0.0f;
-    struct RobotPos pos;
-};
+void resetEncoder()
+{
+  reiniciarEncoders();
+  dados.distanciaDireitaCm = 0;
+  dados.distanciaEsquerdaCm = 0;
+  dados.distanciaTotalCm = 0;
+}
 
-void calcularOdometria(float delta_theta);
+void reiniciarEncoders()
+{
+  noInterrupts();
+  encEsq.pulsos = 0;
+  encEsq.ultimoEstado = LOW;
+  encDir.pulsos = 0;
+  encDir.ultimoEstado = LOW;
+  interrupts();
+}
 
-void reiniciarEncoders();
+void inicializarEncoders()
+{
+  pinMode(pinoD0Esq, INPUT_PULLDOWN);
+  pinMode(pinoD0Dir, INPUT_PULLDOWN);
+  attachInterrupt(digitalPinToInterrupt(pinoD0Esq), isrEsq, RISING);
+  attachInterrupt(digitalPinToInterrupt(pinoD0Dir), isrDir, RISING);
+  reiniciarEncoders();
+}
 
-void inicializarEncoders();
+DadosEncoders lerDadosEncoders()
+{
+  noInterrupts();
+  int pulsosE = encEsq.pulsos;
+  encEsq.pulsos = 0;
+  int pulsosD = encDir.pulsos;
+  encDir.pulsos = 0;
+  interrupts();
 
-DadosEncoders lerDadosEncoders();
+  // Converte para distância (cm)
+  dados.distanciaEsquerdaCm += (float)pulsosE * CM_POR_PULSO;
+  dados.distanciaDireitaCm += (float)pulsosD * CM_POR_PULSO;
+  dados.distanciaTotalCm = (dados.distanciaEsquerdaCm + dados.distanciaDireitaCm) / 2.0f;
 
-void enviarDadosEncoders();
+  float delta_theta = (dados.distanciaDireitaCm - dados.distanciaEsquerdaCm) / DISTANCIA_ENTRE_RODAS_CM;
+
+  calcularOdometria(delta_theta);
+
+  return dados;
+}
+
+void enviarDadosEncoders()
+{
+  Serial.print("Distância Total: ");
+  Serial.print(dados.distanciaTotalCm);
+  Serial.println(" cm");
+
+  Serial.print("Distância Esquerda: ");
+  Serial.print(dados.distanciaEsquerdaCm);
+  Serial.println(" cm");
+
+  Serial.print("Distância Direita: ");
+  Serial.print(dados.distanciaDireitaCm);
+  Serial.println(" cm");
+}
