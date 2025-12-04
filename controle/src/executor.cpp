@@ -7,16 +7,24 @@
 #include "pid.h"
 #include "encoder.h"
 
+#define MAX_VEL_BASE 160
+
 void andarPraFrente(int distancia)
 {
+
+  zerarGiroscopio();
+  resetEncoder();
+
   bool concluido = false;
   int contador = 130;
   unsigned long int tempo = millis();
 
   while (!concluido)
   {
-    if (millis() - tempo >= 100){
-      contador += 5;
+    if (millis() - tempo >= 100)
+    {
+      // Aumenta, mas limita o contador ao valor máximo
+      contador = constrain(contador + 5, 130, MAX_VEL_BASE);
       tempo = millis();
     };
 
@@ -30,7 +38,7 @@ void andarPraFrente(int distancia)
     // O ajuste positivo diminui a roda esquerda e aumenta a direita (vira à direita)
     // O ajuste negativo aumenta a roda esquerda e diminui a direita (vira à esquerda)
 
-    int velE = constrain(contador - ajuste, 0, 180);
+    int velE = constrain(contador - ajuste, 0, 165);
     int velD = constrain(contador + ajuste + 10, 0, 220);
 
     motors::andarDoisMotoresFrente(velE, velD);
@@ -43,13 +51,16 @@ void andarPraFrente(int distancia)
     }
   }
 
-  motors::pararDoisMotores();
+  motors::andarDoisMotoresFrente(1, 1);
   zerarGiroscopio();
   resetEncoder();
 }
 
 void virar_direita()
 {
+  zerarGiroscopio();
+  resetEncoder();
+
   bool concluido = false;
 
   while (!concluido)
@@ -59,36 +70,28 @@ void virar_direita()
     if (abs(estadoGiro.angulo) >= 70)
     {
       concluido = true;
-      break;;
+      break;
     }
-
-    float ajusteF = pid_control(estadoGiro.angulo, 90.0, estadoGiro.deltaTempo);
-    int ajuste = (int)round(ajusteF);
-
-    // O ajuste positivo diminui a roda esquerda e aumenta a direita (vira à direita)
-    // O ajuste negativo aumenta a roda esquerda e diminui a direita (vira à esquerda)
-
-    int velE = constrain(VELOCIDADE_BASE + ajuste, 0, 180);
-    int velD = constrain(VELOCIDADE_BASE - ajuste, 0, 0);
 
     if (estadoGiro.angulo > 90.0)
     {
-      motors::andarDoisMotoresTras(velE, velD);
+      motors::andarDoisMotoresTras(255, 0);
     }
     else
     {
-      motors::andarDoisMotoresFrente(velE, velD);
+      motors::andarDoisMotoresFrente(130, 255);
     }
   }
 
-  motors::pararDoisMotores();
+  motors::andarDoisMotoresFrente(1, 1);
   zerarGiroscopio();
   resetEncoder();
-
 }
 
 void virar_esquerda()
 {
+  zerarGiroscopio();
+  resetEncoder();
   bool concluido = false;
 
   while (!concluido)
@@ -96,36 +99,25 @@ void virar_esquerda()
 
     dados estadoGiro = getAnguloAtual();
 
-
     if (abs(estadoGiro.angulo) >= 85)
     {
       concluido = true;
       break;
     }
 
-    float ajusteF = pid_control(estadoGiro.angulo, -90.0, estadoGiro.deltaTempo);
-    int ajuste = (int)round(ajusteF);
-
-    // O ajuste positivo diminui a roda esquerda e aumenta a direita (vira à direita)
-    // O ajuste negativo aumenta a roda esquerda e diminui a direita (vira à esquerda)
-
-    int velE = constrain(VELOCIDADE_BASE - ajuste, 0, 0);
-    int velD = constrain(VELOCIDADE_BASE + ajuste, 0, 150);
-
     if (estadoGiro.angulo > 90.0)
     {
-      motors::andarDoisMotoresTras(velE, velD);
+      motors::andarDoisMotoresTras(0, 255);
     }
     else
     {
-      motors::andarDoisMotoresFrente(velE, velD);
+      motors::andarDoisMotoresFrente(255, 140);
     }
   }
 
   motors::pararDoisMotores();
   zerarGiroscopio();
   resetEncoder();
-
 }
 
 namespace executor
@@ -185,7 +177,6 @@ namespace executor
     motors::pararDoisMotores();
     Serial.print("Parada de emergência.");
     zerarGiroscopio();
-
   }
 
 }

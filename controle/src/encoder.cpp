@@ -39,7 +39,6 @@ void calcularOdometria(float delta_theta)
 
 void resetEncoder()
 {
-  reiniciarEncoders();
   dados.distanciaDireitaCm = 0;
   dados.distanciaEsquerdaCm = 0;
   dados.distanciaTotalCm = 0;
