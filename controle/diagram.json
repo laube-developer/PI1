@@ -1,0 +1,51 @@
+{
+  "version": 1,
+  "author": "vitor",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "board-esp32-devkit-v1",
+      "id": "esp",
+      "top": -2.2,
+      "left": -13.4,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-led",
+      "id": "ledM1",
+      "top": -110,
+      "left": 120,
+      "attrs": { "color": "red" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "ledM2",
+      "top": -60,
+      "left": 120,
+      "attrs": { "color": "green" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": -110,
+      "left": 170,
+      "attrs": { "value": "220" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r2",
+      "top": -60,
+      "left": 170,
+      "attrs": { "value": "220" }
+    }
+  ],
+  "connections": [
+    ["esp:27", "ledM1:A", "green", ["v10", "h80"]],
+    ["ledM1:C", "r1:1", "green", ["h20"]],
+    ["r1:2", "esp:GND.2", "black", ["v-20", "h-80"]],
+
+    ["esp:14", "ledM2:A", "blue", ["v40", "h80"]],
+    ["ledM2:C", "r2:1", "blue", ["h20"]],
+    ["r2:2", "esp:GND.2", "black", ["v-20", "h-80"]]
+  ]
+}

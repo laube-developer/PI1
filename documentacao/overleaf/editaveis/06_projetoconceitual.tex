@@ -14,39 +14,148 @@
 
 \section{Descrição de \textit{hardware}}
 
-\textcolor{red}{A descrição de \textit{hardware} no documento deve permitir que outras pessoas repliquem o produto proposto neste documento. Para isso, deve-se explicar de forma textual os principais sub-sistemas e as escolhas de projeto, além de indicar:}
+\label{sec:hardware}
 
-\begin{itemize}
-    \item \textcolor{red}{ O diagrama de blocos \cite{blockdiagram}, que oferece uma visão geral do hardware, com as principais partes do sistema e as ligações entre elas.}
-    %\item A lista de materiais \cite{bom}, que facilita a montagem do sistema, indicando tudo que deve ser adquirido. Aproveitem a lista de materiais para apresentarem o orçamento dos mesmos.
-    \item \textcolor{red}{ O esquemático \cite{esquematico}, que mostra as conexões elétricas entre os componentes. Deve-se indicar os componentes por nomes e símbolos, e as conexões entre eles, incluindo a pinagem dos componentes. Se o esquemático ficar muito grande, pode-se separa-lo em vários esquemáticos. A ligação em \textit{protoboard} não é considerada um esquemático adequado.}
-\end{itemize}
+A descrição de hardware a seguir detalha a arquitetura eletrônica desenvolvida para o protótipo "Carrinho do Ovo", permitindo que o projeto seja replicado. O sistema foi projetado de forma modular, com subsistemas de controle, sensoriamento e atuação. A escolha dos componentes buscou um equilíbrio entre custo, disponibilidade e funcionalidade para atender aos requisitos da missão.
 
-\textcolor{red}{A Fig. \ref{fig:diagrama_blocos_e_esquematico} apresenta o diagrama de blocos e o esquemático de um circuito conversor de corrente alternada para corrente direta, a título de exemplo. Repare que o diagrama de blocos indica os sub-sistemas do circuito completo apresentado no esquemático. 
-% Comecem com o diagrama de blocos, que é mais genérico, e depois indiquem os detalhes com a lista de materiais e os esquemáticos.
-}
+O subsistema de controle é centralizado no microcontrolador ESP32, escolhido por seu poder de processamento dual-core e conectividade Wi-Fi/Bluetooth. O subsistema de atuação é composto por dois motores DC para locomoção e um servo motor para a rampa de liberação da carga, ambos controlados através de drivers adequados. O sensoriamento é realizado por encoders ópticos para odometria e um módulo IMU (MPU-6050) para orientação espacial.
 
-\begin{figure}
+\subsection{Diagrama de Blocos}
+
+O diagrama de blocos, apresentado na Figura \ref{fig:diagrama_blocos}, oferece uma visão geral da arquitetura do hardware, ilustrando as principais partes do sistema e o fluxo de energia e de informação entre elas. A alimentação é originada de uma bateria Li-Ion de 7.4V, que é distribuída de duas formas: diretamente para a seção de potência do driver L298N e, através de um regulador step-down LM2596, para um barramento de 5V que alimenta toda a eletrônica de controle. O diagrama evidencia o papel central do ESP32, que recebe dados dos sensores (Encoders, MPU-6050) e envia comandos para os atuadores (Driver L298N, Servo Motor).
+
+\begin{figure}[H]
     \centering
-    \includegraphics[width=0.5\linewidth]{figuras/Exemplo-diagrama-de-blocos.png}
-    \includegraphics[width=0.5\linewidth]{figuras/Esquematico.png}
-    \caption{\textcolor{red}{Diagrama de blocos e esquemático de um circuito conversor de corrente alternada para corrente direta. Extraído de \cite{block_n_schematic}.}}
-    \label{fig:diagrama_blocos_e_esquematico}
+    \includegraphics[width=0.8\linewidth]{figuras/DiagramaBlocosPI1-2025-10-12-020434.png}
+    \caption{Diagrama de blocos da arquitetura eletrônica do sistema.}
+    \label{fig:diagrama_blocos}
+<<<<<<< HEAD
 \end{figure}
 
+\subsection{Esquemático Elétrico}
+
+O esquemático elétrico, detalhado na Figura \ref{fig:esquematico_eletrico} indica a pinagem específica utilizada no ESP32, incluindo os GPIOs designados para o controle dos motores via driver L298N, os pinos do barramento I2C para comunicação com o módulo MPU-6050, o pino de sinal PWM para o servo motor e os pinos de entrada para a leitura dos encoders de roda.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{figuras/Esquematico.png}
+    \caption{Esquemático elétrico completo do protótipo.}
+    \label{fig:esquematico_eletrico}
+=======
+>>>>>>> refs/remotes/origin/feat/deslocamento-carrinho
+\end{figure}
+
+\subsection{Esquemático Elétrico}
+
+O esquemático elétrico, detalhado na Figura \ref{fig:esquematico_eletrico} indica a pinagem específica utilizada no ESP32, incluindo os GPIOs designados para o controle dos motores via driver L298N, os pinos do barramento I2C para comunicação com o módulo MPU-6050, o pino de sinal PWM para o servo motor e os pinos de entrada para a leitura dos encoders de roda.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{figuras/esquematico.png}
+    \caption{Esquemático elétrico completo do protótipo.}
+    \label{fig:esquematico_eletrico}
+\end{figure}
+
+
 \section{Análise de consumo energético}
+\label{sec:analise_energetica}
 
-\textcolor{red}{Com relação ao consumo energético do produto desenvolvido, será necessário apresentar cálculos de consumo dos diversos componentes utilizados e explicar as decisões de projeto para atender a estas demandas.}
+Nesta seção, é detalhado o estudo do consumo energético dos componentes do protótipo, culminando no dimensionamento e na escolha da fonte de alimentação.
 
+\subsection{Identificação dos Subsistemas Elétricos}
+
+A tabela \ref{tab:tabela_componentes_corrigida} lista os principais componentes consumidores de energia do sistema, com seus respectivos parâmetros elétricos nominais para operação.
+
+\begin{table}[H]
+    \centering
+    \caption{Componentes e seus parâmetros de consumo elétrico.}
+    \label{tab:tabela_componentes_corrigida}
+    \begin{tabular}{|c|c|c|c|}
+        \hline
+        \textbf{Componente} & \textbf{Tensão (V)} & \textbf{Corr. Média (A)} & \textbf{Pico de Corr. (A)} \\
+        \hline
+        Motores DC (x2) & 6.0* & 1.4 (total) & ~4.0 (total) \\
+        \hline
+        Motor Servo (SG90) & 5.0 & 0.25 & 0.8 \\
+        \hline
+        Microcontrolador ESP32 & 3.3 & 0.15 & - \\
+        \hline
+        Driver L298N (Lógica) & 5.0 & 0.03 & - \\
+        \hline
+        Regulador LM2596 & 7.4 & 0.01 & - \\
+        \hline
+        Módulo MPU-6050 & 5.0 & 0.005 & - \\
+        \hline
+        Sensores Encoder (x2) & 5.0 & 0.03 (total) & - \\
+        \hline
+    \end{tabular}
+\end{table}
+\footnotesize{*Tensão efetiva de operação nos motores, considerando perdas no driver L298N. A potência é drenada da fonte de 7.4V.}
+
+\subsection{Cálculo da Energia Consumida por Componente}
+Para estimar a energia total, foi definido um tempo de operação contínua de 30 minutos (1800 segundos). A energia ($E$) em Joules (J) para cada componente é calculada utilizando a fórmula:
+\begin{equation}
+    E = V \cdot I \cdot t
+\end{equation}
+onde $V$ é a tensão em Volts, $I$ é a corrente média em Ampères e $t$ é o tempo em segundos.
 
 \begin{itemize}
-    \item \textcolor{red}{ \textbf{Identificação dos Subsistemas Elétricos:} liste todos os componentes que consumirão energia, como sensores, microcontroladores, atuadores e módulos de armazenamento de dados. Para cada componente, registre a tensão de operação (V), corrente média (mA) e tempo estimado de uso (s).}
-    \item \textcolor{red}{ \textbf{Cálculo da Energia Consumida por Componente:} utilize a fórmula: $E = V I t$, onde $E$ é a energia em joules, $V$ é a tensão em volts, $I$ a corrente em ampères e $t$ o tempo em segundos. Realize esse cálculo para cada componente do sistema.}
-    \item \textcolor{red}{ \textbf{Estimativa do Consumo Total de Energia:} some as energias de todos os componentes para obter o consumo energético total estimado do sistema por lançamento.}
-    \item \textcolor{red}{ \textbf{Escolha da Fonte de Alimentação:} com base no consumo total, converta para watt-hora: 1 Wh = 3600 J. Adicione e justifique uma margem de segurança (pesquisar o que é usual para este tipo de sistema) e selecione uma bateria ou fonte que supra a demanda.}
-    \item \textcolor{red}{ \textbf{Planejamento do Circuito de Alimentação:} analise a necessidade de inclusão de reguladores de tensão, proteções contra sobrecorrente, e isolamento para atuadores. Como as oscilações de tensão serão controladas?}
-    \item \textcolor{red}{ \textbf{Monitoramento via \textit{software}:} implemente, no \textit{software} embarcado, rotinas para medir a tensão da bateria e registrar dados de tempo de operação. Colete os dados para análise.}
-    \item \textcolor{red}{ \textbf{Validação com Testes Reais:} realize testes de campo para comparar o consumo estimado com o real. Ajuste a capacidade da fonte se necessário e refine o software de coleta de dados. Justifique a diferença de resultados (real x teórica), de acordo com a literatura.}
+    \item \textbf{Motores DC (x2):} $E = 6.0\,\text{V} \cdot 1.4\,\text{A} \cdot 1800\,\text{s} = 15120\,\text{J}$
+    \item \textbf{Motor Servo (SG90):} $E = 5.0\,\text{V} \cdot 0.25\,\text{A} \cdot 1800\,\text{s} = 2250\,\text{J}$
+    \item \textbf{Microcontrolador ESP32:} $E = 3.3\,\text{V} \cdot 0.15\,\text{A} \cdot 1800\,\text{s} = 891\,\text{J}$
+    \item \textbf{Driver de Motor L298N:} $E = 5.0\,\text{V} \cdot 0.03\,\text{A} \cdot 1800\,\text{s} = 270\,\text{J}$
+    \item \textbf{Regulador de tensão LM2596:} $E = 7.4\,\text{V} \cdot 0.01\,\text{A} \cdot 1800\,\text{s} = 133.2\,\text{J}$
+    \item \textbf{Módulo MPU-6050:} $E = 5.0\,\text{V} \cdot 0.005\,\text{A} \cdot 1800\,\text{s} = 45\,\text{J}$
+    \item \textbf{Sensores Encoder (x2):} $E = 5.0\,\text{V} \cdot 0.03\,\text{A} \cdot 1800\,\text{s} = 270\,\text{J}$
+\end{itemize}
+
+A energia total teórica estimada ($E_t$), somando o consumo de todos os componentes, é de $\mathbf{18979.2 J}$.
+
+\subsection{Estimativa do Consumo Total e Escolha da Bateria}
+
+A energia total é convertida de Joules para Watt-hora (Wh), onde $1 Wh = 3600 J$.
+$$ E_t (Wh) = \frac{18979.2 J}{3600} = \textbf{5.27 Wh} $$
+
+Para compensar as perdas de eficiência não modeladas e garantir uma margem de segurança para os picos de corrente, adiciona-se uma margem de segurança de 30\%.
+$$ E_{final} = 5.27 Wh \cdot 1.3 = \textbf{6.85 Wh} $$
+
+Considerando uma bateria de Lítio-Íon (Li-Ion) em configuração 2S (7.4V), a capacidade mínima necessária em Ampere-hora (Ah) é:
+$$ Capacidade (Ah) = \frac{E_{final} (Wh)}{V_{bateria} (V)} = \frac{6.85 Wh}{7.4V} = \textbf{0.926 Ah} \quad (\text{ou } 926 \text{ mAh}) $$
+
+Com base nesta demanda, foi selecionado um pack de bateria Li-Ion com especificações de 7.4V e 1500mAh. Esta escolha atende à tensão nominal do sistema e supre a capacidade de corrente necessária com uma folga de aproximadamente 60\% sobre o valor mínimo calculado. A seleção desta tecnologia e capacidade também considerou o peso, o custo, e a segurança, visto que o pack escolhido possui um circuito de proteção (BMS) integrado.
+
+\subsection{Cálculo de Autonomia da Bateria e Análise de Perdas}
+
+A autonomia teórica do sistema pode ser estimada com base na energia total da bateria escolhida e na potência média de consumo do protótipo.
+
+\begin{enumerate}
+    \item \textbf{Energia Armazenada na Bateria ($E_{bat}$):}
+    A energia total que a bateria de 1500mAh pode fornecer é:
+    $$ E_{bat} = V_{nominal} \cdot Capacidade_{Ah} = 7.4\,\text{V} \cdot 1.5\,\text{Ah} = 11.1\,\text{Wh} $$
+
+    \item \textbf{Potência Média de Consumo ($P_{media}$):}
+    Utilizando a energia final estimada de $6.85\,\text{Wh}$ para o período de referência de 30 minutos (0.5 horas):
+    $$ P_{media} = \frac{E_{final}}{\text{Tempo}} = \frac{6.85\,\text{Wh}}{0.5\,\text{h}} = 13.7\,\text{W} $$
+
+    \item \textbf{Autonomia Teórica ($Aut_{teo}$):}
+    $$ Aut_{teo} = \frac{E_{bat}}{P_{media}} = \frac{11.1\,\text{Wh}}{13.7\,\text{W}} \approx 0.81\,\text{horas} $$
+    Convertendo para minutos: $0.81\,\text{h} \cdot 60\,\text{min/h} \approx \mathbf{48.6\,\text{minutos}}$.
+\end{enumerate}
+
+A autonomia teórica da bateria é, portanto, de aproximadamente $\mathbf{48.6\,\text{minutos}}$.
+
+\subsubsection{Análise da Autonomia: Teórica vs. Real}
+
+É esperado que a autonomia real em operação seja inferior ao valor teórico calculado. A autonomia teórica é uma estimativa ideal, enquanto o desempenho prático é afetado por diversas fontes de perdas e ineficiências no sistema.
+
+\subsubsection{Principais Causas para Perdas de Carga no Sistema}
+
+\begin{itemize}
+    \item \textbf{Ineficiência em Conversores de Energia:} Componentes como o regulador LM2596 e o driver L298N não são 100\% eficientes, dissipando uma porção da energia na forma de **calor** durante a conversão de tensão e o chaveamento de corrente.
+    \item \textbf{Perdas por Efeito Joule:} A resistência elétrica intrínseca dos cabos, trilhas da placa e conexões do circuito convertem energia elétrica em calor, representando uma perda contínua de carga.
+    \item \textbf{Resistência Interna da Bateria:} Particularmente em momentos de alta demanda (picos de corrente dos motores), a resistência interna da própria bateria causa uma queda de tensão e dissipa energia como calor, reduzindo a capacidade útil entregue ao circuito.
+    \item \textbf{Degradação da Bateria:} Com os ciclos de carga e descarga, a capacidade máxima de armazenamento da bateria de Li-Ion diminui permanentemente, um processo químico natural que reduz a autonomia ao longo da vida útil do componente.
+    \item \textbf{Variações Operacionais:} O consumo de corrente não é constante, variando drasticamente com o tipo de terreno, aceleração e carga transportada, o que pode levar a um consumo médio real superior ao estimado.
 \end{itemize}
 
 \section{Descrição de \textit{software}}
@@ -98,14 +207,14 @@
 
 \subsection{Diagrama BPMN}
 
-\begin{figure}[h!]
+\begin{figure}[H]
     \centering
     \includegraphics[width=1\textwidth]{figuras/BPMN_carro_do_ovo.png}
     \caption{Diagrama BPMN Carro do Ovo}
     \label{fig:bpmn}
 \end{figure}
 
-\begin{figure}[h!]
+\begin{figure}[H]
     \centering
     \includegraphics[width=1\textwidth]{figuras/BPMN_PID_controle.png}
     \caption{Diagrama BPMN Controle PID e Controle do Robô}
@@ -130,154 +239,12 @@
     \label{fig:backlog_nao_funcional}
 \end{figure}
 
-<<<<<<< HEAD
-\subsection{Diagrama de Casos de Uso}
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=1\textwidth]{figuras/diagrama_casos_de_uso.png}
-    \caption{Diagrama de Casos de Uso}
-    \label{fig:diagrama_casos_de_uso}
-\end{figure}
-
-\clearpage
-
-\subsection{Descrição da arquitetura da solução de software}
-    \textcolor{black}{O propósito do software é consolidar a lógica de funcionamento do carrinho. Dessa forma, ele é responsável por gerenciar os comandos a serem executados pelo carrinho e apresentar os resultados ao usuário de forma gráfica.}
-
-    \textcolor{black}{Tendo isso em vista, a arquitetura da solução de software é a arquitetura MVP (Model - View - Presenter). Existirá uma camada View, para exibir o estado do carrinho, apresentar o gráfico de posições e enviar comandos para a camada Presenter. Uma camada Presenter, encarregada de tratar as instruções advindas da View  e enviar para a camada Model, bem como receber mudanças de estado na Model e enviar as atualizações para a camada View.}
-
-    \textcolor{black}{A camada View será desenvolvida com o framework full-stack Next.js, que utiliza a linguagem de programação Typescript. O framework permite chamadas de API assíncronas, de modo a simplificar a comunicação entre a camada View e a camada Presenter. Já a Camada de Lógica Embarcada utilizará a linguagem C/C++ própia para ESP32.}
-
-    \textcolor{black}{A escolha dessa arquitetura advém de a abstração em três camadas modularizar bem os componentes de um sistema controlador de um robô para executar tarefas predefinidas. Dessa forma, é possível definir a lógica e regras de negócio na camada Model, visualizar o estado da Model com a View e comandar as chamadas de mudança na Model e exibir as atualizações de estado na View atraves da camada Presenter.}
-    
-    \textcolor{black}{Ainda se tratando da arquitetura, o armazenamento dos estados para o banco de comandos e o banco de posições utilizará TimescaleDB e para a persistência de dados do usuário e de sessão de usuário (Login, Sessão, Logout, Configurações do frontend) será utilizado o PostgreSQL, com o Supabase como intermediador dessa conexão.}
-
-    \textcolor{black}{O fluxo principal de funcionamento começa na \textbf{View}. O usuário insere, modifica ou exclui comandos na pilha de comandos, em seguida, envia a fila de comandos para serem analisadas pelo \textbf{Gerenciador de Comandos}, que envia esta pilha ao \textbf{Gerenciador de Tarefas} na camada Presenter. Esta camada organiza a sequência lógica e envia os comandos para a camada de controle embarcado (ESP32), responsável pela execução em tempo real.Na ESP32, o Controle PI/PID em firmware (C/C++) atua sobre os motores, utilizando leituras dos encoders e giroscópio para ajustar a trajetória. Os dados de feedback são enviados de volta via MQTT para a Camada Presenter, que os registra no histórico (TimescaleDB) e os disponibiliza à interface para visualização gráfica.}
-
-
-    \begin{figure}[H]
-    \centering
-    \includegraphics[width=1\textwidth]{figuras/arquitetura_da_solucao_de_software.png}
-    \caption{Diagrama da Arquitetura de Software}
-    \label{fig:arquitetura_da_solucao_de_software}
-    \end{figure}
-    
-\clearpage
-
-\subsection{Persistência de dados}
-
-\subsubsection{Banco de Comandos}
-
-    \begin{figure}[H]
-    \centering
-    \includegraphics[width=0.8\textwidth]{figuras/DER_banco_de_comandos.jpeg}
-    \caption{Diagrama do Banco de Comandos}
-    \label{fig:der_banco_de_comandos}
-    \end{figure}
-
-\subsubsection{Banco de Posições}
-
-    \begin{figure}[H]
-    \centering
-    \includegraphics[width=0.8\textwidth]{figuras/DER_banco_de_posições.jpeg}
-    \caption{Diagrama do Banco de Posições}
-    \label{fig:der_banco_de_posicoes}
-    \end{figure}
-
-\subsubsection{Autenticação e Sessão de Usuário}
-
-    \begin{figure}[H]
-    \centering
-    \includegraphics[width=0.8\textwidth]{figuras/DER_usuario.png}
-    \caption{Diagrama Entidade Relacionamento Sessão de Usuário}
-    \label{fig:der_usuario}
-    \end{figure}
-
-\clearpage
-
-\subsection{Análise de dados}
-% \item \textcolor{red}{ \textbf{Análise de dados:} as variáveis definidas nos requisitos do projeto em abordagem numérica e gráfica.}
-
-
-\clearpage
-
-\subsection{Diagrama de estados}
-
-    \begin{figure}[H]
-    \centering
-    \includegraphics[width=1\textwidth]{figuras/diagrama_de_estados.png}
-    \caption{Diagrama de Estados}
-    \label{fig:diagrama_de_estados}
-    \end{figure}
-
-\clearpage
-
-\subsection{Protótipo funcional do \textit{software}, navegável.}
-
-    \begin{figure}[H]
-    \centering
-    \includegraphics[width=0.5\textwidth]{figuras/prototipo_1_login.png}
-    \caption{Interface de Login}
-    \label{fig:prototipo_1_login}
-    \end{figure}
-
-    \begin{figure}[H]
-    \centering
-    \includegraphics[width=0.5\textwidth]{figuras/prototipo_2_desconectado.png}
-    \caption{Interface após login - robô desconectado}
-    \label{fig:prototipo_2_desconectado}
-    \end{figure}
-
-    \begin{figure}[H]
-    \centering
-    \includegraphics[width=0.5\textwidth]{figuras/prototipo_3_conectado.png}
-    \caption{Interface após login - robô conectado}
-    \label{fig:prototipo_3_conectado}
-    \end{figure}
-
-    \begin{figure}[H]
-    \centering
-    \includegraphics[width=0.5\textwidth]{figuras/protoripo_4_comandos.png}
-    \caption{Inserção de comandos na fila}
-    \label{fig:protoripo_4_comandos}
-    \end{figure}
-
-    \begin{figure}[H]
-    \centering
-    \includegraphics[width=0.5\textwidth]{figuras/prototipo_5_deseja_enviar.png}
-    \caption{Confirmação para envio dos comandos}
-    \label{fig:prototipo_5_deseja_enviar}
-    \end{figure}
-
-    \begin{figure}[H]
-    \centering
-    \includegraphics[width=0.5\textwidth]{figuras/prototipo_6_enviado.png}
-    \caption{Comandos enviados com sucesso}
-    \label{fig:prototipo_6_enviado}
-    \end{figure}
-
-    \begin{figure}[H]
-    \centering
-    \includegraphics[width=0.5\textwidth]{figuras/prototipo_7_historico.png}
-    \caption{Histórico de filas executadas}
-    \label{fig:prototipo_7_historico}
-    \end{figure}
-
-    \begin{figure}[H]
-    \centering
-    \includegraphics[width=0.5\textwidth]{figuras/prototipo_8_grafico.png}
-    \caption{Gráfico de posições do carrinho}
-    \label{fig:prototipo_8_grafico}
-    \end{figure}
-=======
 \subsection{Descrição da arquitetura da solução de software}
 
     \textcolor{black}{A arquitetura da solução de software utilizada é a MVP (Model - View - Presenter). Existirá uma camada View de front-end, para exibir o estado do carrinho e enviar comandos para a camada Presenter. Uma camada Presenter, encarregada de tratar as instruções advindas da View  e enviar para a camada Model, bem como receber mudanças de estado na Model e enviar as atualizações para a camada View.}
 
 
 \textcolor{red}{Itens fundamentais:}
->>>>>>> main
 
 \clearpage
 

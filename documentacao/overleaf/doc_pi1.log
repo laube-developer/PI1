@@ -1,374 +1,357 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.9.24)  13 OCT 2025 20:09
+=======
 This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.9.24)  12 OCT 2025 19:58
+>>>>>>> refs/remotes/origin/develop
+=======
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.10.12)  13 OCT 2025 16:25
+=======
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.9.24)  12 OCT 2025 19:58
+>>>>>>> documentacao
+>>>>>>> refs/remotes/origin/feat/deslocamento-carrinho
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/home/rafael-laube/Documentos/unb/2025_2/PI1/documentacao/overleaf/doc_pi1.te
-x
-
-(/home/rafael-laube/Documentos/unb/2025_2/PI1/documentacao/overleaf/doc_pi1.tex
-LaTeX2e <2025-06-01> patch level 1
-L3 programming layer <2025-09-02>
-(/home/rafael-laube/.miktex/texmfs/install/tex/latex/abntex2/abntex2.cls
+**c:/Users/tanny/PI1/documentacao/overleaf/doc_pi1.tex
+(c:/Users/tanny/PI1/documentacao/overleaf/doc_pi1.tex
+LaTeX2e <2023-11-01> patch level 1
+L3 programming layer <2024-01-04>
+(C:\Users\tanny\AppData\Local\Programs\MiKTeX\tex/latex/abntex2\abntex2.cls
 Document Class: abntex2 2018/11/24 v-1.9.7 abnTeX2
-(/home/rafael-laube/.miktex/texmfs/install/tex/latex/base/ifthen.sty
-Package: ifthen 2024/03/16 v1.1e Standard LaTeX ifthen package (DPC)
-)
-(/home/rafael-laube/.miktex/texmfs/install/tex/latex/memoir/memoir.cls
-Document Class: memoir 2025/03/10 v3.8.3b configurable book, report, article do
-cument class
-(/home/rafael-laube/.miktex/texmfs/install/tex/latex/xpatch/xpatch.sty
-(/home/rafael-laube/.miktex/texmfs/install/tex/latex/l3kernel/expl3.sty
-Package: expl3 2025-09-02 L3 programming layer (loader) 
-
-(/home/rafael-laube/.miktex/texmfs/install/tex/latex/l3backend/l3backend-pdftex
-.def
-File: l3backend-pdftex.def 2025-06-09 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count275
+(C:\Users\tanny\AppData\Local\Programs\MiKTeX\tex/latex/base\ifthen.sty
+Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
+) (C:\Users\tanny\AppData\Local\Programs\MiKTeX\tex/latex/memoir\memoir.cls
+Document Class: memoir 2025/03/10 v3.8.3b configurable book, report, article document class
+(C:\Users\tanny\AppData\Local\Programs\MiKTeX\tex/latex/xpatch\xpatch.sty (C:\Users\tanny\AppData\Local\Programs\MiKTeX\tex/latex/l3kernel\expl3.sty
+Package: expl3 2024-01-04 L3 programming layer (loader) 
+ (C:\Users\tanny\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
+File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count187
+\l__pdf_internal_box=\box51
 ))
 Package: xpatch 2020/03/25 v0.3a Extending etoolbox patching commands
-
-(/home/rafael-laube/.miktex/texmfs/install/tex/latex/l3packages/xparse/xparse.s
-ty
-Package: xparse 2024-08-16 L3 Experimental document command parser
-) (/home/rafael-laube/.miktex/texmfs/install/tex/latex/etoolbox/etoolbox.sty
-Package: etoolbox 2025/02/11 v2.5l e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count276
+ (C:\Users\tanny\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/xparse\xparse.sty
+Package: xparse 2023-10-10 L3 Experimental document command parser
+) (C:\Users\tanny\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.sty
+Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count188
 ))
-\onelineskip=\skip49
-\lxvchars=\skip50
-\xlvchars=\skip51
-\@memcnta=\count277
-\c@@memmarkcntra=\count278
- (/home/rafael-laube/.miktex/texmfs/install/tex/generic/iftex/iftex.sty
-Package: iftex 2024/12/12 v1.0g TeX engine tests
+\onelineskip=\skip48
+\lxvchars=\skip49
+\xlvchars=\skip50
+\@memcnta=\count189
+\c@@memmarkcntra=\count190
+ (C:\Users\tanny\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty
+Package: iftex 2022/02/03 v1.0f TeX engine tests
 )
-\trimtop=\skip52
-\trimedge=\skip53
-
-(/home/rafael-laube/.miktex/texmfs/install/tex/latex/memoir/mem12.clo
+\trimtop=\skip51
+\trimedge=\skip52
+ (C:\Users\tanny\AppData\Local\Programs\MiKTeX\tex/latex/memoir\mem12.clo
 File: mem12.clo 2022/07/29 v0.5 memoir class 12pt size option
 )
-\binding=\skip54
-\spinemargin=\skip55
-\foremargin=\skip56
-\uppermargin=\skip57
-\lowermargin=\skip58
-\headdrop=\skip59
-\normalrulethickness=\skip60
-\mem@maxheadheight=\skip61
-\mem@maxfootheight=\skip62
-\headwidth=\skip63
-\c@storedpagenumber=\count279
-\memPD=\dimen148
-\m@mabparskip=\skip64
-\thanksmarkwidth=\skip65
-\thanksmarksep=\skip66
-\droptitle=\skip67
-\c@book=\count280
-\c@part=\count281
-\c@chapter=\count282
-\c@section=\count283
-\c@subsection=\count284
-\c@subsubsection=\count285
-\c@paragraph=\count286
-\c@subparagraph=\count287
-\beforechapskip=\skip68
-\midchapskip=\skip69
-\afterchapskip=\skip70
-\chapindent=\skip71
-\bottomsectionskip=\skip72
-\secindent=\skip73
-\beforesecskip=\skip74
-\aftersecskip=\skip75
-\subsecindent=\skip76
-\beforesubsecskip=\skip77
-\aftersubsecskip=\skip78
-\subsubsecindent=\skip79
-\beforesubsubsecskip=\skip80
-\aftersubsubsecskip=\skip81
-\paraindent=\skip82
-\beforeparaskip=\skip83
-\afterparaskip=\skip84
-\subparaindent=\skip85
-\beforesubparaskip=\skip86
-\aftersubparaskip=\skip87
-\pfbreakskip=\skip88
-\c@@ppsavesec=\count288
-\c@@ppsaveapp=\count289
-\ragrparindent=\dimen149
-\everylistparindent=\dimen150
-\parsepi=\skip89
-\topsepi=\skip90
-\itemsepi=\skip91
-\parsepii=\skip92
-\topsepii=\skip93
-\topsepiii=\skip94
-\itemsepii=\skip95
-\itemsepiii=\skip96
-\partopsepii=\skip97
-\partopsepiii=\skip98
-\m@msavetopsep=\skip99
-\m@msavepartopsep=\skip100
+\binding=\skip53
+\spinemargin=\skip54
+\foremargin=\skip55
+\uppermargin=\skip56
+\lowermargin=\skip57
+\headdrop=\skip58
+\normalrulethickness=\skip59
+\mem@maxheadheight=\skip60
+\mem@maxfootheight=\skip61
+\headwidth=\skip62
+\c@storedpagenumber=\count191
+\memPD=\dimen140
+\m@mabparskip=\skip63
+\thanksmarkwidth=\skip64
+\thanksmarksep=\skip65
+\droptitle=\skip66
+\c@book=\count192
+\c@part=\count193
+\c@chapter=\count194
+\c@section=\count195
+\c@subsection=\count196
+\c@subsubsection=\count197
+\c@paragraph=\count198
+\c@subparagraph=\count199
+\beforechapskip=\skip67
+\midchapskip=\skip68
+\afterchapskip=\skip69
+\chapindent=\skip70
+\bottomsectionskip=\skip71
+\secindent=\skip72
+\beforesecskip=\skip73
+\aftersecskip=\skip74
+\subsecindent=\skip75
+\beforesubsecskip=\skip76
+\aftersubsecskip=\skip77
+\subsubsecindent=\skip78
+\beforesubsubsecskip=\skip79
+\aftersubsubsecskip=\skip80
+\paraindent=\skip81
+\beforeparaskip=\skip82
+\afterparaskip=\skip83
+\subparaindent=\skip84
+\beforesubparaskip=\skip85
+\aftersubparaskip=\skip86
+\pfbreakskip=\skip87
+\c@@ppsavesec=\count266
+\c@@ppsaveapp=\count267
+\ragrparindent=\dimen141
+\everylistparindent=\dimen142
+\parsepi=\skip88
+\topsepi=\skip89
+\itemsepi=\skip90
+\parsepii=\skip91
+\topsepii=\skip92
+\topsepiii=\skip93
+\itemsepii=\skip94
+\itemsepiii=\skip95
+\partopsepii=\skip96
+\partopsepiii=\skip97
+\m@msavetopsep=\skip98
+\m@msavepartopsep=\skip99
 \@enLab=\toks17
-\abstitleskip=\skip101
-\absleftindent=\skip102
-\abs@leftindent=\dimen151
-\absrightindent=\skip103
-\absparindent=\skip104
-\absparsep=\skip105
-\c@vslineno=\count290
-\c@poemline=\count291
-\c@modulo@vs=\count292
-\c@memfvsline=\count293
-\vleftskip=\skip106
-\vrightskip=\skip107
-\stanzaskip=\skip108
-\versewidth=\skip109
-\vgap=\skip110
-\vindent=\skip111
-\vleftmargin=\dimen152
-\c@verse=\count294
-\c@chrsinstr=\count295
-\beforepoemtitleskip=\skip112
-\afterpoemtitleskip=\skip113
-\c@poem=\count296
-\beforePoemTitleskip=\skip114
-\midPoemTitleskip=\skip115
-\afterPoemTitleskip=\skip116
-
-(/home/rafael-laube/.miktex/texmfs/install/tex/latex/tools/array.sty
-Package: array 2025/06/08 v2.6j Tabular extension package (FMi)
-\col@sep=\dimen153
-\ar@mcellbox=\box53
-\extrarowheight=\dimen154
+\abstitleskip=\skip100
+\absleftindent=\skip101
+\abs@leftindent=\dimen143
+\absrightindent=\skip102
+\absparindent=\skip103
+\absparsep=\skip104
+\c@vslineno=\count268
+\c@poemline=\count269
+\c@modulo@vs=\count270
+\c@memfvsline=\count271
+\vleftskip=\skip105
+\vrightskip=\skip106
+\stanzaskip=\skip107
+\versewidth=\skip108
+\vgap=\skip109
+\vindent=\skip110
+\vleftmargin=\dimen144
+\c@verse=\count272
+\c@chrsinstr=\count273
+\beforepoemtitleskip=\skip111
+\afterpoemtitleskip=\skip112
+\c@poem=\count274
+\beforePoemTitleskip=\skip113
+\midPoemTitleskip=\skip114
+\afterPoemTitleskip=\skip115
+ (C:\Users\tanny\AppData\Local\Programs\MiKTeX\tex/latex/tools\array.sty
+Package: array 2023/10/16 v2.5g Tabular extension package (FMi)
+\col@sep=\dimen145
+\ar@mcellbox=\box52
+\extrarowheight=\dimen146
 \NC@list=\toks18
-\extratabsurround=\skip117
-\backup@length=\skip118
-\ar@cellbox=\box54
-)
-(/home/rafael-laube/.miktex/texmfs/install/tex/latex/tools/dcolumn.sty
+\extratabsurround=\skip116
+\backup@length=\skip117
+\ar@cellbox=\box53
+) (C:\Users\tanny\AppData\Local\Programs\MiKTeX\tex/latex/tools\dcolumn.sty
 Package: dcolumn 2023/07/08 v1.06 decimal alignment package (DPC)
-)
-(/home/rafael-laube/.miktex/texmfs/install/tex/latex/tools/delarray.sty
+) (C:\Users\tanny\AppData\Local\Programs\MiKTeX\tex/latex/tools\delarray.sty
 Package: delarray 2014/10/28 v1.01 array delimiter package (DPC)
-)
-(/home/rafael-laube/.miktex/texmfs/install/tex/latex/tools/tabularx.sty
-Package: tabularx 2023/12/11 v2.12a `tabularx' package (DPC)
-\TX@col@width=\dimen155
-\TX@old@table=\dimen156
-\TX@old@col=\dimen157
-\TX@target=\dimen158
-\TX@delta=\dimen159
-\TX@cols=\count297
+) (C:\Users\tanny\AppData\Local\Programs\MiKTeX\tex/latex/tools\tabularx.sty
+Package: tabularx 2023/07/08 v2.11c `tabularx' package (DPC)
+\TX@col@width=\dimen147
+\TX@old@table=\dimen148
+\TX@old@col=\dimen149
+\TX@target=\dimen150
+\TX@delta=\dimen151
+\TX@cols=\count275
 \TX@ftn=\toks19
-)
-(/home/rafael-laube/.miktex/texmfs/install/tex/latex/booktabs/booktabs.sty
+) (C:\Users\tanny\AppData\Local\Programs\MiKTeX\tex/latex/booktabs\booktabs.sty
 Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
-\heavyrulewidth=\dimen160
-\lightrulewidth=\dimen161
-\cmidrulewidth=\dimen162
-\belowrulesep=\dimen163
-\belowbottomsep=\dimen164
-\aboverulesep=\dimen165
-\abovetopsep=\dimen166
-\cmidrulesep=\dimen167
-\cmidrulekern=\dimen168
-\defaultaddspace=\dimen169
-\@cmidla=\count298
-\@cmidlb=\count299
-\@aboverulesep=\dimen170
-\@belowrulesep=\dimen171
-\@thisruleclass=\count300
-\@lastruleclass=\count301
-\@thisrulewidth=\dimen172
+\heavyrulewidth=\dimen152
+\lightrulewidth=\dimen153
+\cmidrulewidth=\dimen154
+\belowrulesep=\dimen155
+\belowbottomsep=\dimen156
+\aboverulesep=\dimen157
+\abovetopsep=\dimen158
+\cmidrulesep=\dimen159
+\cmidrulekern=\dimen160
+\defaultaddspace=\dimen161
+\@cmidla=\count276
+\@cmidlb=\count277
+\@aboverulesep=\dimen162
+\@belowrulesep=\dimen163
+\@thisruleclass=\count278
+\@lastruleclass=\count279
+\@thisrulewidth=\dimen164
 )
-\ctableftskip=\skip119
-\ctabrightskip=\skip120
-\abovecolumnspenalty=\count302
-\@linestogo=\count303
-\@cellstogo=\count304
-\@cellsincolumn=\count305
+\ctableftskip=\skip118
+\ctabrightskip=\skip119
+\abovecolumnspenalty=\count280
+\@linestogo=\count281
+\@cellstogo=\count282
+\@cellsincolumn=\count283
 \crtok=\toks20
-\@mincolumnwidth=\dimen173
-\c@newflo@tctr=\count306
-\mem@margin@floatbox=\box55
-\@contcwidth=\skip121
-\@contindw=\skip122
-\abovecaptionskip=\skip123
-\belowcaptionskip=\skip124
-\subfloattopskip=\skip125
-\subfloatcapskip=\skip126
-\subfloatcaptopadj=\skip127
-\subfloatbottomskip=\skip128
-\subfloatlabelskip=\skip129
-\subfloatcapmargin=\dimen174
-\c@@contsubnum=\count307
-\m@mscap@capbox=\box56
-\m@mscap@fbox=\box57
-\sidecapsep=\dimen175
-\sidecapwidth=\dimen176
-\m@m@tempdima=\dimen177
-\m@mscapraise=\dimen178
-\sidecapraise=\dimen179
-\m@mscapmainwidth=\dimen180
-\m@mscaplkern=\dimen181
-\beforeepigraphskip=\skip130
-\afterepigraphskip=\skip131
-\epigraphwidth=\skip132
-\epigraphrule=\skip133
+\@mincolumnwidth=\dimen165
+\c@newflo@tctr=\count284
+\mem@margin@floatbox=\box54
+\@contcwidth=\skip120
+\@contindw=\skip121
+\abovecaptionskip=\skip122
+\belowcaptionskip=\skip123
+\subfloattopskip=\skip124
+\subfloatcapskip=\skip125
+\subfloatcaptopadj=\skip126
+\subfloatbottomskip=\skip127
+\subfloatlabelskip=\skip128
+\subfloatcapmargin=\dimen166
+\c@@contsubnum=\count285
+\m@mscap@capbox=\box55
+\m@mscap@fbox=\box56
+\sidecapsep=\dimen167
+\sidecapwidth=\dimen168
+\m@m@tempdima=\dimen169
+\m@mscapraise=\dimen170
+\sidecapraise=\dimen171
+\m@mscapmainwidth=\dimen172
+\m@mscaplkern=\dimen173
+\beforeepigraphskip=\skip129
+\afterepigraphskip=\skip130
+\epigraphwidth=\skip131
+\epigraphrule=\skip132
 LaTeX Info: Redefining \em on input line 7017.
 LaTeX Info: Redefining \emph on input line 7025.
-
-(/home/rafael-laube/.miktex/texmfs/install/tex/latex/hyperref/nameref.sty
-Package: nameref 2025-06-21 v2.57 Cross-referencing by name of section
-
-(/home/rafael-laube/.miktex/texmfs/install/tex/latex/refcount/refcount.sty
+ (C:\Users\tanny\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
+Package: nameref 2023-11-26 v2.56 Cross-referencing by name of section
+ (C:\Users\tanny\AppData\Local\Programs\MiKTeX\tex/latex/refcount\refcount.sty
 Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
-
-(/home/rafael-laube/.miktex/texmfs/install/tex/generic/ltxcmds/ltxcmds.sty
+ (C:\Users\tanny\AppData\Local\Programs\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty
 Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
-)
-(/home/rafael-laube/.miktex/texmfs/install/tex/generic/infwarerr/infwarerr.sty
+) (C:\Users\tanny\AppData\Local\Programs\MiKTeX\tex/generic/infwarerr\infwarerr.sty
 Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
-))
-(/home/rafael-laube/.miktex/texmfs/install/tex/generic/gettitlestring/gettitles
-tring.sty
+)) (C:\Users\tanny\AppData\Local\Programs\MiKTeX\tex/generic/gettitlestring\gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
-
-(/home/rafael-laube/.miktex/texmfs/install/tex/latex/kvoptions/kvoptions.sty
+ (C:\Users\tanny\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvoptions.sty
 Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
-
-(/home/rafael-laube/.miktex/texmfs/install/tex/latex/graphics/keyval.sty
+ (C:\Users\tanny\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
 Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
 \KV@toks@=\toks21
-)
-(/home/rafael-laube/.miktex/texmfs/install/tex/latex/kvsetkeys/kvsetkeys.sty
+) (C:\Users\tanny\AppData\Local\Programs\MiKTeX\tex/latex/kvsetkeys\kvsetkeys.sty
 Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
 )))
-\c@section@level=\count308
+\c@section@level=\count286
 )
-\tocentryskip=\skip134
-\tocbaseline=\skip135
-\cftparskip=\skip136
-\cftbeforebookskip=\skip137
-\cftbookindent=\dimen182
-\cftbooknumwidth=\dimen183
-\cftbeforepartskip=\skip138
-\cftpartindent=\skip139
-\cftpartnumwidth=\skip140
-\cftbeforechapterskip=\skip141
-\cftchapterindent=\skip142
-\cftchapternumwidth=\skip143
-\cftbeforesectionskip=\skip144
-\cftsectionindent=\skip145
-\cftsectionnumwidth=\skip146
-\cftbeforesubsectionskip=\skip147
-\cftsubsectionindent=\skip148
-\cftsubsectionnumwidth=\skip149
-\cftbeforesubsubsectionskip=\skip150
-\cftsubsubsectionindent=\skip151
-\cftsubsubsectionnumwidth=\skip152
-\cftbeforeparagraphskip=\skip153
-\cftparagraphindent=\skip154
-\cftparagraphnumwidth=\skip155
-\cftbeforesubparagraphskip=\skip156
-\cftsubparagraphindent=\skip157
-\cftsubparagraphnumwidth=\skip158
-\prechapterprecisshift=\dimen184
-\c@maxsecnumdepth=\count309
-\bibindent=\dimen185
-\bibitemsep=\skip159
-\indexcolsep=\skip160
-\indexrule=\skip161
+\tocentryskip=\skip133
+\tocbaseline=\skip134
+\cftparskip=\skip135
+\cftbeforebookskip=\skip136
+\cftbookindent=\dimen174
+\cftbooknumwidth=\dimen175
+\cftbeforepartskip=\skip137
+\cftpartindent=\skip138
+\cftpartnumwidth=\skip139
+\cftbeforechapterskip=\skip140
+\cftchapterindent=\skip141
+\cftchapternumwidth=\skip142
+\cftbeforesectionskip=\skip143
+\cftsectionindent=\skip144
+\cftsectionnumwidth=\skip145
+\cftbeforesubsectionskip=\skip146
+\cftsubsectionindent=\skip147
+\cftsubsectionnumwidth=\skip148
+\cftbeforesubsubsectionskip=\skip149
+\cftsubsubsectionindent=\skip150
+\cftsubsubsectionnumwidth=\skip151
+\cftbeforeparagraphskip=\skip152
+\cftparagraphindent=\skip153
+\cftparagraphnumwidth=\skip154
+\cftbeforesubparagraphskip=\skip155
+\cftsubparagraphindent=\skip156
+\cftsubparagraphnumwidth=\skip157
+\prechapterprecisshift=\dimen176
+\c@maxsecnumdepth=\count287
+\bibindent=\dimen177
+\bibitemsep=\skip158
+\indexcolsep=\skip159
+\indexrule=\skip160
 \indexmarkstyle=\toks22
 \@indexbox=\insert252
 LaTeX Info: Redefining \raggedbottom on input line 8108.
 LaTeX Info: Redefining \flushbottom on input line 8112.
-\glossarycolsep=\dimen186
-\glossaryrule=\dimen187
-\sideparvshift=\skip162
+\glossarycolsep=\dimen178
+\glossaryrule=\dimen179
+\sideparvshift=\skip161
 \sideins=\insert251
-\sidebartopsep=\skip163
-\sidebarhsep=\skip164
-\sidebarvsep=\skip165
-\sidebarwidth=\skip166
-\footmarkwidth=\skip167
-\footmarksep=\skip168
-\footparindent=\skip169
-\footinsdim=\skip170
+\sidebartopsep=\skip162
+\sidebarhsep=\skip163
+\sidebarvsep=\skip164
+\sidebarwidth=\skip165
+\footmarkwidth=\skip166
+\footmarksep=\skip167
+\footparindent=\skip168
+\footinsdim=\skip169
 \footinsv@r=\insert250
 \@mpfootinsv@r=\insert249
-\m@m@k=\count310
-\m@m@h=\dimen188
-\m@mipn@skip=\skip171
+\m@m@k=\count288
+\m@m@h=\dimen180
+\m@mipn@skip=\skip170
 \sidefootins=\insert248
-\sidefootadjust=\skip172
-\sidefootheight=\skip173
-\sidefoothsep=\skip174
-\sidefootvsep=\skip175
-\sidefootwidth=\skip176
-\m@mdownsf=\skip177
-\c@sidefootnote=\count311
-\sidefootmarkwidth=\skip178
-\sidefootmarksep=\skip179
-\sidefootparindent=\skip180
-\c@pagenote=\count312
-
-patch 2 for \immediateaddtocontents failed
-\c@pagenoteshadow=\count313
-\mem@pn@lastkern=\skip181
-(/home/rafael-laube/.miktex/texmfs/install/tex/latex/tools/verbatim.sty
-Package: verbatim 2024-01-22 v1.5x LaTeX2e package for verbatim enhancements
+\sidefootadjust=\skip171
+\sidefootheight=\skip172
+\sidefoothsep=\skip173
+\sidefootvsep=\skip174
+\sidefootwidth=\skip175
+\m@mdownsf=\skip176
+\c@sidefootnote=\count289
+\sidefootmarkwidth=\skip177
+\sidefootmarksep=\skip178
+\sidefootparindent=\skip179
+\c@pagenote=\count290
+\c@pagenoteshadow=\count291
+\mem@pn@lastkern=\skip180
+ (C:\Users\tanny\AppData\Local\Programs\MiKTeX\tex/latex/tools\verbatim.sty
+Package: verbatim 2023-11-06 v1.5v LaTeX2e package for verbatim enhancements
 \every@verbatim=\toks23
 \verbatim@line=\toks24
 \verbatim@in@stream=\read2
 )
-\verbatimindent=\skip182
+\verbatimindent=\skip181
 \verbatim@out=\write3
-
-(/home/rafael-laube/.miktex/texmfs/install/tex/latex/base/shortvrb.sty
-Package: shortvrb 2024/12/25 v3.0q Standard LaTeX documentation package V3 (FMi
+ (C:\Users\tanny\AppData\Local\Programs\MiKTeX\tex/latex/base\shortvrb.sty
+Package: shortvrb 2022/11/13 v3.0m Standard LaTeX documentation package V3 (FMi)
 )
-)
-\bvboxsep=\skip183
-\c@memfbvline=\count314
-\c@bvlinectr=\count315
-\bvnumlength=\skip184
-\fb@frw=\dimen189
-\fb@frh=\dimen190
-\FrameRule=\dimen191
-\FrameSep=\dimen192
-\c@cp@cntr=\count316
-\c@ism@mctr=\count317
-\c@xsm@mctr=\count318
-\c@csm@mctr=\count319
-\c@ksm@mctr=\count320
-\c@xksm@mctr=\count321
-\c@cksm@mctr=\count322
-\c@msm@mctr=\count323
-\c@xmsm@mctr=\count324
-\c@cmsm@mctr=\count325
-\c@bsm@mctr=\count326
-\c@workm@mctr=\count327
-\c@sheetsequence=\count328
-\c@lastsheet=\count329
-\c@lastpage=\count330
-
-(/home/rafael-laube/.miktex/texmfs/install/tex/latex/textcase/textcase.sty
+\bvboxsep=\skip182
+\c@memfbvline=\count292
+\c@bvlinectr=\count293
+\bvnumlength=\skip183
+\fb@frw=\dimen181
+\fb@frh=\dimen182
+\FrameRule=\dimen183
+\FrameSep=\dimen184
+\c@cp@cntr=\count294
+\c@ism@mctr=\count295
+\c@xsm@mctr=\count296
+\c@csm@mctr=\count297
+\c@ksm@mctr=\count298
+\c@xksm@mctr=\count299
+\c@cksm@mctr=\count300
+\c@msm@mctr=\count301
+\c@xmsm@mctr=\count302
+\c@cmsm@mctr=\count303
+\c@bsm@mctr=\count304
+\c@workm@mctr=\count305
+\c@sheetsequence=\count306
+\c@lastsheet=\count307
+\c@lastpage=\count308
+ (C:\Users\tanny\AppData\Local\Programs\MiKTeX\tex/latex/textcase\textcase.sty
 Package: textcase 2025/02/16 v1.05 Text only upper/lower case changing (DPC)
 Package textcase Info: Defining Legacy names on input line 20.
 )
-\c@figure=\count331
-\c@lofdepth=\count332
-\cftbeforefigureskip=\skip185
-\cftfigureindent=\skip186
-\cftfigurenumwidth=\skip187
-\c@table=\count333
-\c@lotdepth=\count334
-\cftbeforetableskip=\skip188
-\cfttableindent=\skip189
-\cfttablenumwidth=\skip190
+\c@figure=\count309
+\c@lofdepth=\count310
+\cftbeforefigureskip=\skip184
+\cftfigureindent=\skip185
+\cftfigurenumwidth=\skip186
+\c@table=\count311
+\c@lotdepth=\count312
+\cftbeforetableskip=\skip187
+\cfttableindent=\skip188
+\cfttablenumwidth=\skip189
 Package abstract [2008/07/23] emulated by memoir.
 Package appendix [2008/07/23] emulated by memoir.
 Package ccaption [2008/07/23] emulated by memoir.
@@ -396,255 +379,191 @@ Package tocbibind [2008/07/23] emulated by memoir.
 Package tocloft [2008/07/23] emulated by memoir.
 Package tocvsec2 [2008/07/23] emulated by memoir.
 Package verse [2008/07/23] emulated by memoir.
-)
-(/home/rafael-laube/.miktex/texmfs/install/tex/latex/hyperref/hyperref.sty
-Package: hyperref 2025-07-12 v7.01o Hypertext links for LaTeX
-
-(/home/rafael-laube/.miktex/texmfs/install/tex/generic/kvdefinekeys/kvdefinekey
-s.sty
+) (C:\Users\tanny\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref.sty
+Package: hyperref 2023-11-26 v7.01g Hypertext links for LaTeX
+ (C:\Users\tanny\AppData\Local\Programs\MiKTeX\tex/generic/kvdefinekeys\kvdefinekeys.sty
 Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
-)
-(/home/rafael-laube/.miktex/texmfs/install/tex/generic/pdfescape/pdfescape.sty
+) (C:\Users\tanny\AppData\Local\Programs\MiKTeX\tex/generic/pdfescape\pdfescape.sty
 Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
-
-(/home/rafael-laube/.miktex/texmfs/install/tex/generic/pdftexcmds/pdftexcmds.st
-y
-Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
-)
+ (C:\Users\tanny\AppData\Local\Programs\MiKTeX\tex/generic/pdftexcmds\pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO)
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
-)) (/home/rafael-laube/.miktex/texmfs/install/tex/latex/hycolor/hycolor.sty
+)) (C:\Users\tanny\AppData\Local\Programs\MiKTeX\tex/latex/hycolor\hycolor.sty
 Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+) (C:\Users\tanny\AppData\Local\Programs\MiKTeX\tex/latex/letltxmacro\letltxmacro.sty
+Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
+) (C:\Users\tanny\AppData\Local\Programs\MiKTeX\tex/latex/auxhook\auxhook.sty
+Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
 )
-(/home/rafael-laube/.miktex/texmfs/install/tex/generic/stringenc/stringenc.sty
-Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
-)
-)
-\@linkdim=\dimen193
-\Hy@linkcounter=\count335
-\Hy@pagecounter=\count336
-(/home/rafael-laube/.miktex/texmfs/install/tex/latex/hyperref/pd1enc.def
-File: pd1enc.def 2025-07-12 v7.01o Hyperref: PDFDocEncoding definition (HO)
+\@linkdim=\dimen185
+\Hy@linkcounter=\count313
+\Hy@pagecounter=\count314
+ (C:\Users\tanny\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.def
+File: pd1enc.def 2023-11-26 v7.01g Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
-)
-(/home/rafael-laube/.miktex/texmfs/install/tex/generic/intcalc/intcalc.sty
+) (C:\Users\tanny\AppData\Local\Programs\MiKTeX\tex/generic/intcalc\intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
-\Hy@SavedSpaceFactor=\count337
-
-(/home/rafael-laube/.miktex/texmfs/install/tex/latex/hyperref/puenc.def
-File: puenc.def 2025-07-12 v7.01o Hyperref: PDF Unicode definition (HO)
+\Hy@SavedSpaceFactor=\count315
+ (C:\Users\tanny\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\puenc.def
+File: puenc.def 2023-11-26 v7.01g Hyperref: PDF Unicode definition (HO)
 Now handling font encoding PU ...
 ... no UTF-8 mapping file for font encoding PU
 )
-Package hyperref Info: Hyper figures OFF on input line 4195.
-Package hyperref Info: Link nesting OFF on input line 4200.
-Package hyperref Info: Hyper index ON on input line 4203.
-Package hyperref Info: Plain pages OFF on input line 4210.
-Package hyperref Info: Backreferencing OFF on input line 4215.
+Package hyperref Info: Hyper figures OFF on input line 4181.
+Package hyperref Info: Link nesting OFF on input line 4186.
+Package hyperref Info: Hyper index ON on input line 4189.
+Package hyperref Info: Plain pages OFF on input line 4196.
+Package hyperref Info: Backreferencing OFF on input line 4201.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
-Package hyperref Info: Bookmarks ON on input line 4462.
-\c@Hy@tempcnt=\count338
-
-(/home/rafael-laube/.miktex/texmfs/install/tex/latex/url/url.sty
-\Urlmuskip=\muskip17
+Package hyperref Info: Bookmarks ON on input line 4448.
+\c@Hy@tempcnt=\count316
+ (C:\Users\tanny\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty
+\Urlmuskip=\muskip16
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-LaTeX Info: Redefining \url on input line 4801.
-\XeTeXLinkMargin=\dimen194
-
-(/home/rafael-laube/.miktex/texmfs/install/tex/generic/bitset/bitset.sty
+LaTeX Info: Redefining \url on input line 4786.
+\XeTeXLinkMargin=\dimen186
+ (C:\Users\tanny\AppData\Local\Programs\MiKTeX\tex/generic/bitset\bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
-
-(/home/rafael-laube/.miktex/texmfs/install/tex/generic/bigintcalc/bigintcalc.st
-y
-Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
-)
+ (C:\Users\tanny\AppData\Local\Programs\MiKTeX\tex/generic/bigintcalc\bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
 ))
-\Fld@menulength=\count339
-\Field@Width=\dimen195
-\Fld@charsize=\dimen196
-Package hyperref Info: Hyper figures OFF on input line 6078.
-Package hyperref Info: Link nesting OFF on input line 6083.
-Package hyperref Info: Hyper index ON on input line 6086.
-Package hyperref Info: backreferencing OFF on input line 6093.
-Package hyperref Info: Link coloring OFF on input line 6098.
-Package hyperref Info: Link coloring with OCG OFF on input line 6103.
-Package hyperref Info: PDF/A mode OFF on input line 6108.
-\Hy@abspage=\count340
-\c@Item=\count341
-\c@Hfootnote=\count342
+\Fld@menulength=\count317
+\Field@Width=\dimen187
+\Fld@charsize=\dimen188
+Package hyperref Info: Hyper figures OFF on input line 6065.
+Package hyperref Info: Link nesting OFF on input line 6070.
+Package hyperref Info: Hyper index ON on input line 6073.
+Package hyperref Info: backreferencing OFF on input line 6080.
+Package hyperref Info: Link coloring OFF on input line 6085.
+Package hyperref Info: Link coloring with OCG OFF on input line 6090.
+Package hyperref Info: PDF/A mode OFF on input line 6095.
+ (C:\Users\tanny\AppData\Local\Programs\MiKTeX\tex/latex/base\atbegshi-ltx.sty
+Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
+package with kernel methods
+)
+\Hy@abspage=\count318
+\c@Item=\count319
+\c@Hfootnote=\count320
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
- (/home/rafael-laube/.miktex/texmfs/install/tex/latex/hyperref/hpdftex.def
-File: hpdftex.def 2025-07-12 v7.01o Hyperref driver for pdfTeX
-\Fld@listcount=\count343
-\c@bookmark@seq@number=\count344
-
-(/home/rafael-laube/.miktex/texmfs/install/tex/latex/rerunfilecheck/rerunfilech
-eck.sty
+ (C:\Users\tanny\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hpdftex.def
+File: hpdftex.def 2023-11-26 v7.01g Hyperref driver for pdfTeX
+ (C:\Users\tanny\AppData\Local\Programs\MiKTeX\tex/latex/base\atveryend-ltx.sty
+Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend package
+with kernel methods
+)
+\Fld@listcount=\count321
+\c@bookmark@seq@number=\count322
+ (C:\Users\tanny\AppData\Local\Programs\MiKTeX\tex/latex/rerunfilecheck\rerunfilecheck.sty
 Package: rerunfilecheck 2025-06-21 v1.11 Rerun checks for auxiliary files (HO)
-
-(/home/rafael-laube/.miktex/texmfs/install/tex/generic/uniquecounter/uniquecoun
-ter.sty
+ (C:\Users\tanny\AppData\Local\Programs\MiKTeX\tex/generic/uniquecounter\uniquecounter.sty
 Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 )
-Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
-84.
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 284.
 )
-\Hy@SectionHShift=\skip191
-)
-(/home/rafael-laube/.miktex/texmfs/install/tex/latex/memoir/memhfixc.sty
+\Hy@SectionHShift=\skip190
+) (C:\Users\tanny\AppData\Local\Programs\MiKTeX\tex/latex/memoir\memhfixc.sty
 Package: memhfixc 2025/03/06 v1.23 hyperref package fixes for memoir class
-\c@memhycontfloat=\count345
-\c@mem@Hpagenote=\count346
-)
-(/home/rafael-laube/.miktex/texmfs/install/tex/latex/bookmark/bookmark.sty
+\c@memhycontfloat=\count323
+\c@mem@Hpagenote=\count324
+) (C:\Users\tanny\AppData\Local\Programs\MiKTeX\tex/latex/bookmark\bookmark.sty
 Package: bookmark 2023-12-10 v1.31 PDF bookmarks (HO)
-
-(/home/rafael-laube/.miktex/texmfs/install/tex/latex/bookmark/bkm-pdftex.def
-File: bkm-pdftex.def 2023-12-10 v1.31 bookmark driver for pdfTeX and luaTeX (HO
-)
-\BKM@id=\count347
-))
-(/home/rafael-laube/.miktex/texmfs/install/tex/generic/babel/babel.sty
-Package: babel 2025/08/03 v25.12 The multilingual framework for LuaLaTeX, pdfLa
-TeX and XeLaTeX
-\babel@savecnt=\count348
-LaTeX Encoding Info:    Redeclaring text command \ij (encoding OT1) on input li
-ne 2045.
-LaTeX Encoding Info:    Redeclaring text command \IJ (encoding OT1) on input li
-ne 2047.
-LaTeX Encoding Info:    Redeclaring text command \ij (encoding T1) on input lin
-e 2049.
-LaTeX Encoding Info:    Redeclaring text command \IJ (encoding T1) on input lin
-e 2050.
-LaTeX Encoding Info:    Ignoring declaration for text command \ij (encoding ?) 
-on input line 2051.
-LaTeX Encoding Info:    Ignoring declaration for text command \IJ (encoding ?) 
-on input line 2053.
-LaTeX Encoding Info:    Ignoring declaration for text command \SS (encoding ?) 
-on input line 2078.
-\U@D=\dimen197
-\l@unhyphenated=\language1
-
-(/home/rafael-laube/.miktex/texmfs/install/tex/generic/babel/txtbabel.def)
+ (C:\Users\tanny\AppData\Local\Programs\MiKTeX\tex/latex/bookmark\bkm-pdftex.def
+File: bkm-pdftex.def 2023-12-10 v1.31 bookmark driver for pdfTeX and luaTeX (HO)
+\BKM@id=\count325
+)) (C:\Users\tanny\AppData\Local\Programs\MiKTeX\tex/generic/babel\babel.sty
+Package: babel 2024/01/07 v24.1 The Babel package
+\babel@savecnt=\count326
+\U@D=\dimen189
+\l@unhyphenated=\language79
+ (C:\Users\tanny\AppData\Local\Programs\MiKTeX\tex/generic/babel\txtbabel.def)
 \bbl@readstream=\read3
-\bbl@dirlevel=\count349
+\bbl@dirlevel=\count327
 
 *************************************
 * Local config file bblopts.cfg used
 *
-(/home/rafael-laube/.miktex/texmfs/install/tex/latex/arabi/bblopts.cfg
-File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
- babel
-)
-(/home/rafael-laube/.miktex/texmfs/install/tex/latex/babel-english/english.ldf
+(C:\Users\tanny\AppData\Local\Programs\MiKTeX\tex/latex/arabi\bblopts.cfg
+File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of babel
+) (C:\Users\tanny\AppData\Local\Programs\MiKTeX\tex/latex/babel-english\english.ldf
 Language: english 2017/06/06 v3.3r English support from the babel system
-
-(/home/rafael-laube/.miktex/texmfs/install/tex/generic/babel/locale/en/babel-en
-glish.tex
-Package babel Info: Importing font and identification data for english
-(babel)             from babel-en.ini. Reported on input line 12.
-))
-(/home/rafael-laube/.miktex/texmfs/install/tex/generic/babel-french/french.ldf
+Package babel Info: Hyphen rules for 'canadian' set to \l@english
+(babel)             (\language0). Reported on input line 102.
+Package babel Info: Hyphen rules for 'australian' set to \l@ukenglish
+(babel)             (\language73). Reported on input line 105.
+Package babel Info: Hyphen rules for 'newzealand' set to \l@ukenglish
+(babel)             (\language73). Reported on input line 108.
+) (C:\Users\tanny\AppData\Local\Programs\MiKTeX\tex/generic/babel-french\french.ldf
 Language: french 2025-08-15 v4.0e French support from the babel system
-
-(/home/rafael-laube/.miktex/texmfs/install/tex/generic/babel/locale/fr/babel-fr
-ench.tex
-Package babel Info: Importing font and identification data for french
-(babel)             from babel-fr.ini. Reported on input line 12.
-)
-(/home/rafael-laube/.miktex/texmfs/install/tex/generic/babel-french/french3.ldf
+ (C:\Users\tanny\AppData\Local\Programs\MiKTeX\tex/generic/babel-french\french3.ldf
 Language: french 2025-08-15 v3.7e French support from the babel system
-
-Package babel Warning: No hyphenation patterns were preloaded for
-(babel)                the language 'French' into the format.
-(babel)                Please, configure your TeX system to add them and
-(babel)                rebuild the format. Now I will use the patterns
-(babel)                preloaded for \language=nohyphenation instead on input l
-ine 87.
-
-\FB@stdchar=\count350
+\FB@stdchar=\count328
 Package babel Info: Making : an active character on input line 273.
 Package babel Info: Making ; an active character on input line 274.
 Package babel Info: Making ! an active character on input line 275.
 Package babel Info: Making ? an active character on input line 276.
-\FBguill@level=\count351
+\FBguill@level=\count329
 \FBold@everypar=\toks25
-\FB@Mht=\dimen198
-\mc@charclass=\count352
-\mc@charfam=\count353
-\mc@charslot=\count354
-\std@mcc=\count355
-\dec@mcc=\count356
-\FB@pardim=\dimen199
-\listindentFB=\dimen256
-\descindentFB=\dimen257
-\labelindentFB=\dimen258
-\labelwidthFB=\dimen259
-\leftmarginFB=\dimen260
-\parindentFFN=\dimen261
-\FBfnindent=\dimen262
-))
-(/home/rafael-laube/.miktex/texmfs/install/tex/latex/babel-spanish/spanish.ldf
+\FB@Mht=\dimen190
+\mc@charclass=\count330
+\mc@charfam=\count331
+\mc@charslot=\count332
+\std@mcc=\count333
+\dec@mcc=\count334
+\FB@pardim=\dimen191
+\listindentFB=\dimen192
+\descindentFB=\dimen193
+\labelindentFB=\dimen194
+\labelwidthFB=\dimen195
+\leftmarginFB=\dimen196
+\parindentFFN=\dimen197
+\FBfnindent=\dimen198
+)) (C:\Users\tanny\AppData\Local\Programs\MiKTeX\tex/latex/babel-spanish\spanish.ldf
 Language: spanish.ldf 2021/05/27 v5.0q Spanish support from the babel system
-
-(/home/rafael-laube/.miktex/texmfs/install/tex/generic/babel/locale/es/babel-sp
-anish.tex
-Package babel Info: Importing font and identification data for spanish
-(babel)             from babel-es.ini. Reported on input line 12.
-)
-
-Package babel Warning: No hyphenation patterns were preloaded for
-(babel)                the language 'Spanish' into the format.
-(babel)                Please, configure your TeX system to add them and
-(babel)                rebuild the format. Now I will use the patterns
-(babel)                preloaded for \language=nohyphenation instead on input l
-ine 51.
-
 \es@quottoks=\toks26
-\es@quotdepth=\count357
+\es@quotdepth=\count335
 Package babel Info: Making " an active character on input line 570.
 Package babel Info: Making . an active character on input line 675.
 Package babel Info: Making < an active character on input line 722.
 Package babel Info: Making > an active character on input line 722.
-)
-(/home/rafael-laube/.miktex/texmfs/install/tex/latex/babel-portuges/brazil.ldf
+) (C:\Users\tanny\AppData\Local\Programs\MiKTeX\tex/latex/babel-portuges\brazil.ldf
 Language: portuges 2021/07/09 v1.2t Portuguese support from the babel system
-
-
-Package babel Warning: No hyphenation patterns were preloaded for
-(babel)                the language 'Portuguese' into the format.
-(babel)                Please, configure your TeX system to add them and
-(babel)                rebuild the format. Now I will use the patterns
-(babel)                preloaded for \language=nohyphenation instead on input l
-ine 53.
-
-)) (/home/rafael-laube/.miktex/texmfs/install/tex/latex/carlisle/scalefnt.sty)
-(/home/rafael-laube/.miktex/texmfs/install/tex/latex/enumitem/enumitem.sty
+Package babel Info: Hyphen rules for 'brazil' set to \l@portuguese
+(babel)             (\language56). Reported on input line 111.
+)) (C:\Users\tanny\AppData\Local\Programs\MiKTeX\tex/generic/babel/locale/es\babel-spanish.tex
+Package babel Info: Importing font and identification data for spanish
+(babel)             from babel-es.ini. Reported on input line 11.
+) (C:\Users\tanny\AppData\Local\Programs\MiKTeX\tex/generic/babel/locale/fr\babel-french.tex
+Package babel Info: Importing font and identification data for french
+(babel)             from babel-fr.ini. Reported on input line 11.
+) (C:\Users\tanny\AppData\Local\Programs\MiKTeX\tex/generic/babel/locale/en\babel-english.tex
+Package babel Info: Importing font and identification data for english
+(babel)             from babel-en.ini. Reported on input line 11.
+) (C:\Users\tanny\AppData\Local\Programs\MiKTeX\tex/latex/carlisle\scalefnt.sty) (C:\Users\tanny\AppData\Local\Programs\MiKTeX\tex/latex/enumitem\enumitem.sty
 Package: enumitem 2025/02/06 v3.11 Customized lists
-\labelindent=\skip192
-\enit@outerparindent=\dimen263
+\labelindent=\skip191
+\enit@outerparindent=\dimen199
 \enit@toks=\toks27
-\enit@inbox=\box58
-\enit@count@id=\count358
-\enitdp@description=\count359
-)
-(/home/rafael-laube/.miktex/texmfs/install/tex/latex/tools/calc.sty
-Package: calc 2025/03/01 v4.3b Infix arithmetic (KKT,FJ)
-\calc@Acount=\count360
-\calc@Bcount=\count361
-\calc@Adimen=\dimen264
-\calc@Bdimen=\dimen265
-\calc@Askip=\skip193
-\calc@Bskip=\skip194
-LaTeX Info: Redefining \setlength on input line 86.
-LaTeX Info: Redefining \addtolength on input line 87.
-\calc@Ccount=\count362
-\calc@Cskip=\skip195
+\enit@inbox=\box57
+\enit@count@id=\count336
+\enitdp@description=\count337
+) (C:\Users\tanny\AppData\Local\Programs\MiKTeX\tex/latex/tools\calc.sty
+Package: calc 2023/07/08 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count338
+\calc@Bcount=\count339
+\calc@Adimen=\dimen256
+\calc@Bdimen=\dimen257
+\calc@Askip=\skip192
+\calc@Bskip=\skip193
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count340
+\calc@Cskip=\skip194
 )
 
 ******************************************************
@@ -666,44 +585,41 @@ Sidefoothsep and sidefootwidth: 7pt and 42pt
 Sidefootvsep and sidefootheight: 14.5pt and 590.14995pt
 ******************************************************
 
-\c@abntex@bookmarkcounter=\count363
-\cftlastnumwidth=\skip196
-\chapternamenumlength=\skip197
-\ABNTEXcitacaorecuo=\skip198
-\c@alineasi=\count364
-\c@alineasii=\count365
-\enitdp@alineas=\count366
-\c@subalineasi=\count367
-\enitdp@subalineas=\count368
-\c@incisosi=\count369
-\enitdp@incisos=\count370
-\ABNTEXsignwidth=\skip199
-\ABNTEXsignthickness=\skip256
-\ABNTEXsignskip=\skip257
-) (fixos/pacotes.tex
-(/home/rafael-laube/.miktex/texmfs/install/tex/latex/cmap/cmap.sty
+\c@abntex@bookmarkcounter=\count341
+\cftlastnumwidth=\skip195
+\chapternamenumlength=\skip196
+\ABNTEXcitacaorecuo=\skip197
+\c@alineasi=\count342
+\c@alineasii=\count343
+\enitdp@alineas=\count344
+\c@subalineasi=\count345
+\enitdp@subalineas=\count346
+\c@incisosi=\count347
+\enitdp@incisos=\count348
+\ABNTEXsignwidth=\skip198
+\ABNTEXsignthickness=\skip199
+\ABNTEXsignskip=\skip256
+) (fixos/pacotes.tex (C:\Users\tanny\AppData\Local\Programs\MiKTeX\tex/latex/cmap\cmap.sty
 Package: cmap 2021/02/06 v1.0j CMap support: searchable PDF
-)
-(/home/rafael-laube/.miktex/texmfs/install/tex/latex/tools/longtable.sty
-Package: longtable 2024-12-18 v4.23 Multi-page Table package (DPC)
-\LTleft=\skip258
-\LTright=\skip259
-\LTpre=\skip260
-\LTpost=\skip261
-\LTchunksize=\count371
-\LTcapwidth=\dimen266
-\LT@head=\box59
-\LT@firsthead=\box60
-\LT@foot=\box61
-\LT@lastfoot=\box62
-\LT@gbox=\box63
-\LT@cols=\count372
-\LT@rows=\count373
-\c@LT@tables=\count374
-\c@LT@chunks=\count375
+) (C:\Users\tanny\AppData\Local\Programs\MiKTeX\tex/latex/tools\longtable.sty
+Package: longtable 2023-11-01 v4.19 Multi-page Table package (DPC)
+\LTleft=\skip257
+\LTright=\skip258
+\LTpre=\skip259
+\LTpost=\skip260
+\LTchunksize=\count349
+\LTcapwidth=\dimen258
+\LT@head=\box58
+\LT@firsthead=\box59
+\LT@foot=\box60
+\LT@lastfoot=\box61
+\LT@gbox=\box62
+\LT@cols=\count350
+\LT@rows=\count351
+\c@LT@tables=\count352
+\c@LT@chunks=\count353
 \LT@p@ftn=\toks28
-)
-(/home/rafael-laube/.miktex/texmfs/install/tex/latex/lm/lmodern.sty
+) (C:\Users\tanny\AppData\Local\Programs\MiKTeX\tex/latex/lm\lmodern.sty
 Package: lmodern 2015/05/01 v1.6.1 Latin Modern Fonts
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
 (Font)                  OT1/cmr/m/n --> OT1/lmr/m/n on input line 22.
@@ -737,141 +653,285 @@ LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
 (Font)                  OT1/cmr/bx/it --> OT1/lmr/bx/it on input line 37.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 (Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 38.
-)
-(/home/rafael-laube/.miktex/texmfs/install/tex/latex/base/fontenc.sty
-Package: fontenc 2024/12/21 v2.1c Standard LaTeX package
-LaTeX Font Info:    Trying to load font information for T1+lmr on input line 11
-6.
-
-(/home/rafael-laube/.miktex/texmfs/install/tex/latex/lm/t1lmr.fd
+) (C:\Users\tanny\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty
+Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 112.
+ (C:\Users\tanny\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmr.fd
 File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)<<t1.cmap>>)
-(/home/rafael-laube/.miktex/texmfs/install/tex/latex/base/inputenc.sty
-Package: inputenc 2024/02/08 v1.3d Input encoding file
+)<<t1.cmap>>) (C:\Users\tanny\AppData\Local\Programs\MiKTeX\tex/latex/base\inputenc.sty
+Package: inputenc 2021/02/14 v1.3d Input encoding file
 \inpenc@prehook=\toks29
 \inpenc@posthook=\toks30
-)
-(/home/rafael-laube/.miktex/texmfs/install/tex/latex/lastpage/lastpage.sty
+) (C:\Users\tanny\AppData\Local\Programs\MiKTeX\tex/latex/lastpage\lastpage.sty
 Package: lastpage 2025/08/14 v2.1h lastpage: 2.09 or 2e? (HMM)
-
-(/home/rafael-laube/.miktex/texmfs/install/tex/latex/lastpage/lastpage2e.sty
-Package: lastpage2e 2025/08/14 v2.1h Decide which 2e lastpage version to use (H
-MM)
-
-(/home/rafael-laube/.miktex/texmfs/install/tex/latex/lastpage/lastpagemodern.st
-y
-Package: lastpagemodern 2025-08-14 v2.1h Refers to last page's name (HMM; JPG)
-\c@lastpagecount=\count376
+ (C:\Users\tanny\AppData\Local\Programs\MiKTeX\tex/latex/lastpage\lastpage2e.sty
+Package: lastpage2e 2025/08/14 v2.1h Decide which 2e lastpage version to use (HMM)
+ (C:\Users\tanny\AppData\Local\Programs\MiKTeX\tex/latex/lastpage\lastpageclassic.sty
+Package: lastpageclassic 2025/08/14 v2.1h Refers to last page's name (HMM; JPG)
 ) 
-)) (/home/rafael-laube/.miktex/texmfs/install/tex/latex/tools/indentfirst.sty
+)) (C:\Users\tanny\AppData\Local\Programs\MiKTeX\tex/latex/tools\indentfirst.sty
 Package: indentfirst 2023/07/02 v1.03 Indent first paragraph (DPC)
-)
-(/home/rafael-laube/.miktex/texmfs/install/tex/latex/graphics/color.sty
-Package: color 2025/01/14 v1.3e Standard LaTeX Color (DPC)
-
-(/home/rafael-laube/.miktex/texmfs/install/tex/latex/graphics-cfg/color.cfg
+) (C:\Users\tanny\AppData\Local\Programs\MiKTeX\tex/latex/graphics\color.sty
+Package: color 2022/01/06 v1.3d Standard LaTeX Color (DPC)
+ (C:\Users\tanny\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package color Info: Driver file: pdftex.def on input line 149.
-
-(/home/rafael-laube/.miktex/texmfs/install/tex/latex/graphics-def/pdftex.def
-File: pdftex.def 2024/04/13 v1.2c Graphics/color driver for pdftex
-)
-(/home/rafael-laube/.miktex/texmfs/install/tex/latex/graphics/mathcolor.ltx))
-(/home/rafael-laube/.miktex/texmfs/install/tex/latex/graphics/graphicx.sty
-Package: graphicx 2024/12/31 v1.2e Enhanced LaTeX Graphics (DPC,SPQR)
-
-(/home/rafael-laube/.miktex/texmfs/install/tex/latex/graphics/graphics.sty
-Package: graphics 2024/08/06 v1.4g Standard LaTeX Graphics (DPC,SPQR)
-
-(/home/rafael-laube/.miktex/texmfs/install/tex/latex/graphics/trig.sty
-Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
-)
-(/home/rafael-laube/.miktex/texmfs/install/tex/latex/graphics-cfg/graphics.cfg
+ (C:\Users\tanny\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
+File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
+) (C:\Users\tanny\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mathcolor.ltx)) (C:\Users\tanny\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+ (C:\Users\tanny\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
+Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
+ (C:\Users\tanny\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+) (C:\Users\tanny\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
-Package graphics Info: Driver file: pdftex.def on input line 106.
+Package graphics Info: Driver file: pdftex.def on input line 107.
 )
-\Gin@req@height=\dimen267
-\Gin@req@width=\dimen268
-) (/home/rafael-laube/.miktex/texmfs/install/tex/latex/units/units.sty
+\Gin@req@height=\dimen259
+\Gin@req@width=\dimen260
+) (C:\Users\tanny\AppData\Local\Programs\MiKTeX\tex/latex/units\units.sty
 Package: units 1998/08/04 v0.9b Typesetting units
-
-(/home/rafael-laube/.miktex/texmfs/install/tex/latex/units/nicefrac.sty
+ (C:\Users\tanny\AppData\Local\Programs\MiKTeX\tex/latex/units\nicefrac.sty
 Package: nicefrac 1998/08/04 v0.9b Nice fractions
-\L@UnitsRaiseDisplaystyle=\skip262
-\L@UnitsRaiseTextstyle=\skip263
-\L@UnitsRaiseScriptstyle=\skip264
-))
-(/home/rafael-laube/.miktex/texmfs/install/tex/latex/hyperref/backref.sty
-Package: backref 2025-06-21 v1.45 Bibliographical back referencing
-)
-(/home/rafael-laube/.miktex/texmfs/install/tex/latex/abntex2/abntex2cite.sty
+\L@UnitsRaiseDisplaystyle=\skip261
+\L@UnitsRaiseTextstyle=\skip262
+\L@UnitsRaiseScriptstyle=\skip263
+)) (C:\Users\tanny\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\backref.sty
+Package: backref 2023-11-26 v1.44 Bibliographical back referencing
+) (C:\Users\tanny\AppData\Local\Programs\MiKTeX\tex/latex/abntex2\abntex2cite.sty
 Package: abntex2cite 2018/11/24 v-1.9.7 abnTeX2
-
-(/home/rafael-laube/.miktex/texmfs/install/tex/latex/abntex2/abntex2abrev.sty)
-\minimumbiblabelwidth=\skip265
-\ABCIauxlen=\skip266
-\c@ABCIaux=\count377
-\c@ABCImax=\count378
-
-(/home/rafael-laube/.miktex/texmfs/install/tex/generic/iftex/ifpdf.sty
+ (C:\Users\tanny\AppData\Local\Programs\MiKTeX\tex/latex/abntex2\abntex2abrev.sty)
+\minimumbiblabelwidth=\skip264
+\ABCIauxlen=\skip265
+\c@ABCIaux=\count354
+\c@ABCImax=\count355
+ (C:\Users\tanny\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifpdf.sty
 Package: ifpdf 2019/10/25 v3.4 ifpdf legacy package. Use iftex instead.
-)
-(/home/rafael-laube/.miktex/texmfs/install/tex/generic/iftex/ifxetex.sty
+) (C:\Users\tanny\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifxetex.sty
 Package: ifxetex 2019/10/25 v0.7 ifxetex legacy package. Use iftex instead.
-)
-(/home/rafael-laube/.miktex/texmfs/install/tex/latex/relsize/relsize.sty
+) (C:\Users\tanny\AppData\Local\Programs\MiKTeX\tex/latex/relsize\relsize.sty
 Package: relsize 2013/03/29 ver 4.1
 )
-\biblabelsep=\skip267
+\biblabelsep=\skip266
 LaTeX Info: Redefining \newblock on input line 591.
 LaTeX Info: Redefining \cite on input line 618.
 \ABCItoken=\toks31
-)
-(/home/rafael-laube/.miktex/texmfs/install/tex/latex/bold-extra/bold-extra.sty
+) (C:\Users\tanny\AppData\Local\Programs\MiKTeX\tex/latex/bold-extra\bold-extra.sty
 Package: bold-extra 2001/11/13 v0.1 Use fonts from cm/mf-extra/bold
-) (/home/rafael-laube/.miktex/texmfs/install/tex/latex/eso-pic/eso-pic.sty
+) (C:\Users\tanny\AppData\Local\Programs\MiKTeX\tex/latex/eso-pic\eso-pic.sty
 Package: eso-pic 2023/05/03 v3.0c eso-pic (RN)
-\ESO@tempdima=\dimen269
-\ESO@tempdimb=\dimen270
-)
-(/home/rafael-laube/.miktex/texmfs/install/tex/latex/pdflscape/pdflscape.sty
+\ESO@tempdima=\dimen261
+\ESO@tempdimb=\dimen262
+) (C:\Users\tanny\AppData\Local\Programs\MiKTeX\tex/latex/pdflscape\pdflscape.sty
 Package: pdflscape 2022-10-27 v0.13 Display of landscape pages in PDF
-
-(/home/rafael-laube/.miktex/texmfs/install/tex/latex/pdflscape/pdflscape-nometa
-data.sty
-Package: pdflscape-nometadata 2022-10-28 v0.13 Display of landscape pages in PD
-F (HO)
-
-(/home/rafael-laube/.miktex/texmfs/install/tex/latex/graphics/lscape.sty
+ (C:\Users\tanny\AppData\Local\Programs\MiKTeX\tex/latex/pdflscape\pdflscape-nometadata.sty
+Package: pdflscape-nometadata 2022-10-28 v0.13 Display of landscape pages in PDF (HO)
+ (C:\Users\tanny\AppData\Local\Programs\MiKTeX\tex/latex/graphics\lscape.sty
 Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
-)))
+<<<<<<< HEAD
+))
 (/home/rafael-laube/.miktex/texmfs/install/tex/latex/makecell/makecell.sty
+=======
+)) (C:\Users\tanny\AppData\Local\Programs\MiKTeX\tex/latex/makecell\makecell.sty
+>>>>>>> refs/remotes/origin/feat/deslocamento-carrinho
 Package: makecell 2009/08/03 V0.1e Managing of Tab Column Heads and Cells
-\rotheadsize=\dimen271
-\c@nlinenum=\count379
+\rotheadsize=\dimen263
+\c@nlinenum=\count356
 \TeXr@lab=\toks32
+) (C:\Users\tanny\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
+Package: amsmath 2023/05/13 v2.17o AMS math features
+\@mathmargin=\skip267
+
+For additional information on amsmath, use the `?' option.
+(C:\Users\tanny\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amstext.sty
+Package: amstext 2021/08/26 v2.01 AMS text
+ (C:\Users\tanny\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks33
+\ex@=\dimen264
+)) (C:\Users\tanny\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen265
+) (C:\Users\tanny\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.sty
+Package: amsopn 2022/04/08 v2.04 operator names
 )
+<<<<<<< HEAD
+(/home/rafael-laube/.miktex/texmfs/install/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2025/06/16 v2.17y AMS math features
+\@mathmargin=\skip268
+
+For additional information on amsmath, use the `?' option.
+(/home/rafael-laube/.miktex/texmfs/install/tex/latex/amsmath/amstext.sty
+Package: amstext 2024/11/17 v2.01 AMS text
+
+(/home/rafael-laube/.miktex/texmfs/install/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks33
+\ex@=\dimen272
+))
+(/home/rafael-laube/.miktex/texmfs/install/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen273
+)
+(/home/rafael-laube/.miktex/texmfs/install/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2022/04/08 v2.04 operator names
+)
+\inf@bad=\count380
+LaTeX Info: Redefining \frac on input line 233.
+\uproot@=\count381
+\leftroot@=\count382
+LaTeX Info: Redefining \overline on input line 398.
+LaTeX Info: Redefining \colon on input line 409.
+\classnum@=\count383
+\DOTSCASE@=\count384
+LaTeX Info: Redefining \ldots on input line 495.
+LaTeX Info: Redefining \dots on input line 498.
+LaTeX Info: Redefining \cdots on input line 619.
+\Mathstrutbox@=\box64
+\strutbox@=\box65
+LaTeX Info: Redefining \big on input line 721.
+LaTeX Info: Redefining \Big on input line 722.
+LaTeX Info: Redefining \bigg on input line 723.
+LaTeX Info: Redefining \Bigg on input line 724.
+\big@size=\dimen274
+LaTeX Font Info:    Redeclaring font encoding OML on input line 742.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 743.
+\macc@depth=\count385
+LaTeX Info: Redefining \bmod on input line 904.
+LaTeX Info: Redefining \pmod on input line 909.
+LaTeX Info: Redefining \smash on input line 939.
+LaTeX Info: Redefining \relbar on input line 969.
+LaTeX Info: Redefining \Relbar on input line 970.
+\c@MaxMatrixCols=\count386
+\dotsspace@=\muskip18
+\c@parentequation=\count387
+\dspbrk@lvl=\count388
+\tag@help=\toks34
+\row@=\count389
+\column@=\count390
+\maxfields@=\count391
+\andhelp@=\toks35
+\eqnshift@=\dimen275
+\alignsep@=\dimen276
+\tagshift@=\dimen277
+\tagwidth@=\dimen278
+\totwidth@=\dimen279
+\lineht@=\dimen280
+\@envbody=\toks36
+\multlinegap=\skip269
+\multlinetaggap=\skip270
+\mathdisplay@stack=\toks37
+LaTeX Info: Redefining \[ on input line 2949.
+LaTeX Info: Redefining \] on input line 2950.
+)
+(/home/rafael-laube/.miktex/texmfs/install/tex/latex/ragged2e/ragged2e.sty
+Package: ragged2e 2023/06/22 v3.6 ragged2e Package
+\CenteringLeftskip=\skip271
+\RaggedLeftLeftskip=\skip272
+\RaggedRightLeftskip=\skip273
+\CenteringRightskip=\skip274
+\RaggedLeftRightskip=\skip275
+\RaggedRightRightskip=\skip276
+\CenteringParfillskip=\skip277
+\RaggedLeftParfillskip=\skip278
+\RaggedRightParfillskip=\skip279
+\JustifyingParfillskip=\skip280
+\CenteringParindent=\skip281
+\RaggedLeftParindent=\skip282
+\RaggedRightParindent=\skip283
+\JustifyingParindent=\skip284
+))
 (fixos/comandos.tex) (fixos/customizacoes.sty)
 (/home/rafael-laube/.miktex/texmfs/install/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count380
-\float@exts=\toks33
-\float@box=\box64
-\@float@everytoks=\toks34
-\@floatcapt=\box65
+\c@float@type=\count392
+\float@exts=\toks38
+\float@box=\box66
+\@float@everytoks=\toks39
+\@floatcapt=\box67
 )
 (editaveis/00_informacoes.tex) (fixos/informacoes.tex) (fixos/setup.tex
+=======
+\inf@bad=\count357
+LaTeX Info: Redefining \frac on input line 234.
+\uproot@=\count358
+\leftroot@=\count359
+LaTeX Info: Redefining \overline on input line 399.
+LaTeX Info: Redefining \colon on input line 410.
+\classnum@=\count360
+\DOTSCASE@=\count361
+LaTeX Info: Redefining \ldots on input line 496.
+LaTeX Info: Redefining \dots on input line 499.
+LaTeX Info: Redefining \cdots on input line 620.
+\Mathstrutbox@=\box63
+\strutbox@=\box64
+LaTeX Info: Redefining \big on input line 722.
+LaTeX Info: Redefining \Big on input line 723.
+LaTeX Info: Redefining \bigg on input line 724.
+LaTeX Info: Redefining \Bigg on input line 725.
+\big@size=\dimen266
+LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
+\macc@depth=\count362
+LaTeX Info: Redefining \bmod on input line 905.
+LaTeX Info: Redefining \pmod on input line 910.
+LaTeX Info: Redefining \smash on input line 940.
+LaTeX Info: Redefining \relbar on input line 970.
+LaTeX Info: Redefining \Relbar on input line 971.
+\c@MaxMatrixCols=\count363
+\dotsspace@=\muskip17
+\c@parentequation=\count364
+\dspbrk@lvl=\count365
+\tag@help=\toks34
+\row@=\count366
+\column@=\count367
+\maxfields@=\count368
+\andhelp@=\toks35
+\eqnshift@=\dimen267
+\alignsep@=\dimen268
+\tagshift@=\dimen269
+\tagwidth@=\dimen270
+\totwidth@=\dimen271
+\lineht@=\dimen272
+\@envbody=\toks36
+\multlinegap=\skip268
+\multlinetaggap=\skip269
+\mathdisplay@stack=\toks37
+LaTeX Info: Redefining \[ on input line 2953.
+LaTeX Info: Redefining \] on input line 2954.
+) (C:\Users\tanny\AppData\Local\Programs\MiKTeX\tex/latex/ragged2e\ragged2e.sty
+Package: ragged2e 2023/06/22 v3.6 ragged2e Package
+\CenteringLeftskip=\skip270
+\RaggedLeftLeftskip=\skip271
+\RaggedRightLeftskip=\skip272
+\CenteringRightskip=\skip273
+\RaggedLeftRightskip=\skip274
+\RaggedRightRightskip=\skip275
+\CenteringParfillskip=\skip276
+\RaggedLeftParfillskip=\skip277
+\RaggedRightParfillskip=\skip278
+\JustifyingParfillskip=\skip279
+\CenteringParindent=\skip280
+\RaggedLeftParindent=\skip281
+\RaggedRightParindent=\skip282
+\JustifyingParindent=\skip283
+)) (fixos/comandos.tex) (fixos/customizacoes.sty) (C:\Users\tanny\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count369
+\float@exts=\toks38
+\float@box=\box65
+\@float@everytoks=\toks39
+\@floatcapt=\box66
+) (editaveis/00_informacoes.tex) (fixos/informacoes.tex) (fixos/setup.tex
+>>>>>>> refs/remotes/origin/feat/deslocamento-carrinho
 Package color Info: Redefining color blue on input line 1.
 Package hyperref Info: Option `colorlinks' set `true' on input line 16.
-)
-(doc_pi1.aux
-Package babel Info: 'brazil' activates 'portuges' shorthands.
-(babel)             Reported on input line 19.
-)
+) (doc_pi1.aux)
 \openout1 = `doc_pi1.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 12.
@@ -894,97 +954,98 @@ LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 12.
 LaTeX Font Info:    ... okay on input line 12.
 Package hyperref Info: Link coloring ON on input line 12.
 LaTeX Info: Redefining \degres on input line 12.
-\myptabbox=\box66
-\myptabboxwidth=\skip268
+<<<<<<< HEAD
+\myptabbox=\box68
+\myptabboxwidth=\skip285
 
 (/home/rafael-laube/.miktex/texmfs/install/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count381
-\scratchdimen=\dimen272
-\scratchbox=\box67
-\nofMPsegments=\count382
-\nofMParguments=\count383
-\everyMPshowfont=\toks35
-\MPscratchCnt=\count384
-\MPscratchDim=\dimen273
-\MPnumerator=\count385
-\makeMPintoPDFobject=\count386
-\everyMPtoPDFconversion=\toks36
+\scratchcounter=\count393
+\scratchdimen=\dimen281
+\scratchbox=\box69
+\nofMPsegments=\count394
+\nofMParguments=\count395
+\everyMPshowfont=\toks40
+\MPscratchCnt=\count396
+\MPscratchDim=\dimen282
+\MPnumerator=\count397
+\makeMPintoPDFobject=\count398
+\everyMPtoPDFconversion=\toks41
 )
 (/home/rafael-laube/.miktex/texmfs/install/tex/latex/epstopdf-pkg/epstopdf-base
 .sty
+=======
+\myptabbox=\box67
+\myptabboxwidth=\skip284
+ (C:\Users\tanny\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count370
+\scratchdimen=\dimen273
+\scratchbox=\box68
+\nofMPsegments=\count371
+\nofMParguments=\count372
+\everyMPshowfont=\toks40
+\MPscratchCnt=\count373
+\MPscratchDim=\dimen274
+\MPnumerator=\count374
+\makeMPintoPDFobject=\count375
+\everyMPtoPDFconversion=\toks41
+) (C:\Users\tanny\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
+>>>>>>> refs/remotes/origin/feat/deslocamento-carrinho
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
-Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
-85.
-
-(/home/rafael-laube/.miktex/texmfs/install/tex/latex/00miktex/epstopdf-sys.cfg
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
+ (C:\Users\tanny\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-LaTeX Font Info:    Trying to load font information for T1+lmss on input line 1
-5.
- (/home/rafael-laube/.miktex/texmfs/install/tex/latex/lm/t1lmss.fd
-File: t1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
+<<<<<<< HEAD
 
+=======
+>>>>>>> refs/remotes/origin/feat/deslocamento-carrinho
 Package epstopdf Info: Source file: <figuras/capa.eps>
-(epstopdf)                    date: 2025-09-24 16:48:31
-(epstopdf)                    size: 4235 bytes
+(epstopdf)                    date: 2025-10-12 21:50:31
+(epstopdf)                    size: 4344 bytes
 (epstopdf)             Output file: <figuras/capa-eps-converted-to.pdf>
-(epstopdf)                    date: 2025-09-24 21:52:40
+(epstopdf)                    date: 2025-10-12 21:50:31
 (epstopdf)                    size: 3049 bytes
-(epstopdf)             Command: <miktex-epstopdf --outfile=figuras/capa-eps-con
-verted-to.pdf figuras/capa.eps>
-(epstopdf)             \includegraphics on input line 15.
+(epstopdf)             Command: <miktex-epstopdf --outfile=figuras/capa-eps-converted-to.pdf figuras/capa.eps>
+(epstopdf)             \includegraphics on input line 17.
 Package epstopdf Info: Output file is already uptodate.
 <figuras/capa-eps-converted-to.pdf, id=4, 598.235pt x 846.16125pt>
 File: figuras/capa-eps-converted-to.pdf Graphic file (type pdf)
 <use figuras/capa-eps-converted-to.pdf>
-Package pdftex.def Info: figuras/capa-eps-converted-to.pdf  used on input line 
-15.
+Package pdftex.def Info: figuras/capa-eps-converted-to.pdf  used on input line 17.
 (pdftex.def)             Requested size: 597.46675pt x 845.07463pt.
-[1
+ [1
 
-{/home/rafael-laube/.miktex/texmfs/data/fonts/map/pdftex/pdftex.map}{/home/rafa
-el-laube/.miktex/texmfs/install/fonts/enc/dvips/lm/lm-ec.enc} <./figuras/capa-e
-ps-converted-to.pdf>]
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 1
-6.
-
-(/home/rafael-laube/.miktex/texmfs/install/tex/latex/lm/ot1lmr.fd
+{C:/Users/tanny/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/tanny/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc} <./figuras/capa-eps-converted-to.pdf>]
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 18.
+ (C:\Users\tanny\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )<<ot1.cmap>>
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 1
-6.
-
-(/home/rafael-laube/.miktex/texmfs/install/tex/latex/lm/omllmm.fd
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 18.
+ (C:\Users\tanny\AppData\Local\Programs\MiKTeX\tex/latex/lm\omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )<<oml.cmap>>
-LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-16.
-
-(/home/rafael-laube/.miktex/texmfs/install/tex/latex/lm/omslmsy.fd
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 18.
+ (C:\Users\tanny\AppData\Local\Programs\MiKTeX\tex/latex/lm\omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )<<oms.cmap>>
-LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-16.
-(/home/rafael-laube/.miktex/texmfs/install/tex/latex/lm/omxlmex.fd
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 18.
+ (C:\Users\tanny\AppData\Local\Programs\MiKTeX\tex/latex/lm\omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 16.
+(Font)              <12> on input line 18.
 <<omx.cmap>>
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 16.
+(Font)              <8> on input line 18.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 16.
+(Font)              <6> on input line 18.
 
-
-
-pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
-been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.16 \imprimirfolhaderosto* {}
+l.18 \imprimirfolhaderosto* {}
                                [1
 
 
@@ -1025,15 +1086,30 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <7> on input line 30.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <5> on input line 30.
+[2]) (editaveis/02_resumo.tex [3]) (fixos/listasAutomaticas.tex (doc_pi1.lof) [4
+
+] (doc_pi1.lot) [5
+
+]) (editaveis/01_abreviaturas.tex [6
 
 
+<<<<<<< HEAD
 [2]) (editaveis/02_resumo.tex
-Overfull \hbox (22.2436pt too wide) in paragraph at lines 2--3
-\T1/lmr/m/n/12 principais requisitos, tecnologias necessárias e outras informaç
-ões relevantes para apresentação.
+=======
+{C:/Users/tanny/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}]) (editaveis/01_simbolos.tex [7
+
+
+{C:/Users/tanny/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/Users/tanny/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}]) (fixos/indiceAutomatico.tex (doc_pi1.toc [8
+
+]) [9] [10]) (editaveis/03_introducao.tex
+Overfull \hbox (1.7602pt too wide) in paragraph at lines 9--10
+\T1/lmr/m/n/12 bots Af-fect Every-day Cam-pus Life? An Ex-plo-ra-tory Pos-ting Bo-ard Analy-sis and Interview-
  []
 
+<<<<<<< HEAD
+=======
 
+>>>>>>> refs/remotes/origin/feat/deslocamento-carrinho
 
 [3]) (fixos/listasAutomaticas.tex (doc_pi1.lof)
 
@@ -1057,32 +1133,60 @@ Overfull \hbox (22.2436pt too wide) in paragraph at lines 2--3
 {/home/rafael-laube/.miktex/texmfs/install/fonts/enc/dvips/lm/lm-rm.enc}{/home/
 rafael-laube/.miktex/texmfs/install/fonts/enc/dvips/lm/lm-mathsy.enc}])
 (fixos/indiceAutomatico.tex (doc_pi1.toc
+<<<<<<< HEAD
+=======
 LaTeX Font Info:    Font shape `T1/lmss/bx/it' in size <12> not available
 (Font)              Font shape `T1/lmss/bx/sl' tried instead on input line 24.
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <12> not available
 (Font)              Font shape `T1/lmss/m/sl' tried instead on input line 38.
 
+>>>>>>> refs/remotes/origin/develop
 
 [8
 
 ])
 
 [9]) (editaveis/03_introducao.tex
-Overfull \hbox (31.58148pt too wide) in paragraph at lines 15--16
-\T1/lmr/m/n/12 produtos similares, baixo número de empresas concorrentes ou núm
-ero estimado de consumidores
+Overfull \hbox (31.13023pt too wide) in paragraph at lines 7--8
+[]\T1/lmr/m/n/12 Embora os detalhes técnicos dos algoritmos de navegação da Sta
+rship sejam proprietários,
  []
 
+<<<<<<< HEAD
+
+Overfull \hbox (16.28218pt too wide) in paragraph at lines 9--10
+\T1/lmr/m/n/12 Robots Affect Everyday Campus Life? An Exploratory Posting Board
+ Analysis and Interview-
+ []
+
+
+Overfull \hbox (65.17378pt too wide) in paragraph at lines 9--10
+\T1/lmr/m/n/12 aprofundada sobre a percepção da comunidade acadêmica em relação
+ a esses novos "vizinhos"mecânicos. 
+ []
+
+
+=======
 <figuras/fga.png, id=315, 1091.277pt x 128.6406pt>
 File: figuras/fga.png Graphic file (type png)
 <use figuras/fga.png>
 Package pdftex.def Info: figuras/fga.png  used on input line 25.
 (pdftex.def)             Requested size: 455.0pt x 53.6361pt.
 ) (editaveis/04_termodeaberturadoprojeto.tex
+>>>>>>> refs/remotes/origin/develop
 
 [10
 
 
+<<<<<<< HEAD
+]
+<figuras/fga.png, id=281, 1091.277pt x 128.6406pt>
+File: figuras/fga.png Graphic file (type png)
+<use figuras/fga.png>
+Package pdftex.def Info: figuras/fga.png  used on input line 39.
+(pdftex.def)             Requested size: 455.0pt x 53.6361pt.
+) (editaveis/04_termodeaberturadoprojeto.tex
+=======
 
 pdfTeX warning (ext4): destination with the same identifier (name{figure.1.1}) 
 has been already used, duplicate ignored
@@ -1102,19 +1206,39 @@ utos, serviços e resultados
 
 
 
+>>>>>>> documentacao
 [11
 
-]
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 4
-1.
- (/home/rafael-laube/.miktex/texmfs/install/tex/latex/lm/ts1lmr.fd
-File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-))
-(editaveis/05_equipe.tex
+>>>>>>> refs/remotes/origin/feat/deslocamento-carrinho
 
+]
+<figuras/fga.png, id=332, 1091.277pt x 128.6406pt>
+File: figuras/fga.png Graphic file (type png)
+<use figuras/fga.png>
+Package pdftex.def Info: figuras/fga.png  used on input line 39.
+(pdftex.def)             Requested size: 455.0pt x 53.6361pt.
+) (editaveis/04_termodeaberturadoprojeto.tex [12 <./figuras/fga.png>] [13
+
+<<<<<<< HEAD
+] [14]) (editaveis/05_equipe.tex [15]
+Overfull \hbox (89.78333pt too wide) in paragraph at lines 59--94
+ [][] 
+=======
 Package babel Info: 'brazil' activates 'portuges' shorthands.
 (babel)             Reported on input line 1.
+<<<<<<< HEAD
+[11 <./figuras/fga.png>]
+
+[12
+
+]
+
+[13]) (editaveis/05_equipe.tex
+
+[14]
+=======
 [12{/home/rafael-laube/.miktex/texmfs/install/fonts/enc/dvips/lm/lm-ts1.enc}]
+>>>>>>> refs/remotes/origin/develop
 Overfull \hbox (89.78333pt too wide) in paragraph at lines 59--94
  [][] 
  []
@@ -1124,7 +1248,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 
-[13
+[15
 
 
 
@@ -1135,7 +1259,7 @@ as been already used, duplicate ignored
 l.99 \end{landscape}
                     ]
 
-[14
+[16
 pdfTeX warning (ext4): destination with the same identifier (name{table.3.2}) h
 as been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
@@ -1143,13 +1267,17 @@ as been already used, duplicate ignored
 l.99 \end{landscape}
                     ]
 
-[15
+[17
 pdfTeX warning (ext4): destination with the same identifier (name{table.3.3}) h
 as been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
 l.99 \end{landscape}
                     ]) (editaveis/06_projetoconceitual.tex
+<<<<<<< HEAD
+LaTeX Font Info:    Trying to load font information for T1+lmss on input line 9
+.
+=======
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <17.28> not available
 (Font)              Font shape `T1/lmss/m/sl' tried instead on input line 15.
 <figuras/Exemplo-diagrama-de-blocos.png, id=352, 310.66063pt x 56.21pt>
@@ -1163,67 +1291,163 @@ File: figuras/Esquematico.png Graphic file (type png)
 <use figuras/Esquematico.png>
 Package pdftex.def Info: figuras/Esquematico.png  used on input line 32.
 (pdftex.def)             Requested size: 227.5pt x 102.25798pt.
+>>>>>>> refs/remotes/origin/develop
 
-Overfull \hbox (21.69817pt too wide) in paragraph at lines 39--40
-[][]\T1/lmr/m/n/12 Com relação ao consumo energético do produto desenvolvido, s
-erá necessário apresentar
- []
+<<<<<<< HEAD
+(/home/rafael-laube/.miktex/texmfs/install/tex/latex/lm/t1lmss.fd
+File: t1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
 
-
-
-[16
+[18
 
 
 ]
-Overfull \hbox (20.7437pt too wide) in paragraph at lines 43--44
-[][]\T1/lmr/bx/n/12 Identificação dos Subsistemas Elétricos: \T1/lmr/m/n/12 lis
-te todos os componentes que consumirão
- []
+<figuras/DiagramaBlocosPI1-2025-10-12-020434.png, id=322, 2762.32pt x 1571.8725
+pt>
+File: figuras/DiagramaBlocosPI1-2025-10-12-020434.png Graphic file (type png)
+<use figuras/DiagramaBlocosPI1-2025-10-12-020434.png>
+Package pdftex.def Info: figuras/DiagramaBlocosPI1-2025-10-12-020434.png  used 
+on input line 29.
+(pdftex.def)             Requested size: 364.00139pt x 207.10886pt.
+<figuras/Esquematico.png, id=324, 750.55406pt x 439.6425pt>
+File: figuras/Esquematico.png Graphic file (type png)
+<use figuras/Esquematico.png>
+Package pdftex.def Info: figuras/Esquematico.png  used on input line 40.
+(pdftex.def)             Requested size: 455.0pt x 266.52455pt.
 
 
-Overfull \hbox (19.89511pt too wide) in paragraph at lines 45--46
-\T1/lmr/m/n/12 componentes para obter o consumo energético total estimado do si
-stema por lançamento.[] 
- []
+[19
+pdfTeX warning (ext4): destination with the same identifier (name{figure.4.1}) 
+has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.44 
+      <./figuras/DiagramaBlocosPI1-2025-10-12-020434.png>]
 
-
-Overfull \hbox (2.35785pt too wide) in paragraph at lines 46--47
-\T1/lmr/m/n/12 watt-hora: 1 Wh = 3600 J. Adicione e justifique uma margem de se
-gurança (pesquisar
- []
-
-
-
-[17
+[20
 pdfTeX warning (ext4): destination with the same identifier (name{figure.4.2}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
+<<<<<<< HEAD
+l.84 \end{equation}
+                   
+=======
+Overfull \hbox (21.69817pt too wide) in paragraph at lines 39--40
+[][]\T1/lmr/m/n/12 Com relação ao consumo energético do produto desenvolvido, s
+erá necessário apresentar
+>>>>>>> documentacao
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[16
+
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{table.3.1}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+<<<<<<< HEAD
+l.99 \end{landscape}
+                    ] [17
+pdfTeX warning (ext4): destination with the same identifier (name{table.3.2}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.99 \end{landscape}
+                    ] [18
+pdfTeX warning (ext4): destination with the same identifier (name{table.3.3}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.99 \end{landscape}
+                    ]) (editaveis/06_projetoconceitual.tex
+LaTeX Font Info:    Trying to load font information for T1+lmss on input line 9.
+ (C:\Users\tanny\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmss.fd
+File: t1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+) [19
+
+
+]
+<figuras/DiagramaBlocosPI1-2025-10-12-020434.png, id=372, 2762.32pt x 1571.8725pt>
+File: figuras/DiagramaBlocosPI1-2025-10-12-020434.png Graphic file (type png)
+<use figuras/DiagramaBlocosPI1-2025-10-12-020434.png>
+Package pdftex.def Info: figuras/DiagramaBlocosPI1-2025-10-12-020434.png  used on input line 29.
+(pdftex.def)             Requested size: 364.00139pt x 207.10886pt.
+<figuras/esquematico.png, id=374, 750.55406pt x 439.6425pt>
+File: figuras/esquematico.png Graphic file (type png)
+<use figuras/esquematico.png>
+Package pdftex.def Info: figuras/esquematico.png  used on input line 40.
+(pdftex.def)             Requested size: 455.0pt x 266.52455pt.
+ [20
+pdfTeX warning (ext4): destination with the same identifier (name{figure.4.1}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.44 
+      <./figuras/DiagramaBlocosPI1-2025-10-12-020434.png>] [21
+pdfTeX warning (ext4): destination with the same identifier (name{figure.4.2}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.85 \end{equation}
+                   
+pdfTeX warning (ext4): destination with the same identifier (name{table.4.4}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.85 \end{equation}
+                    <./figuras/esquematico.png>]
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 89.
+ (C:\Users\tanny\AppData\Local\Programs\MiKTeX\tex/latex/lm\ts1lmr.fd
+File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+) [22{C:/Users/tanny/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}]
+<figuras/BPMN_carro_do_ovo.png, id=397, 763.35187pt x 298.56544pt>
+>>>>>>> refs/remotes/origin/feat/deslocamento-carrinho
+=======
 l.50 \end{itemize}
                    <./figuras/Exemplo-diagrama-de-blocos.png> <./figuras/Esquem
 atico.png>]
 <figuras/BPMN_carro_do_ovo.png, id=371, 763.35187pt x 298.56544pt>
+>>>>>>> documentacao
 File: figuras/BPMN_carro_do_ovo.png Graphic file (type png)
 <use figuras/BPMN_carro_do_ovo.png>
-Package pdftex.def Info: figuras/BPMN_carro_do_ovo.png  used on input line 103.
-
+Package pdftex.def Info: figuras/BPMN_carro_do_ovo.png  used on input line 198.
 (pdftex.def)             Requested size: 455.0pt x 177.96071pt.
+<<<<<<< HEAD
+ [23]
+<figuras/BPMN_PID_controle.png, id=405, 817.10269pt x 415.5525pt>
+=======
 <figuras/BPMN_PID_controle.png, id=372, 817.10269pt x 415.5525pt>
+>>>>>>> documentacao
 File: figuras/BPMN_PID_controle.png Graphic file (type png)
 <use figuras/BPMN_PID_controle.png>
-Package pdftex.def Info: figuras/BPMN_PID_controle.png  used on input line 110.
-
+Package pdftex.def Info: figuras/BPMN_PID_controle.png  used on input line 205.
 (pdftex.def)             Requested size: 455.0pt x 231.39526pt.
+<<<<<<< HEAD
+<figuras/backlog_funcional.png, id=406, 1132.23pt x 973.6375pt>
+=======
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 <figuras/backlog_funcional.png, id=373, 1132.23pt x 973.6375pt>
+>>>>>>> documentacao
 File: figuras/backlog_funcional.png Graphic file (type png)
 <use figuras/backlog_funcional.png>
-Package pdftex.def Info: figuras/backlog_funcional.png  used on input line 119.
-
+Package pdftex.def Info: figuras/backlog_funcional.png  used on input line 214.
 (pdftex.def)             Requested size: 455.0pt x 391.26059pt.
+<<<<<<< HEAD
+ [24
+pdfTeX warning (ext4): destination with the same identifier (name{figure.4.3}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.218 
+      
+pdfTeX warning (ext4): destination with the same identifier (name{figure.4.4}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.218 
+       <./figuras/BPMN_carro_do_ovo.png> <./figuras/BPMN_PID_controle.png>]
+<figuras/backlog_nao_funcional.png, id=414, 1226.5825pt x 574.145pt>
+=======
 
 
 [18
@@ -1242,20 +1466,97 @@ has been already used, duplicate ignored
 l.123 
        <./figuras/BPMN_PID_controle.png>]
 <figuras/backlog_nao_funcional.png, id=385, 1226.5825pt x 574.145pt>
+>>>>>>> documentacao
 File: figuras/backlog_nao_funcional.png Graphic file (type png)
 <use figuras/backlog_nao_funcional.png>
-Package pdftex.def Info: figuras/backlog_nao_funcional.png  used on input line 
-128.
+Package pdftex.def Info: figuras/backlog_nao_funcional.png  used on input line 223.
 (pdftex.def)             Requested size: 455.0pt x 212.97348pt.
+<<<<<<< HEAD
+ [25
+pdfTeX warning (ext4): destination with the same identifier (name{figure.4.5}) has been already used, duplicate ignored
+=======
 
 
 [20
 pdfTeX warning (ext4): destination with the same identifier (name{figure.4.5}) 
 has been already used, duplicate ignored
+>>>>>>> documentacao
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.132 
+l.227 
        <./figuras/backlog_funcional.png>]
+<<<<<<< HEAD
+<figuras/diagrama_casos_de_uso.png, id=420, 921.4425pt x 833.1125pt>
+File: figuras/diagrama_casos_de_uso.png Graphic file (type png)
+<use figuras/diagrama_casos_de_uso.png>
+Package pdftex.def Info: figuras/diagrama_casos_de_uso.png  used on input line 233.
+(pdftex.def)             Requested size: 455.0pt x 411.38135pt.
+ [26
+pdfTeX warning (ext4): destination with the same identifier (name{figure.4.6}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.237 
+       <./figuras/backlog_nao_funcional.png>] [27
+pdfTeX warning (ext4): destination with the same identifier (name{figure.4.7}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.238 \clearpage
+                 <./figuras/diagrama_casos_de_uso.png>]
+<figuras/arquitetura_da_solucao_de_software.png, id=431, 1797.71625pt x 805.8105pt>
+File: figuras/arquitetura_da_solucao_de_software.png Graphic file (type png)
+<use figuras/arquitetura_da_solucao_de_software.png>
+Package pdftex.def Info: figuras/arquitetura_da_solucao_de_software.png  used on input line 256.
+(pdftex.def)             Requested size: 455.0pt x 203.94815pt.
+ [28
+
+] [29
+pdfTeX warning (ext4): destination with the same identifier (name{figure.4.8}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.261 \clearpage
+                 <./figuras/arquitetura_da_solucao_de_software.png>]
+<figuras/DER_banco_de_comandos.jpeg, id=441, 517.935pt x 403.5075pt>
+File: figuras/DER_banco_de_comandos.jpeg Graphic file (type jpg)
+<use figuras/DER_banco_de_comandos.jpeg>
+Package pdftex.def Info: figuras/DER_banco_de_comandos.jpeg  used on input line 269.
+(pdftex.def)             Requested size: 364.00139pt x 283.59238pt.
+<figuras/DER_banco_de_posiÃ§Ãµes.jpeg, id=442, 1606.0pt x 623.32875pt>
+File: figuras/DER_banco_de_posiÃ§Ãµes.jpeg Graphic file (type jpg)
+<use figuras/DER_banco_de_posiÃ§Ãµes.jpeg>
+Package pdftex.def Info: figuras/DER_banco_de_posiÃ§Ãµes.jpeg  used on input line 278.
+(pdftex.def)             Requested size: 364.00139pt x 141.27963pt.
+<figuras/DER_usuario.png, id=443, 443.10544pt x 191.9672pt>
+File: figuras/DER_usuario.png Graphic file (type png)
+<use figuras/DER_usuario.png>
+Package pdftex.def Info: figuras/DER_usuario.png  used on input line 287.
+(pdftex.def)             Requested size: 364.00139pt x 157.69824pt.
+ [30
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{figure.4.9}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.291 
+      
+pdfTeX warning (ext4): destination with the same identifier (name{figure.4.10}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.291 
+       <./figuras/DER_banco_de_comandos.jpeg> <./figuras/DER_banco_de_posiÃ§Ãµes.jpeg>] [31
+pdfTeX warning (ext4): destination with the same identifier (name{figure.4.11}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.292 \clearpage
+                 <./figuras/DER_usuario.png>] [32
+
+]
+<figuras/diagrama_de_estados.png, id=458, 814.39256pt x 520.79568pt>
+File: figuras/diagrama_de_estados.png Graphic file (type png)
+<use figuras/diagrama_de_estados.png>
+Package pdftex.def Info: figuras/diagrama_de_estados.png  used on input line 304.
+(pdftex.def)             Requested size: 455.0pt x 290.96812pt.
+ [33
+=======
 <figuras/diagrama_casos_de_uso.png, id=391, 921.4425pt x 833.1125pt>
 File: figuras/diagrama_casos_de_uso.png Graphic file (type png)
 <use figuras/diagrama_casos_de_uso.png>
@@ -1494,231 +1795,718 @@ l.282 \clearpage
 rafico.png>]
 
 [32
+>>>>>>> documentacao
 
 
+<<<<<<< HEAD
+>>>>>>> refs/remotes/origin/develop
 pdfTeX warning (ext4): destination with the same identifier (name{table.4.4}) h
 as been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
+<<<<<<< HEAD
+l.84 \end{equation}
+                    <./figuras/Esquematico.png>]
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 8
+8.
+
+(/home/rafael-laube/.miktex/texmfs/install/tex/latex/lm/ts1lmr.fd
+File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+
+[21{/home/rafael-laube/.miktex/texmfs/install/fonts/enc/dvips/lm/lm-ts1.enc}]
+Overfull \hbox (13.87564pt too wide) in paragraph at lines 142--143
+[]\T1/lmr/bx/n/10 Degradação da Bateria: \T1/lmr/m/n/10 Com os ciclos de carga 
+e descarga, a capacidade máxima de armazenamento
+ []
+
+
+Overfull \hbox (0.87395pt too wide) in paragraph at lines 142--143
+\T1/lmr/m/n/10 da bateria de Li-Ion diminui permanentemente, um processo químic
+o natural que reduz a autonomia
+ []
+
+<figuras/BPMN_carro_do_ovo.png, id=347, 763.35187pt x 298.56544pt>
+File: figuras/BPMN_carro_do_ovo.png Graphic file (type png)
+<use figuras/BPMN_carro_do_ovo.png>
+Package pdftex.def Info: figuras/BPMN_carro_do_ovo.png  used on input line 197.
+
+(pdftex.def)             Requested size: 455.0pt x 177.96071pt.
+
+
+[22]
+<figuras/BPMN_PID_controle.png, id=355, 817.10269pt x 415.5525pt>
+File: figuras/BPMN_PID_controle.png Graphic file (type png)
+<use figuras/BPMN_PID_controle.png>
+Package pdftex.def Info: figuras/BPMN_PID_controle.png  used on input line 204.
+
+(pdftex.def)             Requested size: 455.0pt x 231.39526pt.
+<figuras/backlog_funcional.png, id=356, 1132.23pt x 973.6375pt>
+File: figuras/backlog_funcional.png Graphic file (type png)
+<use figuras/backlog_funcional.png>
+Package pdftex.def Info: figuras/backlog_funcional.png  used on input line 213.
+
+(pdftex.def)             Requested size: 455.0pt x 391.26059pt.
+
+
+[23
+pdfTeX warning (ext4): destination with the same identifier (name{figure.4.3}) 
+has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.217 
+=======
+pdfTeX warning (ext4): destination with the same identifier (name{figure.4.12}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+<<<<<<< HEAD
+l.309 \clearpage
+                 <./figuras/diagrama_de_estados.png>]
+<figuras/prototipo_1_login.png, id=464, 1445.4pt x 1027.84pt>
+File: figuras/prototipo_1_login.png Graphic file (type png)
+<use figuras/prototipo_1_login.png>
+Package pdftex.def Info: figuras/prototipo_1_login.png  used on input line 315.
+(pdftex.def)             Requested size: 227.5pt x 161.77586pt.
+<figuras/prototipo_2_desconectado.png, id=465, 1445.4pt x 1027.84pt>
+File: figuras/prototipo_2_desconectado.png Graphic file (type png)
+<use figuras/prototipo_2_desconectado.png>
+Package pdftex.def Info: figuras/prototipo_2_desconectado.png  used on input line 322.
+(pdftex.def)             Requested size: 227.5pt x 161.77586pt.
+<figuras/prototipo_3_conectado.png, id=466, 1445.4pt x 1027.84pt>
+File: figuras/prototipo_3_conectado.png Graphic file (type png)
+<use figuras/prototipo_3_conectado.png>
+Package pdftex.def Info: figuras/prototipo_3_conectado.png  used on input line 329.
+(pdftex.def)             Requested size: 227.5pt x 161.77586pt.
+<figuras/protoripo_4_comandos.png, id=467, 1445.4pt x 1027.84pt>
+File: figuras/protoripo_4_comandos.png Graphic file (type png)
+<use figuras/protoripo_4_comandos.png>
+Package pdftex.def Info: figuras/protoripo_4_comandos.png  used on input line 336.
+(pdftex.def)             Requested size: 227.5pt x 161.77586pt.
+ [34
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{figure.4.13}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.340 
+>>>>>>> refs/remotes/origin/feat/deslocamento-carrinho
+=======
 l.367 
+>>>>>>> refs/remotes/origin/develop
       
+pdfTeX warning (ext4): destination with the same identifier (name{figure.4.4}) 
+has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.217 
+       <./figuras/BPMN_carro_do_ovo.png> <./figuras/BPMN_PID_controle.png>]
+<figuras/backlog_nao_funcional.png, id=363, 1226.5825pt x 574.145pt>
+File: figuras/backlog_nao_funcional.png Graphic file (type png)
+<use figuras/backlog_nao_funcional.png>
+Package pdftex.def Info: figuras/backlog_nao_funcional.png  used on input line 
+222.
+(pdftex.def)             Requested size: 455.0pt x 212.97348pt.
+
+
+[24
+pdfTeX warning (ext4): destination with the same identifier (name{figure.4.5}) 
+has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.226 
+       <./figuras/backlog_funcional.png>]
+
+[25
+pdfTeX warning (ext4): destination with the same identifier (name{figure.4.6}) 
+has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.234 \clearpage
+                 <./figuras/backlog_nao_funcional.png>]
+
+[26
+
+
 pdfTeX warning (ext4): destination with the same identifier (name{table.4.5}) h
 as been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
+<<<<<<< HEAD
+l.319 
+=======
 l.367 
+>>>>>>> refs/remotes/origin/develop
       
 pdfTeX warning (ext4): destination with the same identifier (name{table.4.6}) h
 as been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
+<<<<<<< HEAD
+l.319 
+      
+=======
 l.367 
       ]
 
 [33
+>>>>>>> refs/remotes/origin/develop
 pdfTeX warning (ext4): destination with the same identifier (name{table.4.7}) h
 as been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
+<<<<<<< HEAD
+l.319 
+      ]
+
+[27
+=======
 l.451 
       
+>>>>>>> refs/remotes/origin/develop
 pdfTeX warning (ext4): destination with the same identifier (name{table.4.8}) h
 as been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
+<<<<<<< HEAD
+l.403 
+=======
 l.451 
+>>>>>>> refs/remotes/origin/develop
       
 pdfTeX warning (ext4): destination with the same identifier (name{table.4.9}) h
 as been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
+<<<<<<< HEAD
+l.403 
+=======
 l.451 
+>>>>>>> refs/remotes/origin/develop
       
 pdfTeX warning (ext4): destination with the same identifier (name{table.4.10}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
+<<<<<<< HEAD
+l.403 
+      
+=======
 l.451 
       ]
 
 [34
+>>>>>>> refs/remotes/origin/develop
 pdfTeX warning (ext4): destination with the same identifier (name{table.4.11}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
+<<<<<<< HEAD
+l.403 
+      ]
+
+[28
+=======
 l.535 
       
+>>>>>>> refs/remotes/origin/develop
 pdfTeX warning (ext4): destination with the same identifier (name{table.4.12}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
+<<<<<<< HEAD
+l.487 
+=======
 l.535 
+>>>>>>> refs/remotes/origin/develop
       
 pdfTeX warning (ext4): destination with the same identifier (name{table.4.13}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
+<<<<<<< HEAD
+l.487 
+=======
 l.535 
+>>>>>>> refs/remotes/origin/develop
       
 pdfTeX warning (ext4): destination with the same identifier (name{table.4.14}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
+<<<<<<< HEAD
+l.487 
+      
+=======
 l.535 
       ]
 
 [35
+>>>>>>> refs/remotes/origin/develop
 pdfTeX warning (ext4): destination with the same identifier (name{table.4.15}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
+<<<<<<< HEAD
+l.487 
+      ]
+
+[29
+=======
 l.619 
       
+>>>>>>> refs/remotes/origin/develop
 pdfTeX warning (ext4): destination with the same identifier (name{table.4.16}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
+<<<<<<< HEAD
+l.571 
+=======
 l.619 
+>>>>>>> refs/remotes/origin/develop
       
 pdfTeX warning (ext4): destination with the same identifier (name{table.4.17}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
+<<<<<<< HEAD
+l.571 
+=======
 l.619 
+>>>>>>> refs/remotes/origin/develop
       
 pdfTeX warning (ext4): destination with the same identifier (name{table.4.18}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
+<<<<<<< HEAD
+l.571 
+      
+=======
 l.619 
       ]
 
 [36
+>>>>>>> refs/remotes/origin/develop
 pdfTeX warning (ext4): destination with the same identifier (name{table.4.19}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
+<<<<<<< HEAD
+l.571 
+      ]
+
+[30
+=======
 l.682 
       
+>>>>>>> refs/remotes/origin/develop
 pdfTeX warning (ext4): destination with the same identifier (name{table.4.20}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
+<<<<<<< HEAD
+l.634 
+=======
 l.682 
+>>>>>>> refs/remotes/origin/develop
       
 pdfTeX warning (ext4): destination with the same identifier (name{table.4.21}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
+<<<<<<< HEAD
+l.634 
+      
+pdfTeX warning (ext4): destination with the same identifier (name{table.4.22}) 
+has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.634 
+      ]
+Underfull \hbox (badness 1496) in paragraph at lines 691--691
+=======
 l.682 
       ]
 Underfull \hbox (badness 1496) in paragraph at lines 739--739
+>>>>>>> refs/remotes/origin/develop
 []|\T1/lmr/bx/n/12 Resultado esperado: \T1/lmr/m/n/12 O status da interface mud
 a para "Desconectado"; A
  []
 
 
 
+<<<<<<< HEAD
+[31
+=======
 [37
 pdfTeX warning (ext4): destination with the same identifier (name{table.4.22}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
 l.745 
+>>>>>>> documentacao
       
+<<<<<<< HEAD
+>>>>>>> refs/remotes/origin/develop
 pdfTeX warning (ext4): destination with the same identifier (name{table.4.23}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
+<<<<<<< HEAD
+l.697 
+=======
 l.745 
-      
-pdfTeX warning (ext4): destination with the same identifier (name{table.4.24}) 
-has been already used, duplicate ignored
+>>>>>>> refs/remotes/origin/develop
+=======
+pdfTeX warning (ext4): destination with the same identifier (name{figure.4.14}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
+<<<<<<< HEAD
+l.340 
+=======
 l.745 
-      ]
-Underfull \hbox (badness 2005) in paragraph at lines 760--760
-[]|\T1/lmr/bx/n/12 Resultado esperado: \T1/lmr/m/n/12 O robô para imediatamente
- (os motores devem ser
- []
-
-) (editaveis/07_orcamento.tex
-
-[38
+>>>>>>> documentacao
+>>>>>>> refs/remotes/origin/feat/deslocamento-carrinho
+      
+pdfTeX warning (ext4): destination with the same identifier (name{figure.4.15}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+<<<<<<< HEAD
+<<<<<<< HEAD
+l.697 
+      
 pdfTeX warning (ext4): destination with the same identifier (name{table.4.25}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.1 \begin{landscape}
-                     
+l.697 
+      ]
+Underfull \hbox (badness 2005) in paragraph at lines 712--712
+=======
+l.340 
+       <./figuras/prototipo_1_login.png> <./figuras/prototipo_2_desconectado.png> <./figuras/prototipo_3_conectado.png>]
+<figuras/prototipo_5_deseja_enviar.png, id=475, 1445.4pt x 1027.84pt>
+File: figuras/prototipo_5_deseja_enviar.png Graphic file (type png)
+<use figuras/prototipo_5_deseja_enviar.png>
+Package pdftex.def Info: figuras/prototipo_5_deseja_enviar.png  used on input line 343.
+(pdftex.def)             Requested size: 227.5pt x 161.77586pt.
+<figuras/prototipo_6_enviado.png, id=476, 1445.4pt x 1027.84pt>
+File: figuras/prototipo_6_enviado.png Graphic file (type png)
+<use figuras/prototipo_6_enviado.png>
+Package pdftex.def Info: figuras/prototipo_6_enviado.png  used on input line 350.
+(pdftex.def)             Requested size: 227.5pt x 161.77586pt.
+<figuras/prototipo_7_historico.png, id=477, 1445.4pt x 1027.84pt>
+File: figuras/prototipo_7_historico.png Graphic file (type png)
+<use figuras/prototipo_7_historico.png>
+Package pdftex.def Info: figuras/prototipo_7_historico.png  used on input line 357.
+(pdftex.def)             Requested size: 227.5pt x 161.77586pt.
+ [35
+pdfTeX warning (ext4): destination with the same identifier (name{figure.4.16}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.361 
+      
+pdfTeX warning (ext4): destination with the same identifier (name{figure.4.17}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.361 
+      
+pdfTeX warning (ext4): destination with the same identifier (name{figure.4.18}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.361 
+       <./figuras/protoripo_4_comandos.png> <./figuras/prototipo_5_deseja_enviar.png> <./figuras/prototipo_6_enviado.png>]
+<figuras/prototipo_8_grafico.png, id=484, 1445.4pt x 1027.84pt>
+File: figuras/prototipo_8_grafico.png Graphic file (type png)
+<use figuras/prototipo_8_grafico.png>
+Package pdftex.def Info: figuras/prototipo_8_grafico.png  used on input line 364.
+(pdftex.def)             Requested size: 227.5pt x 161.77586pt.
+ [36
+pdfTeX warning (ext4): destination with the same identifier (name{figure.4.19}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.377 \clearpage
+                
+pdfTeX warning (ext4): destination with the same identifier (name{figure.4.20}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.377 \clearpage
+                 <./figuras/prototipo_7_historico.png> <./figuras/prototipo_8_grafico.png>] [37
+>>>>>>> refs/remotes/origin/feat/deslocamento-carrinho
+=======
+l.745 
+      ]
+Underfull \hbox (badness 2005) in paragraph at lines 760--760
+>>>>>>> refs/remotes/origin/develop
+[]|\T1/lmr/bx/n/12 Resultado esperado: \T1/lmr/m/n/12 O robô para imediatamente
+ (os motores devem ser
+ []
+>>>>>>> documentacao
+
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+[32
 pdfTeX warning (ext4): destination with the same identifier (name{table.4.26}) 
+=======
+pdfTeX warning (ext4): destination with the same identifier (name{table.4.5}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.462 
+      
+pdfTeX warning (ext4): destination with the same identifier (name{table.4.6}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.462 
+      
+pdfTeX warning (ext4): destination with the same identifier (name{table.4.7}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.462 
+      ] [38
+pdfTeX warning (ext4): destination with the same identifier (name{table.4.8}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.546 
+      
+pdfTeX warning (ext4): destination with the same identifier (name{table.4.9}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.546 
+      
+pdfTeX warning (ext4): destination with the same identifier (name{table.4.10}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.546 
+      
+pdfTeX warning (ext4): destination with the same identifier (name{table.4.11}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.546 
+      ] [39
+pdfTeX warning (ext4): destination with the same identifier (name{table.4.12}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.630 
+      
+pdfTeX warning (ext4): destination with the same identifier (name{table.4.13}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.630 
+      
+pdfTeX warning (ext4): destination with the same identifier (name{table.4.14}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.630 
+      
+pdfTeX warning (ext4): destination with the same identifier (name{table.4.15}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.630 
+      ] [40
+pdfTeX warning (ext4): destination with the same identifier (name{table.4.16}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.714 
+      
+pdfTeX warning (ext4): destination with the same identifier (name{table.4.17}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.714 
+      
+pdfTeX warning (ext4): destination with the same identifier (name{table.4.18}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.714 
+      
+pdfTeX warning (ext4): destination with the same identifier (name{table.4.19}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.714 
+      ] [41
+pdfTeX warning (ext4): destination with the same identifier (name{table.4.20}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.777 
+      
+pdfTeX warning (ext4): destination with the same identifier (name{table.4.21}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.777 
+      
+pdfTeX warning (ext4): destination with the same identifier (name{table.4.22}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.777 
+      ] [42
+pdfTeX warning (ext4): destination with the same identifier (name{table.4.23}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.840 
+      
+pdfTeX warning (ext4): destination with the same identifier (name{table.4.24}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.840 
+      
+pdfTeX warning (ext4): destination with the same identifier (name{table.4.25}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.840 
+      ]) (editaveis/07_orcamento.tex [43
+pdfTeX warning (ext4): destination with the same identifier (name{table.4.26}) has been already used, duplicate ignored
+>>>>>>> refs/remotes/origin/feat/deslocamento-carrinho
+=======
+[38
+pdfTeX warning (ext4): destination with the same identifier (name{table.4.25}) 
+>>>>>>> refs/remotes/origin/develop
 has been already used, duplicate ignored
+>>>>>>> documentacao
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
 l.1 \begin{landscape}
+                     
+<<<<<<< HEAD
+pdfTeX warning (ext4): destination with the same identifier (name{table.4.27}) 
+has been already used, duplicate ignored
+=======
+pdfTeX warning (ext4): destination with the same identifier (name{table.4.27}) has been already used, duplicate ignored
+>>>>>>> refs/remotes/origin/feat/deslocamento-carrinho
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.1 \begin{landscape}
+<<<<<<< HEAD
+                     ] [44
+=======
                      ]
 
+<<<<<<< HEAD
+[33
+=======
 [39
+<<<<<<< HEAD
+>>>>>>> refs/remotes/origin/develop
 
 
 
-pdfTeX warning (ext4): destination with the same identifier (name{table.5.27}) 
+pdfTeX warning (ext4): destination with the same identifier (name{table.5.28}) 
 has been already used, duplicate ignored
+=======
+>>>>>>> documentacao
+
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{table.5.28}) has been already used, duplicate ignored
+>>>>>>> refs/remotes/origin/feat/deslocamento-carrinho
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
 l.50 \end{landscape}
                     
-pdfTeX warning (ext4): destination with the same identifier (name{table.5.28}) 
+<<<<<<< HEAD
+pdfTeX warning (ext4): destination with the same identifier (name{table.5.29}) 
 has been already used, duplicate ignored
+=======
+pdfTeX warning (ext4): destination with the same identifier (name{table.5.29}) has been already used, duplicate ignored
+>>>>>>> refs/remotes/origin/feat/deslocamento-carrinho
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
 l.50 \end{landscape}
+<<<<<<< HEAD
+                    ] [45
+pdfTeX warning (ext4): destination with the same identifier (name{table.5.30}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.50 \end{landscape}
+                    ]) (editaveis/08_cronograma.tex [46
+=======
                     ]
 
+<<<<<<< HEAD
+[34
+pdfTeX warning (ext4): destination with the same identifier (name{table.5.30}) 
+=======
 [40
 pdfTeX warning (ext4): destination with the same identifier (name{table.5.29}) 
+>>>>>>> refs/remotes/origin/develop
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
 l.50 \end{landscape}
                     ]) (editaveis/08_cronograma.tex
 
+<<<<<<< HEAD
+[35
+=======
 [41
+<<<<<<< HEAD
+>>>>>>> refs/remotes/origin/develop
+=======
+>>>>>>> documentacao
+>>>>>>> refs/remotes/origin/feat/deslocamento-carrinho
 
 
 
 
-pdfTeX warning (ext4): destination with the same identifier (name{table.6.30}) 
-has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.108 \end{landscape}
-                     
+<<<<<<< HEAD
 pdfTeX warning (ext4): destination with the same identifier (name{table.6.31}) 
 has been already used, duplicate ignored
+=======
+pdfTeX warning (ext4): destination with the same identifier (name{table.6.31}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
 l.108 \end{landscape}
                      
-pdfTeX warning (ext4): destination with the same identifier (name{table.6.32}) 
+pdfTeX warning (ext4): destination with the same identifier (name{table.6.32}) has been already used, duplicate ignored
+>>>>>>> refs/remotes/origin/feat/deslocamento-carrinho
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.108 \end{landscape}
+                     
+pdfTeX warning (ext4): destination with the same identifier (name{table.6.33}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.108 \end{landscape}
+<<<<<<< HEAD
+                     
+pdfTeX warning (ext4): destination with the same identifier (name{table.6.33}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
 l.108 \end{landscape}
+=======
+<<<<<<< HEAD
+                     ]) (editaveis/09_resultados.tex) (editaveis/10_licoes.tex [47
+
+
+]
+=======
+>>>>>>> refs/remotes/origin/feat/deslocamento-carrinho
                      ]) (editaveis/09_resultados.tex) (editaveis/10_licoes.tex
 
+<<<<<<< HEAD
+[36
+
+
+]
+=======
 [42
 
 
 ]
 
 [43]
+<<<<<<< HEAD
+>>>>>>> refs/remotes/origin/develop
+=======
+>>>>>>> documentacao
+>>>>>>> refs/remotes/origin/feat/deslocamento-carrinho
 Overfull \hbox (1.87119pt too wide) in paragraph at lines 15--15
 \T1/lmr/bx/n/12 internos 
  []
 
 
+<<<<<<< HEAD
 Underfull \hbox (badness 10000) in paragraph at lines 21--21
 []\T1/lmr/m/n/12 Descreva seus diferenciais
  []
@@ -1734,7 +2522,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 27--27
  []
 
 
-Underfull \hbox (badness 5696) in paragraph at lines 27--27
+Underfull \hbox (badness 5681) in paragraph at lines 27--27
 \T1/lmr/m/n/12 deficiências: aquilo que faz de
  []
 
@@ -1744,52 +2532,88 @@ Underfull \hbox (badness 1137) in paragraph at lines 27--27
  []
 
 
+=======
+>>>>>>> refs/remotes/origin/feat/deslocamento-carrinho
 Overfull \hbox (4.28117pt too wide) in paragraph at lines 28--28
 \T1/lmr/bx/n/12 externos 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 34--34
-[]\T1/lmr/m/n/12 Descreva as principais
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 34--34
-\T1/lmr/m/n/12 oportunidades identificadas:
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 34--34
-\T1/lmr/m/n/12 eventos potenciais que podem
- []
-
-
 Underfull \hbox (badness 5460) in paragraph at lines 40--40
-[]\T1/lmr/m/n/12 Descreva as principais ameaças
+[]\T1/lmr/m/n/12 Descreva as prin-ci-pais ame-a-ças
  []
 
+[48
 
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+[37
+=======
+pdfTeX warning (ext4): destination with the same identifier (name{table.8.34}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.53 \subsection
+                {Escopo}] [49]) (doc_pi1.bbl (doc_pi1.brf)
+\tf@brf=\write4
+\openout4 = `doc_pi1.brf'.
+
+ [50]
+>>>>>>> refs/remotes/origin/feat/deslocamento-carrinho
+=======
 [44
+>>>>>>> refs/remotes/origin/develop
 
 
-pdfTeX warning (ext4): destination with the same identifier (name{table.8.33}) 
+pdfTeX warning (ext4): destination with the same identifier (name{table.8.34}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.51 \subsection
-                {OrÃ§amento}]
+l.53 \subsection
+                {Escopo}]
 
+<<<<<<< HEAD
+[38]) (doc_pi1.bbl (doc_pi1.brf)
+=======
 [45]) (doc_pi1.bbl (doc_pi1.brf)
+>>>>>>> refs/remotes/origin/develop
 \tf@brf=\write4
 \openout4 = `doc_pi1.brf'.
 
 
 
+<<<<<<< HEAD
+[39]
+=======
 [46]
+<<<<<<< HEAD
+>>>>>>> refs/remotes/origin/develop
 bibitemlist
+
+LaTeX Warning: Empty `thebibliography' environment on input line 8.
+
 ) (editaveis/11_apendices.tex
 
+<<<<<<< HEAD
+[40
+=======
+>>>>>>> documentacao
+bibitemlist
+
+<<<<<<< HEAD
+LaTeX Warning: Empty `thebibliography' environment on input line 8.
+
+) (editaveis/11_apendices.tex [51
+
+] [52
+
+]) (editaveis/12_anexos.tex [53
+
+] [54
+
+]
+>>>>>>> refs/remotes/origin/feat/deslocamento-carrinho
+=======
 [47
 
 ]
@@ -1811,23 +2635,25 @@ ar sua argumentação.
 ) (editaveis/12_anexos.tex
 
 [49
+>>>>>>> refs/remotes/origin/develop
 
 ]
-Overfull \hbox (3.89801pt too wide) in paragraph at lines 12--12
-[]\T1/lmr/m/n/12 Apêndices são textos elaborados pelo autor a fim de complement
-ar sua argumentação. 
- []
-
-
 
 [50
 
-]
-Overfull \hbox (3.89801pt too wide) in paragraph at lines 22--22
-[]\T1/lmr/m/n/12 Apêndices são textos elaborados pelo autor a fim de complement
-ar sua argumentação. 
- []
+]) (editaveis/12_anexos.tex
 
+<<<<<<< HEAD
+[42
+
+]
+
+[43
+
+]
+=======
+>>>>>>> documentacao
+>>>>>>> refs/remotes/origin/feat/deslocamento-carrinho
 File: figuras/fga.png Graphic file (type png)
 <use figuras/fga.png>
 Package pdftex.def Info: figuras/fga.png  used on input line 27.
@@ -1835,15 +2661,31 @@ Package pdftex.def Info: figuras/fga.png  used on input line 27.
 )
 No file doc_pi1.ind.
 
+<<<<<<< HEAD
+AED: lastpage setting LastPage
+[55
 
+
+pdfTeX warning (ext4): destination with the same identifier (name{figure.anexochapback.2.21}) has been already used, duplicate ignored
+=======
+
+<<<<<<< HEAD
+[44
+=======
 [51
+>>>>>>> refs/remotes/origin/develop
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{figure.anexoc
 hapback.2.21}) has been already used, duplicate ignored
+>>>>>>> documentacao
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.61 \end{document}
+<<<<<<< HEAD
+l.63 \end{document}
+=======
+l.65 \end{document}
+>>>>>>> refs/remotes/origin/feat/deslocamento-carrinho
                    ]
 \tf@lof=\write5
 \openout5 = `doc_pi1.lof'.
@@ -1854,18 +2696,59 @@ l.61 \end{document}
 \tf@toc=\write7
 \openout7 = `doc_pi1.toc'.
 
-
-
-enddocument/afterlastpage (AED): lastpage setting LastPage.
-(doc_pi1.aux)
+ (doc_pi1.aux)
  ***********
-LaTeX2e <2025-06-01> patch level 1
+LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2020/03/25>
  ***********
 Package rerunfilecheck Info: File `doc_pi1.brf' has not changed.
-(rerunfilecheck)             Checksum: 775432BA3A8DDE233C2EF16CB008AA92;206.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
+<<<<<<< HEAD
+<<<<<<< HEAD
+ 18908 strings out of 470067
+ 311359 string characters out of 5482058
+ 752618 words of memory out of 5000000
+ 46646 multiletter control sequences out of 15000+600000
+ 732412 words of font info for 89 fonts, out of 8000000 for 9000
+ 0 hyphenation exceptions out of 8191
+ 99i,13n,107p,1452b,665s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</home/rafael-laube/.miktex/texmfs/install/fonts/type1/public/lm/lmbx10.pfb><
+/home/rafael-laube/.miktex/texmfs/install/fonts/type1/public/lm/lmbx12.pfb></ho
+me/rafael-laube/.miktex/texmfs/install/fonts/type1/public/lm/lmbxi10.pfb></home
+/rafael-laube/.miktex/texmfs/install/fonts/type1/public/lm/lmmi10.pfb></home/ra
+fael-laube/.miktex/texmfs/install/fonts/type1/public/lm/lmmi12.pfb></home/rafae
+l-laube/.miktex/texmfs/install/fonts/type1/public/lm/lmmi7.pfb></home/rafael-la
+ube/.miktex/texmfs/install/fonts/type1/public/lm/lmmi8.pfb></home/rafael-laube/
+.miktex/texmfs/install/fonts/type1/public/lm/lmr10.pfb></home/rafael-laube/.mik
+tex/texmfs/install/fonts/type1/public/lm/lmr12.pfb></home/rafael-laube/.miktex/
+texmfs/install/fonts/type1/public/lm/lmr17.pfb></home/rafael-laube/.miktex/texm
+fs/install/fonts/type1/public/lm/lmri10.pfb></home/rafael-laube/.miktex/texmfs/
+install/fonts/type1/public/lm/lmri12.pfb></home/rafael-laube/.miktex/texmfs/ins
+tall/fonts/type1/public/lm/lmss12.pfb></home/rafael-laube/.miktex/texmfs/instal
+l/fonts/type1/public/lm/lmsy10.pfb>
+Output written on doc_pi1.pdf (45 pages, 1067754 bytes).
+PDF statistics:
+ 766 PDF objects out of 1000 (max. 8388607)
+ 182 named destinations out of 1000 (max. 500000)
+ 581 words of extra memory for PDF output out of 10000 (max. 10000000)
+=======
+ 18954 strings out of 474486
+ 315519 string characters out of 5743754
+ 1953542 words of memory out of 5000000
+ 40553 multiletter control sequences out of 15000+600000
+ 667918 words of font info for 86 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 99i,13n,107p,1426b,639s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/tanny/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><C:/Users/tanny/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/tanny/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbxi10.pfb><C:/Users/tanny/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi10.pfb><C:/Users/tanny/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi12.pfb><C:/Users/tanny/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi7.pfb><C:/Users/tanny/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Users/tanny/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/tanny/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/tanny/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr17.pfb><C:/Users/tanny/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/Users/tanny/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri12.pfb><C:/Users/tanny/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss12.pfb><C:/Users/tanny/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb>
+Output written on doc_pi1.pdf (56 pages, 1851592 bytes).
+PDF statistics:
+ 915 PDF objects out of 1000 (max. 8388607)
+ 216 named destinations out of 1000 (max. 500000)
+ 723 words of extra memory for PDF output out of 10000 (max. 10000000)
+>>>>>>> refs/remotes/origin/feat/deslocamento-carrinho
+=======
  18275 strings out of 470067
  305104 string characters out of 5482058
  741210 words of memory out of 5000000
@@ -1895,4 +2778,9 @@ PDF statistics:
  875 PDF objects out of 1000 (max. 8388607)
  202 named destinations out of 1000 (max. 500000)
  659 words of extra memory for PDF output out of 10000 (max. 10000000)
+<<<<<<< HEAD
+>>>>>>> refs/remotes/origin/develop
+=======
+>>>>>>> documentacao
+>>>>>>> refs/remotes/origin/feat/deslocamento-carrinho
 

@@ -1,0 +1,16 @@
+{
+  "folders": [
+	{
+		"path": "../.."
+	},
+	{
+		"name": "carro-do-ovo-control",
+		"path": "../../../../PlatformIO/Projects/carro-do-ovo-control"
+	},
+	{
+		"name": "controle",
+		"path": "."
+	}
+],
+  "settings": {}
+}
