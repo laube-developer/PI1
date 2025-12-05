@@ -1,24 +1,17 @@
 "use server"
 
 import { supabase } from "../lib/supabaseClient";
-import { disconnectMQTTClient, getMQTTClient } from "../lib/mqtt"
+import client from "../lib/mqttServer"
 import { Comando } from "@/entidades/comandos";
 import { Ponto } from "@/entidades/ponto";
 import { Historico } from "@/entidades/historico";
 import { AppState } from "@/entidades/appstate";
 
-export async function conectar(): Promise<{isConnected: boolean}> {
-    const client = getMQTTClient()
-    return {isConnected: client.connected}
-}
-
-export async function desconectar(): Promise<{isDisconnected: boolean}> {
-    disconnectMQTTClient();
-    return {isDisconnected: true}
+export async function conectar(): Promise<{ isConnected: boolean }> {
+    return { isConnected: client.connected }
 }
 
 export async function enviarMensagem(topico: string, mensagem: string): Promise<void> {
-    const client = getMQTTClient()
     client.publish(topico, mensagem)
 }
 

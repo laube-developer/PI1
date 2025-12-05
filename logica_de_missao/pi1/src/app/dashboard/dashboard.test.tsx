@@ -1,7 +1,7 @@
 // src/app/dashboard/dashboard.test.tsx
 import { render, screen, fireEvent, waitFor, within } from '@testing-library/react';
 import DashboardPage from './page';
-import { supabase } from '../../../lib/supabaseClient';
+import { supabase } from '../lib/supabaseClient';
 import { useRouter } from 'next/navigation';
 import { User } from '../../../entidades/user';
 

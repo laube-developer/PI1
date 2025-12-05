@@ -1,10 +1,10 @@
 "use client"
 import { useEffect, useState } from 'react';
 import { useRouter, useParams } from 'next/navigation';
-import { getHistoricoById } from '../../../../../actions/actions';
+import { getHistoricoById } from '../../../actions/actions';
 import { Historico } from '@/entidades/historico';
-import CodeView from '../../../../../components/CodeView';
-import GraficoDeslocamento from '../../../../../components/GraficoDeslocamento';
+import CodeView from '../../../components/CodeView';
+import GraficoDeslocamento from '../../../components/GraficoDeslocamento';
 
 export default function HistoricoDetailPage() {
     const [historico, setHistorico] = useState<Historico | null>(null);

@@ -1,26 +1,23 @@
 "use client"
 import { useEffect, useState } from 'react'
 import { useRouter } from 'next/navigation'
-import { supabase } from '../../..//lib/supabaseClient'
-import Sidebar from '../../../components/Sidebar'
-import ComandoButton from '../../../components/ComandoButton'
+import { supabase } from '../lib/supabaseClient'
+import Sidebar from '../components/Sidebar'
+import ComandoButton from '../components/ComandoButton'
 import { FaLongArrowAltUp } from 'react-icons/fa'
 import { HiArrowUturnRight } from 'react-icons/hi2'
 import { BsBoxSeamFill } from 'react-icons/bs'
 import { Andar, Comando, Virar } from '@/entidades/comandos'
-import Button from '../../../components/Button'
+import Button from '../components/Button'
 import { IoMdClose } from 'react-icons/io'
-import CodeView from '../../../components/CodeView'
+import CodeView from '../components/CodeView'
 import { DragDropContext, Droppable, Draggable, DropResult } from '@hello-pangea/dnd'
-import { AppState } from '../../../entidades/appstate'
-import { User } from '../../../entidades/user'
-import { useMQTTClient } from '../../../hooks/useMQTTClient'
-import { enviarMensagem } from '../../../actions/actions'
+import { useMQTTClient } from '../hooks/useMQTTClient'
+import { enviarMensagem } from '../actions/actions'
 import { AppState } from '@/entidades/appstate'
 import { User } from '@/entidades/user'
-import { enviarMensagem, salvarHistorico } from '../../../actions/actions'
-import GraficoDeslocamento from '../../../components/GraficoDeslocamento'
-import { getMQTTClient } from '../../../lib/mqtt'
+import { salvarHistorico } from '../actions/actions'
+import GraficoDeslocamento from '../components/GraficoDeslocamento'
 import { MqttClient } from 'mqtt'
 
 import { Ponto } from '@/entidades/ponto';
@@ -38,55 +35,7 @@ export default function DashboardPage() {
   const router = useRouter()
 
   const {isConnected, publish, disconnect, reconnect} = useMQTTClient();
-
-  useEffect(() => {
-    const mqttClient = getMQTTClient();
-    setClient(mqttClient);
-
-    const messageHandler = (topic: string, payload: Buffer) => {
-      if (topic === "carrodoovo/telemetria") {
-        try {
-          const message = JSON.parse(payload.toString());
-          if (message.x !== undefined && message.y !== undefined) {
-            setPosicoesReais(prevPosicoes => [...prevPosicoes, { x: message.x, y: message.y }]);
-          }
-        } catch (error) {
-          console.error("Erro ao processar mensagem MQTT:", error);
-        }
-      }
-    };
-
-    mqttClient.on('message', messageHandler);
-
-    return () => {
-      mqttClient.off('message', messageHandler);
-    };
-  }, []);
-
-  useEffect(() => {
-    const mqttClient = getMQTTClient();
-    setClient(mqttClient);
-
-    const messageHandler = (topic: string, payload: Buffer) => {
-      if (topic === "carrodoovo/telemetria") {
-        try {
-          const message = JSON.parse(payload.toString());
-          if (message.x !== undefined && message.y !== undefined) {
-            setPosicoesReais(prevPosicoes => [...prevPosicoes, { x: message.x, y: message.y }]);
-          }
-        } catch (error) {
-          console.error("Erro ao processar mensagem MQTT:", error);
-        }
-      }
-    };
-
-    mqttClient.on('message', messageHandler);
-
-    return () => {
-      mqttClient.off('message', messageHandler);
-    };
-  }, []);
-
+  
   useEffect(() => {
     supabase.auth.getSession().then(({ data }) => {
       if (!data.session) {
@@ -174,32 +123,17 @@ export default function DashboardPage() {
     .catch(()=> alert("Falha ao enviar os comandos."))
   }
 
-<<<<<<< HEAD
-  const paradaEmergencial = () => {
-    publish("carrodoovo/paradaDeEmergencia", "parada");
-  }
-
-=======
->>>>>>> develop
-  const handleSalvarHistorico = async () => {
-    if (modelState.comandos().length === 0) {
-      alert("Nenhum comando para salvar!");
-      return;
-    }
-
-    try {
-      await salvarHistorico(
-        modelState.comandos(),
-        calcularDeslocamentoComandado(),
-        posicoesReais,
-        modelState.user()!.id
-      );
-      alert("Histórico salvo com sucesso!");
-    } catch (error) {
-      console.error(error);
-      alert("Erro ao salvar o histórico.");
-    }
-  };
+  useEffect(() => {
+    const eventSource = new EventSource("/api/mqtt");
+  
+    eventSource.onmessage = (event) => {
+      const msg = JSON.parse(event.data);
+  
+      setPosicoesReais(prev => [...prev, { x: msg.x, y: msg.y }]);
+    };
+  
+    return () => eventSource.close();
+  }, []);
 
   const calcularDeslocamentoComandado = (): Ponto[] => {
     const pontos: Ponto[] = [{ x: 0, y: 0 }];
@@ -229,38 +163,15 @@ export default function DashboardPage() {
 
   return (
     <div className="min-h-screen flex bg-gray-100">
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+
       <Sidebar
-        handleDisconnect={disconnect}
-        isConnected={isConnected}
-        handleReconnect={reconnect}
+        comandos={modelState.comandos}
         handleLogout={handleLogout}
-        modelState={modelState}
-        setModelState={setModelState}
+        sidebarState={sidebarState}
+        setSideBarState={setSideBarState}
         handleEnviar={handleEnviar}
-        handleParadaEmergencia={paradaEmergencial}
-        
+        handleParadaEmergencia={() => publish("carrodoovo/paradaDeEmergencia", "")}
         />
-=======
-      <Sidebar handleLogout={handleLogout} sidebarState={sidebarState} setSideBarState={setSideBarState} handleEnviar={handleEnviar}/>
->>>>>>> 1e04d39 (feat: adiciona grafico para exibição das posições do carrinho, tanto a posição ideal (via comandos) quanto a real, recebida via mqtt)
-=======
-=======
->>>>>>> develop
-      <Sidebar 
-        handleLogout={handleLogout} 
-        sidebarState={sidebarState} 
-        setSideBarState={setSideBarState} 
-        handleEnviar={handleEnviar}
-        handleSalvar={handleSalvarHistorico}
-        comandos={modelState.comandos()}
-      />
-<<<<<<< HEAD
->>>>>>> 643772f (adiciona os testes restantes, gráfico de deslocamento e histórico de corridas)
-=======
->>>>>>> develop
 
       {/* Main content */}
       <main className="flex-1 p-6 flex flex-col items-center justify-center bg-slate-200 relative">
@@ -305,7 +216,7 @@ export default function DashboardPage() {
                       data-testid="command-list"
                     >
                       {modelState.comandos().map((comando, id) => (
-                        <Draggable key={comando.id} draggableId={comando.id} index={id}>
+                        <Draggable key={`comando_${id}`} draggableId={`comando_${id}`} index={id}>
                           {(provided) => (
                             <div
                               ref={provided.innerRef}
@@ -330,7 +241,7 @@ export default function DashboardPage() {
                                     value={comando.distancia}
                                     onChange={(event)=> setModelState(modelState.alterarDistancia(id, Number(event.target.value)))}
                                     type='number'
-                                    className='w-full bg-slate-200 rounded-md p-1 w-35'
+                                    className='bg-slate-200 rounded-md p-1 w-35'
                                     min={0}
                                   />
                                   <p>cm</p>

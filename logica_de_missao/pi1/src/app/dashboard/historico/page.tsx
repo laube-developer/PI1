@@ -1,8 +1,8 @@
 "use client"
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { supabase } from '../../../../lib/supabaseClient';
-import { getHistorico } from '../../../../actions/actions';
+import { supabase } from '../../lib/supabaseClient';
+import { getHistorico } from '../../actions/actions';
 import { Historico } from '@/entidades/historico';
 import { User } from '@/entidades/user';
 
