@@ -1,4 +1,4 @@
-import client from "../../../../lib/mqttServer";
+import client from "../../lib/mqttServer";
 
 export async function POST(req: Request){
     const {topic, message} = await req.json();

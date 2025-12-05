@@ -1,7 +1,7 @@
 "use server"
 
 import mqtt from "mqtt";
-import { MQTTService } from "../../lib/mqtt";
+import { MQTTService } from "./lib/mqtt";
 
 export async function connectMqttBroker(){
     "use server"
