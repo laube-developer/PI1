@@ -64,6 +64,30 @@ export default function DashboardPage() {
   }, []);
 
   useEffect(() => {
+    const mqttClient = getMQTTClient();
+    setClient(mqttClient);
+
+    const messageHandler = (topic: string, payload: Buffer) => {
+      if (topic === "carrodoovo/telemetria") {
+        try {
+          const message = JSON.parse(payload.toString());
+          if (message.x !== undefined && message.y !== undefined) {
+            setPosicoesReais(prevPosicoes => [...prevPosicoes, { x: message.x, y: message.y }]);
+          }
+        } catch (error) {
+          console.error("Erro ao processar mensagem MQTT:", error);
+        }
+      }
+    };
+
+    mqttClient.on('message', messageHandler);
+
+    return () => {
+      mqttClient.off('message', messageHandler);
+    };
+  }, []);
+
+  useEffect(() => {
     supabase.auth.getSession().then(({ data }) => {
       if (!data.session) {
         router.push('/login')
@@ -150,10 +174,13 @@ export default function DashboardPage() {
     .catch(()=> alert("Falha ao enviar os comandos."))
   }
 
+<<<<<<< HEAD
   const paradaEmergencial = () => {
     publish("carrodoovo/paradaDeEmergencia", "parada");
   }
 
+=======
+>>>>>>> develop
   const handleSalvarHistorico = async () => {
     if (modelState.comandos().length === 0) {
       alert("Nenhum comando para salvar!");
@@ -204,6 +231,7 @@ export default function DashboardPage() {
     <div className="min-h-screen flex bg-gray-100">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       <Sidebar
         handleDisconnect={disconnect}
         isConnected={isConnected}
@@ -219,6 +247,8 @@ export default function DashboardPage() {
       <Sidebar handleLogout={handleLogout} sidebarState={sidebarState} setSideBarState={setSideBarState} handleEnviar={handleEnviar}/>
 >>>>>>> 1e04d39 (feat: adiciona grafico para exibição das posições do carrinho, tanto a posição ideal (via comandos) quanto a real, recebida via mqtt)
 =======
+=======
+>>>>>>> develop
       <Sidebar 
         handleLogout={handleLogout} 
         sidebarState={sidebarState} 
@@ -227,7 +257,10 @@ export default function DashboardPage() {
         handleSalvar={handleSalvarHistorico}
         comandos={modelState.comandos()}
       />
+<<<<<<< HEAD
 >>>>>>> 643772f (adiciona os testes restantes, gráfico de deslocamento e histórico de corridas)
+=======
+>>>>>>> develop
 
       {/* Main content */}
       <main className="flex-1 p-6 flex flex-col items-center justify-center bg-slate-200 relative">

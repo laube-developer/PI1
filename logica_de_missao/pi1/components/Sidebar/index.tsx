@@ -41,6 +41,7 @@ export default function Sidebar({handleLogout, sidebarState, setSideBarState, ha
             <span className="text-xs font-bold text-gray-900 text-center">CARRO DO OVO</span>
         </div>
 
+<<<<<<< HEAD
         <div className="w-full text-xs flex flex-col items-start">
             <b>Status: </b>
             {isConnected ? (
@@ -73,6 +74,10 @@ export default function Sidebar({handleLogout, sidebarState, setSideBarState, ha
             disabled={!isConnected} 
         >
             Enviar
+=======
+        <Button handleClick={conectar} className={sidebarState.isConnected ? "!text-green-700 font-bold" : ""}>
+            {!sidebarState.isConnected ? "Conectar" : "Conectado"}
+>>>>>>> develop
         </Button>
 
 <<<<<<< HEAD
@@ -87,6 +92,7 @@ export default function Sidebar({handleLogout, sidebarState, setSideBarState, ha
             className="bg-gray-500 text-white"
             disabled={comandos.length === 0}
             >Enviar
+<<<<<<< HEAD
         </Button>
 >>>>>>> 643772f (adiciona os testes restantes, gráfico de deslocamento e histórico de corridas)
 
@@ -98,6 +104,18 @@ export default function Sidebar({handleLogout, sidebarState, setSideBarState, ha
             Salvar
         </Button>
 
+=======
+        </Button>
+
+        <Button
+            handleClick={handleSalvar}
+            className="bg-blue-500 text-white"
+            disabled={comandos.length === 0}
+        >
+            Salvar
+        </Button>
+
+>>>>>>> develop
         <Link href="/dashboard/historico" className="w-full">
             <Button className="w-full">Histórico</Button>
         </Link>

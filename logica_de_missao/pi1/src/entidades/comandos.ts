@@ -11,16 +11,13 @@ abstract class Comando {
     this.tipo = tipo;
   }
 
-<<<<<<< HEAD:logica_de_missao/pi1/entidades/comandos.ts
-  abstract toString(): string;
-=======
+
   toJSON() {
     return {
       tipo: this.tipo,
       id: this.id
     };
   }
->>>>>>> 643772f (adiciona os testes restantes, gráfico de deslocamento e histórico de corridas):logica_de_missao/pi1/src/entidades/comandos.ts
 }
 
 class Andar extends Comando {
@@ -32,16 +29,11 @@ class Andar extends Comando {
     this.distancia = distancia;
   }
 
-<<<<<<< HEAD:logica_de_missao/pi1/entidades/comandos.ts
-  toString() {
-    return `${this.tipo}:${this.distancia}`;
-=======
   toJSON() {
     return {
       ...super.toJSON(),
       distancia: this.distancia
     };
->>>>>>> 643772f (adiciona os testes restantes, gráfico de deslocamento e histórico de corridas):logica_de_missao/pi1/src/entidades/comandos.ts
   }
 }
 
@@ -54,20 +46,16 @@ class Virar extends Comando {
     this.direcao = direcao;
   }
 
-<<<<<<< HEAD:logica_de_missao/pi1/entidades/comandos.ts
-  toString() {
-    return `${this.tipo}:${this.direcao}`;
-=======
+
   toJSON() {
     return {
       ...super.toJSON(),
       direcao: this.direcao
     };
->>>>>>> 643772f (adiciona os testes restantes, gráfico de deslocamento e histórico de corridas):logica_de_missao/pi1/src/entidades/comandos.ts
   }
 }
+class Largar extends Comando {
 
-class Depositar extends Comando {
   constructor (id: string){
     super(id, "Largar");
   }
@@ -75,10 +63,6 @@ class Depositar extends Comando {
   toJSON() {
     return super.toJSON();
   }
-
-  toString() {
-    return this.tipo;
-  }
 }
 
-export {Comando, Andar, Virar, Depositar}
+export {Comando, Andar, Virar, Largar}
