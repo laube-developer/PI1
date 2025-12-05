@@ -1,35 +1,32 @@
 #include <Arduino.h>
 #include "config.h"
 #include "motors.h"
+#include "encoder.h"
+#include "giroscopio.h"
+#include "wifi_mqtt.h"
 #include "command_queue.h"
 #include "executor.h"
-#include "demo_feed.h"
-#include "tipos_de_dados.h"
-#include "giroscopio.h"
-#include "GiroenviarDados.h"
-
-DadosGiroscopio meusDadosSensor;
+#include "egg.h"
 
 void setup() {
   Serial.begin(115200);
-  delay(200);
-  Serial.println();
-  Serial.println("=== Carro do Ovo — Simulacao: Velocidades por Roda (fila interna) ===");
-  motors::setup();
-  cmdq::clear();
+  delay(500);
+
+  inicializarMqttWifi();
   executor::setup();
-  demo::setup();
+  setupEggMotor();
+  motors::initialize();
   setupGiroscopio();
+  inicializarEncoders();
+  Serial.print("\n\n\n======Teste motor andar reto\n\n\n");
 }
 
 void loop() {
-  demo::tick();
-
+  mqtt_tick();
+  delay(100);
   executor::tick();
 
-  meusDadosSensor = lerGiroscopio();
+  DadosEncoders encoders = lerDadosEncoders();
+  dados giro = getAnguloAtual();
 
-  enviarDadosGiroscopio(meusDadosSensor);
-  
-  delay(2);
 }

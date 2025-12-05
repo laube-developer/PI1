@@ -42,7 +42,7 @@ export default function Button({
     iconSize = 12,
     smoth= false
 }: ButtonProps){
-    const baseClasses = "w-full bg-gray-200 text-gray-900 py-2 rounded-lg text-xs flex items-center justify-center gap-1";
+    const baseClasses = "w-full bg-gray-200 text-gray-900 py-2 px-3 rounded-lg text-xs flex items-center justify-center gap-1";
 
     const colorClasses = (smoth ? SMOTH_COLOR_CLASSES[color] : COLOR_CLASSES[color]) || COLOR_CLASSES.primary;
 

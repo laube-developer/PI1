@@ -1,7 +1,7 @@
 #pragma once
 
-struct DadosGiroscopio {
+typedef struct {
   float x;
   float y;
   float z;
-};
+} DadosGiroscopio;

@@ -1,4 +1,5 @@
 #pragma once
+
 #include <Arduino.h>
 #include "commands.h"
 
@@ -7,4 +8,3 @@ namespace executor {
   void tick();          
   void emergencyStop();
 }
-

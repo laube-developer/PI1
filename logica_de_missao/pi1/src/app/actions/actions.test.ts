@@ -20,7 +20,7 @@ jest.mock('../lib/supabaseClient', () => ({
 }));
 
 import { conectar, desconectar, enviarMensagem, salvarHistorico, getHistorico, getHistoricoById } from './actions';
-import { getMQTTClient, disconnectMQTTClient } from '../lib/mqtt';
+import { getMQTTClient, disconnectMQTTClient } from '../src/app/lib/mqtt';
 import { supabase } from '../lib/supabaseClient';
 import { Comando } from '@/entidades/comandos';
 import { Ponto } from '@/entidades/ponto';

@@ -1,6 +1,18 @@
 #pragma once
 
-#include "tipos_de_dados.h"
+struct dados {
+    float angulo;
+    unsigned long deltaTempo;
+};
 
 void setupGiroscopio();
-DadosGiroscopio lerGiroscopio();
+
+float lerGiroscopio();
+
+void enviarDadosGiroscopio(float dados);
+
+dados getAnguloAtual();
+
+void calibracaoGiroscopio();
+
+void zerarGiroscopio();

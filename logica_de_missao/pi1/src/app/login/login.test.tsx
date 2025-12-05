@@ -1,7 +1,7 @@
 // src/app/login/login.test.tsx
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import LoginPage from './page';
-import { supabase } from '../../../lib/supabaseClient';
+import { supabase } from '../lib/supabaseClient';
 import { useRouter } from 'next/navigation';
 
 // Mocking Supabase client

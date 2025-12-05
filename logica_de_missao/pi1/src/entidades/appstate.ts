@@ -61,17 +61,17 @@ export class AppState {
     comandos(){return this.comandosState}
 
     adicionarAndar(){
-        const novoComando = new Andar(crypto.randomUUID(), 0);
+        const novoComando = new Andar(0);
         return this.getEstadoAtualizado({comandos: [...this.comandosState, novoComando]})
     }
 
     adicionarVirar(){
-        const novoComando = new Virar(crypto.randomUUID(), "Esquerda");
+        const novoComando = new Virar("Esquerda");
         return this.getEstadoAtualizado({comandos: [...this.comandosState, novoComando]})
     }
 
     adicionarLargar(){
-        const novoComando = new Largar(crypto.randomUUID());
+        const novoComando = new Largar();
         return this.getEstadoAtualizado({
             comandos: [...this.comandosState, novoComando],
             jaTemLargar: true
@@ -81,7 +81,7 @@ export class AppState {
     alterarDistancia(id: number, distancia: number){
         if (this.comandosState[id].tipo != "Andar") return this
         console.log("Alterando distância do comando", id, "para", distancia);
-        const novoComando = new Andar(this.comandosState[id].id, Math.abs(distancia))
+        const novoComando = new Andar(Math.abs(distancia))
         const novaLista = [...this.comandosState];
         novaLista[id] = novoComando;
         return this.getEstadoAtualizado({comandos: novaLista})
@@ -90,7 +90,7 @@ export class AppState {
     alterarDirecao(id: number, direcao: "Esquerda" | "Direita"){
         if (this.comandosState[id].tipo != "Virar") return this
         console.log("Alterando direção do comando", id, "para", direcao);
-        const novoComando = new Virar(this.comandosState[id].id, direcao)
+        const novoComando = new Virar(direcao)
         const novaLista = [...this.comandosState];
         novaLista[id] = novoComando;
         return this.getEstadoAtualizado({comandos: novaLista})
@@ -119,13 +119,13 @@ export class AppState {
         switch (objeto.tipo) {
           case "Andar":
             // Garante que 'distancia' é um número
-            return new Andar(crypto.randomUUID(), objeto.distancia ?? 0);
+            return new Andar(objeto.distancia ?? 0);
           case "Virar":
             // Garante que 'direcao' é um valor aceito, ou usa um padrão
             const direcao = (objeto.direcao === 'Direita' || objeto.direcao === 'Esquerda') ? objeto.direcao : 'Esquerda';
-            return new Virar(crypto.randomUUID(), direcao);
+            return new Virar(direcao);
           case "Largar":
-            return new Largar(crypto.randomUUID());
+            return new Largar();
             
           default:
             console.error("Tipo de comando desconhecido", objeto.tipo);
