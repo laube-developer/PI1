@@ -1,0 +1,48 @@
+services:
+  mosquitto:
+    image: eclipse-mosquitto:latest
+    container_name: mosquitto
+    restart: always
+    environment:
+      - TZ=America/Sao_Paulo
+    ports:
+      - '1883:1883'
+      - '9001:9001'
+    volumes:
+      - ./mosquitto/config:/mosquitto/config
+      - ./mosquitto/data:/mosquitto/data
+      - ./mosquitto/log:/mosquitto/log
+    networks:
+      - app_network
+
+  next-app:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    ports:
+      # Sua aplicação Next.js roda na porta externa 3001
+      - '3000:3000'
+    volumes:
+      - .:/app
+      - /app/node_modules
+    command: npm run dev
+    depends_on:
+      - mosquitto
+    networks:
+      - app_network
+    user: root
+    environment:
+      MQTT_HOST: host.docker.internal,
+      MQTT_PORT: 1883,
+      CHOKIDAR_USEPOLLING: "true"
+      # Opcional: Se necessário, aumente o número máximo de observadores (inotify)
+      WATCHPACK_POLLING: "true"
+    extra_hosts:
+      - "host.docker.internal:host-gateway" # Define o DNS mágico para apontar para o host
+
+networks:
+  app_network:
+    driver: bridge
+
+volumes:
+  mqtt_mosquitto:
