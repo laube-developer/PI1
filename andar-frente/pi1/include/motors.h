@@ -18,6 +18,8 @@ namespace motors {
     void pararMotor2();
     
     void andarDoisMotoresFrente(int velocidadeEsquerdo, int velocidadeDireito);
+
+    void andarDoisMotoresTras(int velocidadeEsquerdo, int velocidadeDireito);
     
     void pararDoisMotores();
 
